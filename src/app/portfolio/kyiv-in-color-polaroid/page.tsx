@@ -1,14 +1,12 @@
 'use client';
 
 import React, { useCallback, useEffect, useState } from 'react';
-import Link from 'next/link';
 import Header from '@/components/Header';
 import Sidebar from '@/components/Sidebar';
 import ContactForm from '@/components/ContactForm';
 import NavigationButton, { CloseButton } from '@/components/NavigationButton';
 
 export default function KyivInColorPolaroidPage() {
-  const [activeTab, setActiveTab] = useState<'overview' | 'full'>('full');
   // Modal state
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 

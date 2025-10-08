@@ -14,7 +14,6 @@ export default function NavigationButton({
   className = '', 
   variant = 'carousel' 
 }: NavigationButtonProps) {
-  const isCarousel = variant === 'carousel';
   const Icon = direction === 'left' ? ArrowLeft : ArrowRight;
   
   return (

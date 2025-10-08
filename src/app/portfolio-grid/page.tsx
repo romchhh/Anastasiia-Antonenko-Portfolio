@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import Header from '@/components/Header';
 import Sidebar from '@/components/Sidebar';
@@ -164,7 +163,7 @@ export default function PortfolioGridPage() {
     }
   ];
 
-  const handleItemClick = (item: any, index: number) => {
+  const handleItemClick = (item: typeof portfolioItems[number], index: number) => {
     if (item.link) {
       router.push(item.link);
     } else {

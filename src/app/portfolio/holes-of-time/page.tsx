@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useCallback, useEffect, useState } from 'react';
-import Link from 'next/link';
 import Header from '@/components/Header';
 import Sidebar from '@/components/Sidebar';
 import ContactForm from '@/components/ContactForm';
@@ -16,7 +15,6 @@ export default function HolesOfTimePage() {
   // Each column is independent - images flow sequentially with gaps
   const gap = 20;
   const col1Width = 658; // First column width
-  const col2Width = 427; // Second column width (increased to align top and bottom)
   const smallWidth = 319; // Small images width (2 images + gap = 658px: 319 + 20 + 319 = 658)
   const smallHeight = 489; // Small images height (proportional to 319/314 * 481)
   
