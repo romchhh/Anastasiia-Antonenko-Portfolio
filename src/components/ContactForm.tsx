@@ -43,10 +43,10 @@ export default function ContactForm() {
   if (formState === 'submitted') {
     return (
       <>
-        <h3 className="text-[45px] font-normal leading-[100%] tracking-[0.03em] text-[#1A1A1A] lowercase">thank you<br />for your interest!</h3>
-        <div className="mt-2 w-[395px]">
-          <p className="text-[18px] font-normal leading-[150%] tracking-[0.03em] text-[#515151] lowercase">your message has been sent.</p>
-          <p className="text-[18px] font-normal leading-[150%] tracking-[0.03em] text-[#515151] lowercase">I look forward to continuing the conversation.</p>
+        <h3 className="text-[28px] sm:text-[35px] md:text-[45px] font-normal leading-[100%] tracking-[0.03em] text-[#1A1A1A] lowercase">thank you<br />for your interest!</h3>
+        <div className="mt-2 w-full max-w-[395px]">
+          <p className="text-[16px] md:text-[18px] font-normal leading-[150%] tracking-[0.03em] text-[#515151] lowercase">your message has been sent.</p>
+          <p className="text-[16px] md:text-[18px] font-normal leading-[150%] tracking-[0.03em] text-[#515151] lowercase">I look forward to continuing the conversation.</p>
         </div>
       </>
     );
@@ -54,15 +54,15 @@ export default function ContactForm() {
 
   return (
     <>
-      <h3 className="text-[45px] font-normal leading-[100%] tracking-[0.03em] text-[#1A1A1A] lowercase">interested in prints<br />or collaborations?</h3>
-      <p className="mt-2 text-[18px] font-normal leading-[150%] tracking-[0.03em] text-[#515151] lowercase w-[477px]">leave your message below and I&apos;ll get back to you soon</p>
+      <h3 className="text-[28px] sm:text-[35px] md:text-[45px] font-normal leading-[100%] tracking-[0.03em] text-[#1A1A1A] lowercase">interested in prints<br />or collaborations?</h3>
+      <p className="mt-2 text-[16px] md:text-[18px] font-normal leading-[150%] tracking-[0.03em] text-[#515151] lowercase w-full max-w-[477px]">leave your message below and I&apos;ll get back to you soon</p>
 
       <form
         className="mt-4 space-y-3"
         onSubmit={handleSubmit}
       >
         <textarea
-          className={`w-[500px] h-[117px] border border-gray-300 bg-transparent px-3 py-2 text-[12px] outline-none focus:border-gray-300 resize-none ${touched.message && !isMessageValid ? 'placeholder-red-500' : 'placeholder-gray-500'}`}
+          className={`w-full max-w-[500px] h-[100px] sm:h-[117px] border border-gray-300 bg-transparent px-3 py-2 text-[12px] outline-none focus:border-gray-300 resize-none ${touched.message && !isMessageValid ? 'placeholder-red-500' : 'placeholder-gray-500'}`}
           placeholder={touched.message && !isMessageValid ? "Please write your message here" : "Your message here"}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
@@ -71,10 +71,10 @@ export default function ContactForm() {
             color: touched.message && !isMessageValid ? '#ef4444' : '#999'
           }}
         />
-        <div className="flex gap-5 items-end">
-          <div className="flex flex-col gap-1">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-5 items-end">
+          <div className="flex flex-col gap-1 w-full sm:w-auto">
             <input
-              className={`w-[240px] h-[29px] bg-transparent border-0 border-b border-gray-300 px-0 py-0 text-[12px] outline-none focus:border-gray-300 ${touched.name && !isNameValid ? 'placeholder-red-500' : 'placeholder-gray-500'}`}
+              className={`w-full sm:w-[240px] h-[29px] bg-transparent border-0 border-b border-gray-300 px-0 py-0 text-[12px] outline-none focus:border-gray-300 ${touched.name && !isNameValid ? 'placeholder-red-500' : 'placeholder-gray-500'}`}
               placeholder={touched.name && !isNameValid ? "Please enter your name" : "Name"}
               value={name}
               onChange={(e) => setName(e.target.value)}
@@ -84,12 +84,12 @@ export default function ContactForm() {
               }}
             />
           </div>
-          <div className="flex flex-col-reverse gap-1">
+          <div className="flex flex-col-reverse gap-1 w-full sm:w-auto">
             {touched.email && !isEmailValid && email.length > 0 && (
               <span className="text-[10px] text-red-500">please enter a valid email address</span>
             )}
             <input
-              className={`w-[240px] h-[29px] bg-transparent border-0 border-b border-gray-300 px-0 py-0 text-[12px] outline-none focus:border-gray-300 ${touched.email && !isEmailValid ? 'placeholder-red-500 border-red-500' : 'placeholder-gray-500'}`}
+              className={`w-full sm:w-[240px] h-[29px] bg-transparent border-0 border-b border-gray-300 px-0 py-0 text-[12px] outline-none focus:border-gray-300 ${touched.email && !isEmailValid ? 'placeholder-red-500 border-red-500' : 'placeholder-gray-500'}`}
               placeholder={touched.email && !isEmailValid ? "Invalid email" : "Email"}
               inputMode="email"
               value={email}
@@ -103,7 +103,7 @@ export default function ContactForm() {
           </div>
           <button
             type="submit"
-            className="h-[40px] px-10 bg-[#1A1A1A] text-white text-[12px] hover:bg-[#333] transition-colors border border-[#1A1A1A] whitespace-nowrap"
+            className="h-[40px] px-8 sm:px-10 bg-[#1A1A1A] text-white text-[12px] hover:bg-[#333] transition-colors border border-[#1A1A1A] whitespace-nowrap w-full sm:w-auto"
           >
             get in touch
           </button>

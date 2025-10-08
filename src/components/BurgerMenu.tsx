@@ -1,98 +1,32 @@
 'use client';
 
-import React, { useState } from 'react';
-import Sidebar from '@/components/Sidebar';
-import NavigationButton from '@/components/NavigationButton';
+import React from 'react';
+import Link from 'next/link';
 
-export default function Portfolio() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  
-  // Масив пар фото (вертикальне + горизонтальне)
-  const slides = [
-    {
-      vertical: "/gallery/2 1.png",
-      horizontal: "/gallery/Frame 458.png",
-    },
-    {
-      vertical: "/gallery/2 11.png",
-      horizontal: "/gallery/Frame 4581.png",
-    },
-    {
-      vertical: "/gallery/2 12.png",
-      horizontal: "/gallery/Frame 4582.png",
-    },
-    {
-      vertical: "/gallery/2 13.png",
-      horizontal: "/gallery/Frame 4583.png",
-    },
-    {
-      vertical: "/gallery/2 14.png",
-      horizontal: "/gallery/Frame 4584.png",
-    },
-  ];
+interface BurgerMenuProps {
+  isOpen: boolean;
+  onToggle: () => void;
+}
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
-
+export default function BurgerMenu({ isOpen, onToggle }: BurgerMenuProps) {
   return (
-    <div className="min-h-screen bg-[#F5F5F5] flex flex-col relative">
-      {/* Header */}
-      <header className="bg-transparent relative">
-        <div className="px-4 md:px-12 pt-14 pb-6.5 flex items-center justify-between">
-          <h1 className="text-[22px] md:text-[45px] font-normal leading-[110%] tracking-[0.03em] text-[#1A1A1A] uppercase">
-            ANASTASIIA ANTONENKO
-          </h1>
-          {/* Burger Menu Button */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2"
-            aria-label="Toggle menu"
-          >
-            <div className="w-6 h-6 flex flex-col justify-center items-center">
-              <span
-                className={`block h-0.5 w-6 bg-black transition-all duration-300 ${
-                  isMobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''
-                }`}
-              />
-              <span
-                className={`block h-0.5 w-6 bg-black transition-all duration-300 mt-1 ${
-                  isMobileMenuOpen ? 'opacity-0' : ''
-                }`}
-              />
-              <span
-                className={`block h-0.5 w-6 bg-black transition-all duration-300 mt-1 ${
-                  isMobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''
-                }`}
-              />
-            </div>
-          </button>
-        </div>
-        {/* Horizontal line that ends where the sidebar starts */}
-        <div className="absolute bottom-0 left-0 right-0 lg:right-[17rem] h-px bg-gray-300" />
-      </header>
-
+    <>
       {/* Mobile Menu Overlay */}
       <div
         className={`fixed inset-0 z-40 lg:hidden transition-all duration-300 ${
-          isMobileMenuOpen ? 'visible opacity-100' : 'invisible opacity-0'
+          isOpen ? 'visible opacity-100' : 'invisible opacity-0'
         }`}
       >
         {/* Background Blur and Dark Overlay */}
         <div
           className={`absolute inset-0 transition-all duration-300 ${
-            isMobileMenuOpen ? 'opacity-100' : 'opacity-0'
+            isOpen ? 'opacity-100' : 'opacity-0'
           }`}
           style={{
             background: '#393838CC',
             backdropFilter: 'blur(4px)'
           }}
-          onClick={() => setIsMobileMenuOpen(false)}
+          onClick={onToggle}
         />
 
         {/* Top horizontal line - extends to screen edge */}
@@ -121,7 +55,7 @@ export default function Portfolio() {
 
         {/* Close button (X) - positioned in top right area */}
         <button
-          onClick={() => setIsMobileMenuOpen(false)}
+          onClick={onToggle}
           className="absolute z-50 text-white hover:opacity-70 transition-opacity"
           aria-label="Close menu"
           style={{
@@ -138,7 +72,7 @@ export default function Portfolio() {
         {/* Menu Panel */}
         <div
           className={`absolute left-0 top-0 h-full bg-transparent transition-all duration-300 ease-in-out ${
-            isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
+            isOpen ? 'translate-x-0' : '-translate-x-full'
           }`}
           style={{
             width: '315px'
@@ -171,7 +105,7 @@ export default function Portfolio() {
             <nav style={{ marginBottom: '20px' }}>
               <ul style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
                 <li>
-                  <a
+                  <Link
                     href="/#about"
                     className="text-white uppercase hover:opacity-70 transition-opacity"
                     style={{
@@ -181,13 +115,13 @@ export default function Portfolio() {
                       lineHeight: '110%',
                       letterSpacing: '-0.2%'
                     }}
-                    onClick={() => setIsMobileMenuOpen(false)}
+                    onClick={onToggle}
                   >
                     ABOUT
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="/portfolio-grid"
                     className="text-white uppercase hover:opacity-70 transition-opacity"
                     style={{
@@ -197,13 +131,13 @@ export default function Portfolio() {
                       lineHeight: '110%',
                       letterSpacing: '-0.2%'
                     }}
-                    onClick={() => setIsMobileMenuOpen(false)}
+                    onClick={onToggle}
                   >
                     PORTFOLIO
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="/#process"
                     className="text-white uppercase hover:opacity-70 transition-opacity"
                     style={{
@@ -213,10 +147,10 @@ export default function Portfolio() {
                       lineHeight: '110%',
                       letterSpacing: '-0.2%'
                     }}
-                    onClick={() => setIsMobileMenuOpen(false)}
+                    onClick={onToggle}
                   >
                     PROCESS
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </nav>
@@ -288,80 +222,6 @@ export default function Portfolio() {
           </div>
         </div>
       </div>
-
-      {/* Main Content */}
-      <div className="flex-1">
-        {/* Gallery Section */}
-        <main className="py-8 pr-4 lg:pr-[17rem] pl-4 lg:pl-12">
-          <div>
-            <div className="relative">
-              {/* Two Photos Layout */}
-              <div className="flex flex-col lg:flex-row lg:items-center gap-6">
-                {/* Vertical Photo */}
-                <div className="w-full lg:w-[35%] relative order-2 lg:order-1">
-                  <div className="aspect-[3/4] overflow-hidden bg-transparent">
-                    <img
-                      src={slides[currentSlide].vertical}
-                      alt="Vertical photo"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-
-                {/* Horizontal Photo */}
-                <div className="w-full lg:w-[58%] relative order-1 lg:order-2">
-                  <div className="aspect-[4/3] overflow-hidden bg-transparent">
-                    <img
-                      src={slides[currentSlide].horizontal}
-                      alt="Horizontal photo"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              {/* Email below images - hidden on mobile */}
-              <div className="hidden lg:block text-right mt-16 pr-4 lg:pr-12">
-                <p className="text-[16px] font-normal leading-[150%] tracking-[0.03em] text-[#515151]">stushaphotofilm@gmail.com</p>
-              </div>
-
-              {/* Mobile Navigation Dots */}
-              <div className="lg:hidden flex justify-center mt-8 gap-2">
-                {slides.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentSlide(index)}
-                    className={`w-2 h-2 rounded-full transition-colors duration-200 ${
-                      index === currentSlide ? 'bg-[#515151]' : 'bg-[#D1D1D1]'
-                    }`}
-                    aria-label={`Go to slide ${index + 1}`}
-                  />
-                ))}
-              </div>
-
-              {/* Navigation Buttons */}
-              <NavigationButton
-                direction="left"
-                onClick={prevSlide}
-                className="absolute left-2 lg:left-4 top-1/2 -translate-y-1/2"
-                variant="carousel"
-              />
-              
-              <NavigationButton
-                direction="right"
-                onClick={nextSlide}
-                className="absolute right-2 lg:left-[calc(35%+1.5rem+58%-4rem)] lg:right-auto top-1/2 -translate-y-1/2"
-                variant="carousel"
-              />
-            </div>
-          </div>
-        </main>
-      </div>
-
-      {/* Sidebar Navigation - fixed positioned, hidden on mobile */}
-      <div className="hidden lg:block fixed top-0 bottom-0 right-0 w-[17rem]">
-        <Sidebar />
-      </div>
-    </div>
+    </>
   );
 }

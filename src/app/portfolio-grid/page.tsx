@@ -6,10 +6,97 @@ import Header from '@/components/Header';
 import Sidebar from '@/components/Sidebar';
 import ContactForm from '@/components/ContactForm';
 import NavigationButton, { CloseButton } from '@/components/NavigationButton';
+import BurgerMenu from '@/components/BurgerMenu';
 
 export default function PortfolioGridPage() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [scale, setScale] = useState(1);
   const router = useRouter();
+
+  // Calculate scale based on available width
+  React.useEffect(() => {
+    const calculateScale = () => {
+      const windowWidth = window.innerWidth;
+      const gridWidth = 1100; // Fixed grid width
+      
+      // Calculate available width based on screen size
+      let availableWidth;
+      let scaleFactor = 0.95; // Conservative factor to prevent overlap
+      
+      if (windowWidth >= 1280) {
+        // Large Desktop with sidebar
+        const sidebarWidth = 272; // lg:pr-[17rem] = 17 * 16 = 272px
+        const margins = 48; // lg:mx-6 = 24px * 2
+        const padding = 80; // lg:pl-12 + lg:pr-8 = 48 + 32
+        availableWidth = windowWidth - sidebarWidth - margins - padding;
+        scaleFactor = 0.92;
+      } else if (windowWidth >= 1024) {
+        // Desktop with sidebar - more generous for better photo display
+        const sidebarWidth = 272;
+        const margins = 48;
+        const padding = 48;
+        const safetyBuffer = 20;
+        availableWidth = windowWidth - sidebarWidth - margins - padding - safetyBuffer;
+        scaleFactor = 0.95; // More generous for better display
+      } else if (windowWidth >= 768) {
+        // Tablet with sidebar - account for sidebar
+        const sidebarWidth = 272; // md:pr-[17rem] = 17 * 16 = 272px
+        const margins = 24; // md:mx-3 = 12px * 2 = 24px
+        const padding = 32; // md:px-2 + some extra
+        const safetyBuffer = 20; // Minimal safety buffer
+        availableWidth = windowWidth - sidebarWidth - margins - padding - safetyBuffer;
+        scaleFactor = 0.95; // More aggressive for tablets
+      } else if (windowWidth >= 640) {
+        // Small tablets / large phones - no sidebar
+        const padding = 20;
+        availableWidth = windowWidth - padding;
+        scaleFactor = 0.90;
+      } else {
+        // Mobile - no sidebar
+        const padding = 8; // px-1
+        availableWidth = windowWidth - padding;
+        scaleFactor = 0.95;
+      }
+      
+      // Calculate scale to fit available width
+      let calculatedScale = (availableWidth * scaleFactor) / gridWidth;
+      
+      // Set minimum and maximum scale limits based on screen size
+      let maxScale = 1.0;
+      let minScale = 0.25;
+      
+      if (windowWidth < 1280 && windowWidth >= 1024) {
+        maxScale = 0.85; // Larger for smaller desktop screens with sidebar
+      } else if (windowWidth >= 768 && windowWidth < 1024) {
+        maxScale = 0.75; // Larger for tablets with sidebar
+        minScale = 0.4;
+      } else if (windowWidth >= 640 && windowWidth < 768) {
+        maxScale = 0.95; // Allow more zoom for small tablets
+        minScale = 0.4;
+      } else if (windowWidth < 640) {
+        maxScale = 1.0; // Full scale for mobile
+        minScale = 0.3;
+      }
+      
+      calculatedScale = Math.max(minScale, Math.min(maxScale, calculatedScale));
+      
+      // Debug logging
+      console.log(`Window: ${windowWidth}px, Available: ${availableWidth}px, Scale: ${calculatedScale.toFixed(3)}, Range: ${minScale}-${maxScale}`);
+      
+      setScale(calculatedScale);
+    };
+
+    // Small delay to ensure proper calculation after layout
+    const timeoutId = setTimeout(calculateScale, 100);
+    calculateScale();
+    
+    window.addEventListener('resize', calculateScale);
+    return () => {
+      clearTimeout(timeoutId);
+      window.removeEventListener('resize', calculateScale);
+    };
+  }, []);
 
   // Gallery images with equal spacing (gap = 40px)
   // Each column is independent - images flow sequentially with gaps
@@ -188,55 +275,109 @@ export default function PortfolioGridPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F5F5F5] relative">
-      <div className="mx-6 my-6 bg-transparent relative pr-[17rem]">
-        {/* Header */}
-        <Header title="PORTFOLIO" subtitle="anastasiia antonenko" />
+    <div className="min-h-screen bg-[#F5F5F5] relative overflow-x-hidden">
+      {/* Burger Menu - mobile only */}
+      <div className="md:hidden">
+        <BurgerMenu 
+          isOpen={isMobileMenuOpen} 
+          onToggle={() => setIsMobileMenuOpen(!isMobileMenuOpen)} 
+        />
+      </div>
+      
+      {/* Mobile Header - only shows on mobile screens */}
+      <header className="md:hidden bg-transparent relative">
+        <div className="px-2 pt-12 pb-6 flex items-center justify-between">
+          <h1 className="text-[22px] font-normal leading-[110%] tracking-[0.03em] text-[#1A1A1A] uppercase">
+            PORTFOLIO
+          </h1>
+          {/* Burger Menu Button */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="p-2"
+            aria-label="Toggle menu"
+          >
+            <div className="w-6 h-6 flex flex-col justify-center items-center">
+              <span
+                className={`block h-0.5 w-6 bg-black transition-all duration-300 ${
+                  isMobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''
+                }`}
+              />
+              <span
+                className={`block h-0.5 w-6 bg-black transition-all duration-300 mt-1 ${
+                  isMobileMenuOpen ? 'opacity-0' : ''
+                }`}
+              />
+              <span
+                className={`block h-0.5 w-6 bg-black transition-all duration-300 mt-1 ${
+                  isMobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''
+                }`}
+              />
+            </div>
+          </button>
+        </div>
+        {/* Horizontal line */}
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gray-300" />
+      </header>
+      
+      <div className="md:mx-3 lg:mx-6 md:my-3 lg:my-6 bg-transparent relative pr-0 md:pr-[17rem]">
+        {/* Desktop/Tablet Header - uses original Header component */}
+        <div className="hidden md:block">
+          <Header title="PORTFOLIO" subtitle="anastasiia antonenko" />
+        </div>
 
         {/* Main content area */}
-        <main className="py-8 pl-12 pr-8">
-          {/* Portfolio Grid with absolute positioning */}
-          <div className="-ml-12 -mr-8 relative" style={{ height: '2200px' }}>
-            {portfolioItems.map((item, index) => (
-              <div key={item.id} className="absolute" style={{ top: `${item.top}px`, left: `${item.left}px` }}>
-                {/* Image */}
-                <div 
-                  className="overflow-hidden bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
-                  style={{
-                    width: `${item.width}px`,
-                    height: `${item.height}px`
-                  }}
-                  onClick={() => handleItemClick(item, index)}
-                >
-                  <img 
-                    src={item.image} 
-                    alt={item.title}
-                    className="w-full h-full object-cover" 
-                  />
+        <main className="py-2 md:py-4 lg:py-8 px-1 sm:px-2 md:px-2 lg:pl-12 lg:pr-8">
+          {/* Portfolio Grid with absolute positioning - scales responsively */}
+          <div 
+            className="w-full origin-top-left transition-transform duration-200 ease-out"
+            style={{ 
+              transform: `scale(${scale})`,
+              height: `${2200 * scale}px`,
+              marginBottom: `${scale < 0.5 ? '10px' : '0px'}`
+            }}
+          >
+            <div className="relative" style={{ width: '1100px', height: '2200px' }}>
+              {portfolioItems.map((item, index) => (
+                <div key={item.id} className="absolute" style={{ top: `${item.top}px`, left: `${item.left}px` }}>
+                  {/* Image */}
+                  <div 
+                    className="overflow-hidden bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
+                    style={{
+                      width: `${item.width}px`,
+                      height: `${item.height}px`
+                    }}
+                    onClick={() => handleItemClick(item, index)}
+                  >
+                    <img 
+                      src={item.image} 
+                      alt={item.title}
+                      className="w-full h-full object-cover" 
+                    />
+                  </div>
+                  
+                  {/* Caption */}
+                  <div className="mt-2 mb-20" style={{ width: `${item.width}px` }}>
+                    <h3 className="text-[18.2px] font-normal leading-[150%] tracking-[-0.01em] text-[#1A1A1A] uppercase" style={{ fontFamily: 'Work Sans' }}>
+                      {item.title}
+                    </h3>
+                    <p className="text-[16px] font-normal leading-[150%] tracking-[-0.01em] text-[#515151] mt-1" style={{ fontFamily: 'Work Sans' }}>
+                      {item.year}
+                    </p>
+                  </div>
                 </div>
-                
-                {/* Caption */}
-                <div className="mt-2 mb-20" style={{ width: `${item.width}px` }}>
-                  <h3 className="text-[18.2px] font-normal leading-[150%] tracking-[-0.01em] text-[#1A1A1A] uppercase" style={{ fontFamily: 'Work Sans' }}>
-                    {item.title}
-                  </h3>
-                  <p className="text-[16px] font-normal leading-[150%] tracking-[-0.01em] text-[#515151] mt-1" style={{ fontFamily: 'Work Sans' }}>
-                    {item.year}
-                  </p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
 
           {/* Contact Form */}
-          <div className="mt-0 pt-0">
+          <div className="mt-4 md:mt-6 lg:mt-8 pt-0 px-2 sm:px-4 md:px-0">
             <ContactForm />
           </div>
         </main>
       </div>
 
-      {/* Sidebar - fixed positioned relative to viewport */}
-      <div className="fixed top-0 bottom-0 right-0 w-[17rem]">
+      {/* Sidebar - fixed positioned relative to viewport, hidden only on mobile */}
+      <div className="hidden md:block fixed top-0 bottom-0 right-0 w-[17rem]">
         <Sidebar />
       </div>
 

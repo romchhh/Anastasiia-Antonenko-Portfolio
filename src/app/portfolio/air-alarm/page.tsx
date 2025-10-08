@@ -5,11 +5,13 @@ import Header from '@/components/Header';
 import Sidebar from '@/components/Sidebar';
 import ContactForm from '@/components/ContactForm';
 import NavigationButton, { CloseButton } from '@/components/NavigationButton';
+import BurgerMenu from '@/components/BurgerMenu';
 
 export default function AirAlarmPage() {
   const [activeTab, setActiveTab] = useState<'overview' | 'full'>('overview');
   // Modal state
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // Gallery images with absolute positioning based on provided coordinates
   const gap = 20;
@@ -100,7 +102,13 @@ And we, too, have changed. Fear no longer devours us — it transforms into stre
   
   return (
     <div className="min-h-screen bg-[#F5F5F5] relative">
-      <div className="mx-6 my-6 bg-transparent relative pr-[17rem]">
+      {/* Burger Menu */}
+      <BurgerMenu 
+        isOpen={isMobileMenuOpen} 
+        onToggle={() => setIsMobileMenuOpen(!isMobileMenuOpen)} 
+      />
+      
+      <div className="mx-6 my-6 bg-transparent relative pr-4 lg:pr-[17rem]">
         {/* Header */}
         <Header title="AIR ALARM" subtitle="anastasiia antonenko" />
 
@@ -183,8 +191,8 @@ And we, too, have changed. Fear no longer devours us — it transforms into stre
         </main>
       </div>
 
-      {/* Sidebar - fixed positioned relative to viewport */}
-      <div className="fixed top-0 bottom-0 right-0 w-[17rem]">
+      {/* Sidebar - fixed positioned relative to viewport, hidden on mobile */}
+      <div className="hidden lg:block fixed top-0 bottom-0 right-0 w-[17rem]">
         <Sidebar />
       </div>
 
