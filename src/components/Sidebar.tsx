@@ -11,7 +11,7 @@ export default function Sidebar() {
             </Link>
           </li>
           <li>
-            <Link href="/portfolio" className="text-[#515151] tracking-wide hover:text-[#1A1A1A] transition-colors">
+            <Link href="/portfolio-grid" className="text-[#515151] tracking-wide hover:text-[#1A1A1A] transition-colors">
               PORTFOLIO
             </Link>
           </li>

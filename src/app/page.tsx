@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
 import Sidebar from '@/components/Sidebar';
+import NavigationButton from '@/components/NavigationButton';
 
 export default function Portfolio() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -97,23 +97,19 @@ export default function Portfolio() {
               </div>
 
               {/* Navigation Buttons */}
-              <button
+              <NavigationButton
+                direction="left"
                 onClick={prevSlide}
-                className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 z-10 hover:scale-110 hover:bg-[#1A1A1A]"
-                style={{ backgroundColor: '#A6A3A3B2' }}
-                aria-label="Previous"
-              >
-                <ArrowLeft className="w-5 h-5 text-white" />
-              </button>
+                className="absolute left-4 top-1/2 -translate-y-1/2"
+                variant="carousel"
+              />
               
-              <button
+              <NavigationButton
+                direction="right"
                 onClick={nextSlide}
-                className="absolute left-[calc(35%+1.5rem+58%-4rem)] top-1/2 -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 z-10 hover:scale-110 hover:bg-[#1A1A1A]"
-                style={{ backgroundColor: '#A6A3A3B2' }}
-                aria-label="Next"
-              >
-                <ArrowRight className="w-5 h-5 text-white" />
-              </button>
+                className="absolute left-[calc(35%+1.5rem+58%-4rem)] top-1/2 -translate-y-1/2"
+                variant="carousel"
+              />
             </div>
           </div>
         </main>
