@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import Sidebar from '@/components/Sidebar';
 import NavigationButton from '@/components/NavigationButton';
 
@@ -171,7 +172,7 @@ export default function Portfolio() {
             <nav style={{ marginBottom: '20px' }}>
               <ul style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
                 <li>
-                  <a
+                  <Link
                     href="/#about"
                     className="text-white uppercase hover:opacity-70 transition-opacity"
                     style={{
@@ -184,7 +185,7 @@ export default function Portfolio() {
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     ABOUT
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a
@@ -203,7 +204,7 @@ export default function Portfolio() {
                   </a>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="/#process"
                     className="text-white uppercase hover:opacity-70 transition-opacity"
                     style={{
@@ -216,7 +217,7 @@ export default function Portfolio() {
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     PROCESS
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </nav>
