@@ -1,22 +1,41 @@
+'use client';
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Sidebar() {
+  const pathname = usePathname();
   return (
     <aside className="h-full w-full bg-transparent border-l border-gray-300 flex flex-col">
       <nav className="p-8 pt-36">
         <ul className="space-y-6 text-[20px]">
           <li>
-            <Link href="/#about" className="text-[#515151] tracking-wide hover:text-[#1A1A1A] transition-colors">
+            <Link 
+              href="/about" 
+              className={`tracking-wide transition-colors ${
+                pathname === '/about' ? 'text-[#080808]' : 'text-[#515151] hover:text-[#1A1A1A]'
+              }`}
+            >
               ABOUT
             </Link>
           </li>
           <li>
-            <Link href="/portfolio-grid" className="text-[#515151] tracking-wide hover:text-[#1A1A1A] transition-colors">
+            <Link 
+              href="/portfolio-grid" 
+              className={`tracking-wide transition-colors ${
+                pathname === '/portfolio-grid' ? 'text-[#080808]' : 'text-[#515151] hover:text-[#1A1A1A]'
+              }`}
+            >
               PORTFOLIO
             </Link>
           </li>
           <li>
-            <Link href="/#process" className="text-[#515151] tracking-wide hover:text-[#1A1A1A] transition-colors">
+            <Link 
+              href="/process" 
+              className={`tracking-wide transition-colors ${
+                pathname === '/process' ? 'text-[#080808]' : 'text-[#515151] hover:text-[#1A1A1A]'
+              }`}
+            >
               PROCESS
             </Link>
           </li>

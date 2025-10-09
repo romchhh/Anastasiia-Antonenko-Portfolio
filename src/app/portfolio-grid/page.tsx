@@ -8,6 +8,23 @@ import ContactForm from '@/components/ContactForm';
 import NavigationButton, { CloseButton } from '@/components/NavigationButton';
 import BurgerMenu from '@/components/BurgerMenu';
 
+interface PortfolioItem {
+  id: string;
+  title: string;
+  year: string;
+  image: string;
+  mobileImage?: string;
+  width: number;
+  height: number;
+  top: number;
+  left: number;
+  row: number;
+  mobileOrder?: number;
+  tabletOrder?: number;
+  description: string;
+  link: string;
+}
+
 export default function PortfolioGridPage() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -106,7 +123,7 @@ export default function PortfolioGridPage() {
   const col2Width = 620; // Second column width (larger) - slightly increased for single images
   const smallWidth = 290; // Small images width for second column (2 small images = 290 + 20 + 290 = 600)
   
-  const portfolioItems = [
+  const portfolioItems: PortfolioItem[] = [
     // COLUMN 1 (left column - 400px wide)
     // 2 3.png: starts at 0, ends at 560
     {
@@ -119,6 +136,8 @@ export default function PortfolioGridPage() {
       top: 0,
       left: gap,
       row: 1,
+      mobileOrder: 2,
+      tabletOrder: 2,
       description: 'A series exploring the delicate nature of memory and time.',
       link: '/portfolio/fragile-traces'
     },
@@ -133,6 +152,8 @@ export default function PortfolioGridPage() {
       top: 640,
       left: gap,
       row: 2,
+      mobileOrder: 3,
+      tabletOrder: 4,
       description: 'Collage work examining the intersection of news and personal experience.',
       link: '/portfolio/from-headlines-to-reality'
     },
@@ -147,6 +168,8 @@ export default function PortfolioGridPage() {
       top: 1030,
       left: gap,
       row: 3,
+      mobileOrder: 4,
+      tabletOrder: 8,
       description: 'Ghostly figures in urban landscapes.',
       link: '/portfolio/phantom'
     },
@@ -156,11 +179,14 @@ export default function PortfolioGridPage() {
       title: 'KYIV IN COLOR',
       year: '2022',
       image: '/portfolio/Rectangle 742.png',
+      mobileImage: '/portfolio/2 34.png',
       width: col1Width,
       height: 340,
       top: 1712,
       left: gap,
       row: 4,
+      mobileOrder: 6,
+      tabletOrder: 6,
       description: 'Early exploration of selective color in urban photography.',
       link: '/portfolio/kyiv-in-color'
     },
@@ -177,6 +203,8 @@ export default function PortfolioGridPage() {
       top: 0,
       left: col1Width + gap * 2,
       row: 1,
+      mobileOrder: 1,
+      tabletOrder: 1,
       description: 'Damaged negatives reflecting fragmented memory and collective erasure.',
       link: '/portfolio/holes-of-time'
     },
@@ -191,6 +219,8 @@ export default function PortfolioGridPage() {
       top: 520,
       left: col1Width + gap * 2,
       row: 2,
+      mobileOrder: 4,
+      tabletOrder: 5,
       description: 'A study of perception and identity through portraiture.',
       link: '/portfolio/in-the-eyes-of-others'
     },
@@ -204,6 +234,8 @@ export default function PortfolioGridPage() {
       top: 520,
       left: col1Width + gap * 2 + smallWidth + gap,
       row: 2,
+      mobileOrder: 2,
+      tabletOrder: 3,
       description: 'Exploration of memory through water and time.',
       link: '/portfolio/washed-memories'
     },
@@ -218,6 +250,8 @@ export default function PortfolioGridPage() {
       top: 1005,
       left: col1Width + gap * 2,
       row: 3,
+      mobileOrder: 6,
+      tabletOrder: 9,
       description: 'Visual response to conflict and its impact on daily life.',
       link: '/portfolio/air-alarm'
     },
@@ -232,6 +266,8 @@ export default function PortfolioGridPage() {
       top: 1663,
       left: col1Width + gap * 2,
       row: 4,
+      mobileOrder: 5,
+      tabletOrder: 7,
       description: 'Polaroid documentation of Kyiv with selective color highlighting.',
       link: '/portfolio/kyiv-in-color-polaroid'
     },
@@ -245,12 +281,14 @@ export default function PortfolioGridPage() {
       top: 1663,
       left: col1Width + gap * 2 + smallWidth + gap,
       row: 4,
+      mobileOrder: 5,
+      tabletOrder: 10,
       description: 'Metaphorical exploration of destruction and rebirth.',
       link: '/portfolio/down-in-flames'
     }
   ];
 
-  const handleItemClick = (item: typeof portfolioItems[number], index: number) => {
+  const handleItemClick = (item: PortfolioItem, index: number) => {
     if (item.link) {
       router.push(item.link);
     } else {
@@ -275,7 +313,7 @@ export default function PortfolioGridPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F5F5F5] relative overflow-x-hidden">
+    <div className="min-h-screen bg-[#F5F5F5] relative overflow-x-hidden" style={{ margin: 0, padding: 0 }}>
       {/* Burger Menu - mobile only */}
       <div className="md:hidden">
         <BurgerMenu 
@@ -285,9 +323,21 @@ export default function PortfolioGridPage() {
       </div>
       
       {/* Mobile Header - only shows on mobile screens */}
-      <header className="md:hidden bg-transparent relative">
-        <div className="px-2 pt-12 pb-6 flex items-center justify-between">
-          <h1 className="text-[22px] font-normal leading-[110%] tracking-[0.03em] text-[#1A1A1A] uppercase">
+      <header className="md:hidden bg-transparent relative" style={{ margin: 0, padding: 0 }}>
+        <div className="px-5 pt-5 pb-4 flex items-center justify-between" style={{ margin: 0 }}>
+          <h1 
+            style={{ 
+              fontFamily: 'var(--font-work-sans), "Work Sans", -apple-system, BlinkMacSystemFont, sans-serif',
+              fontWeight: 400,
+              fontSize: '22px',
+              lineHeight: '110%',
+              letterSpacing: '-0.01em',
+              textTransform: 'uppercase' as const,
+              color: '#1A1A1A',
+              margin: 0,
+              padding: 0
+            }}
+          >
             PORTFOLIO
           </h1>
           {/* Burger Menu Button */}
@@ -316,8 +366,19 @@ export default function PortfolioGridPage() {
           </button>
         </div>
         {/* Horizontal line */}
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gray-300" />
+        <div className="absolute bottom-0 left-5 right-0 h-px bg-gray-300" />
       </header>
+      
+      {/* Author name under horizontal line - right aligned, clickable */}
+      <div className="md:hidden px-2 pt-3 pb-2 flex justify-end">
+        <button 
+          onClick={() => window.location.href = '/portfolio-grid'}
+          className="text-[16px] font-normal leading-[110%] tracking-[-0.01em] text-[#1A1A1A] lowercase hover:opacity-70 transition-opacity"
+          style={{ fontFamily: 'Work Sans' }}
+        >
+          anastasiia antonenko
+        </button>
+      </div>
       
       <div className="md:mx-3 lg:mx-6 md:my-3 lg:my-6 bg-transparent relative pr-0 md:pr-[17rem]">
         {/* Desktop/Tablet Header - uses original Header component */}
@@ -326,10 +387,10 @@ export default function PortfolioGridPage() {
         </div>
 
         {/* Main content area */}
-        <main className="py-2 md:py-4 lg:py-8 px-1 sm:px-2 md:px-2 lg:pl-12 lg:pr-8">
-          {/* Portfolio Grid with absolute positioning - scales responsively */}
+        <main className="py-0 md:py-4 lg:py-8 px-5 md:px-2 lg:pl-12 lg:pr-8">
+          {/* Desktop: Portfolio Grid with absolute positioning - scales responsively */}
           <div 
-            className="w-full origin-top-left transition-transform duration-200 ease-out"
+            className="hidden lg:block w-full origin-top-left transition-transform duration-200 ease-out"
             style={{ 
               transform: `scale(${scale})`,
               height: `${2200 * scale}px`,
@@ -367,6 +428,84 @@ export default function PortfolioGridPage() {
                 </div>
               ))}
             </div>
+          </div>
+
+          {/* Tablet: Grid with 2 columns */}
+          <div className="hidden md:grid lg:hidden grid-cols-2 gap-4">
+            {[...portfolioItems]
+              .sort((a, b) => (a.tabletOrder || 0) - (b.tabletOrder || 0))
+              .map((item, index) => (
+                <div 
+                  key={item.id} 
+                  className="cursor-pointer hover:opacity-80 transition-opacity"
+                  onClick={() => handleItemClick(item, index)}
+                >
+                  <div className="overflow-hidden bg-white/0">
+                    <img 
+                      src={item.image} 
+                      alt={item.title}
+                      className="w-full h-auto object-cover" 
+                    />
+                  </div>
+                  <div className="mt-2 mb-4">
+                    <h3 className="text-[16px] md:text-[18.2px] font-normal leading-[150%] tracking-[-0.01em] text-[#1A1A1A] uppercase" style={{ fontFamily: 'Work Sans' }}>
+                      {item.title}
+                    </h3>
+                    <p className="text-[14px] md:text-[16px] font-normal leading-[150%] tracking-[-0.01em] text-[#515151] mt-1" style={{ fontFamily: 'Work Sans' }}>
+                      {item.year}
+                    </p>
+                  </div>
+                </div>
+              ))}
+          </div>
+
+          {/* Mobile: Custom layout */}
+          <div className="md:hidden flex flex-col gap-4">
+            {[...portfolioItems]
+              .sort((a, b) => (a.mobileOrder || 0) - (b.mobileOrder || 0))
+              .reduce((rows: PortfolioItem[][], item, index, arr) => {
+                const prevItem = arr[index - 1];
+                const currentOrder = item.mobileOrder || 0;
+                const prevOrder = prevItem?.mobileOrder || 0;
+                
+                // Групуємо елементи з однаковим mobileOrder в один рядок
+                if (prevItem && currentOrder === prevOrder) {
+                  rows[rows.length - 1].push(item);
+                } else {
+                  rows.push([item]);
+                }
+                return rows;
+              }, [])
+              .map((row, rowIndex) => (
+                <div 
+                  key={rowIndex} 
+                  className={row.length === 1 ? "w-full" : "grid grid-cols-2 gap-2"}
+                >
+                  {row.map((item: PortfolioItem) => (
+                    <div 
+                      key={item.id}
+                      className="cursor-pointer hover:opacity-80 transition-opacity"
+                      onClick={() => handleItemClick(item, portfolioItems.indexOf(item))}
+                    >
+                      <div className="overflow-hidden bg-white/0">
+                        <img 
+                          src={item.mobileImage || item.image} 
+                          alt={item.title}
+                          className="w-full h-auto object-cover" 
+                        />
+                      </div>
+                      <div className="mt-2 mb-4">
+                        <h3 className="text-[14px] font-normal leading-[150%] tracking-[-0.01em] text-[#1A1A1A] uppercase" style={{ fontFamily: 'Work Sans' }}>
+                          {item.title}
+                        </h3>
+                        <p className="text-[12px] font-normal leading-[150%] tracking-[-0.01em] text-[#515151] mt-1" style={{ fontFamily: 'Work Sans' }}>
+                          {item.year}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ))}
           </div>
 
           {/* Contact Form */}

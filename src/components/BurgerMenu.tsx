@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 interface BurgerMenuProps {
   isOpen: boolean;
@@ -9,6 +10,7 @@ interface BurgerMenuProps {
 }
 
 export default function BurgerMenu({ isOpen, onToggle }: BurgerMenuProps) {
+  const pathname = usePathname();
   return (
     <>
       {/* Mobile Menu Overlay */}
@@ -94,7 +96,9 @@ export default function BurgerMenu({ isOpen, onToggle }: BurgerMenuProps) {
                   height: '24px'
                 }}
               >
-                ANASTASIIA ANTONENKO
+                <Link href="/" className="text-white uppercase hover:opacity-70 transition-opacity">
+                  ANASTASIIA ANTONENKO
+                </Link>
               </h1>
             </div>
 
@@ -106,8 +110,10 @@ export default function BurgerMenu({ isOpen, onToggle }: BurgerMenuProps) {
               <ul style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
                 <li>
                   <Link
-                    href="/#about"
-                    className="text-white uppercase hover:opacity-70 transition-opacity"
+                    href="/about"
+                    className={`uppercase transition-opacity ${
+                      pathname === '/about' ? 'text-[#080808]' : 'text-white hover:opacity-70'
+                    }`}
                     style={{
                       fontFamily: 'Work Sans',
                       fontWeight: 400,
@@ -123,7 +129,9 @@ export default function BurgerMenu({ isOpen, onToggle }: BurgerMenuProps) {
                 <li>
                   <Link
                     href="/portfolio-grid"
-                    className="text-white uppercase hover:opacity-70 transition-opacity"
+                    className={`uppercase transition-opacity ${
+                      pathname === '/portfolio-grid' ? 'text-[#080808]' : 'text-white hover:opacity-70'
+                    }`}
                     style={{
                       fontFamily: 'Work Sans',
                       fontWeight: 400,
@@ -138,8 +146,10 @@ export default function BurgerMenu({ isOpen, onToggle }: BurgerMenuProps) {
                 </li>
                 <li>
                   <Link
-                    href="/#process"
-                    className="text-white uppercase hover:opacity-70 transition-opacity"
+                    href="/process"
+                    className={`uppercase transition-opacity ${
+                      pathname === '/process' ? 'text-[#080808]' : 'text-white hover:opacity-70'
+                    }`}
                     style={{
                       fontFamily: 'Work Sans',
                       fontWeight: 400,

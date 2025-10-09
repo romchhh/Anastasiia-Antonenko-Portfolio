@@ -42,11 +42,12 @@ export default function Portfolio() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F5F5F5] flex flex-col relative">
+    <div className="min-h-screen bg-[#F5F5F5] flex flex-col relative" style={{ margin: 0, padding: 0 }}>
       {/* Header */}
       <header className="bg-transparent relative">
-        <div className="px-4 md:px-12 pt-14 pb-6.5 flex items-center justify-between">
-          <h1 className="text-[22px] md:text-[45px] font-normal leading-[110%] tracking-[0.03em] text-[#1A1A1A] uppercase">
+        <div className="px-5 md:px-12 pt-5 md:pt-14 pb-4 md:pb-6.5 flex items-center justify-between">
+          <h1 className="text-[22px] md:text-[45px] font-normal leading-[110%] tracking-[-0.01em] md:tracking-[0.03em] text-[#1A1A1A] uppercase"
+              style={{ fontFamily: 'var(--font-work-sans), "Work Sans", sans-serif' }}>
             ANASTASIIA ANTONENKO
           </h1>
           {/* Burger Menu Button */}
@@ -75,7 +76,7 @@ export default function Portfolio() {
           </button>
         </div>
         {/* Horizontal line that ends where the sidebar starts */}
-        <div className="absolute bottom-0 left-0 right-0 lg:right-[17rem] h-px bg-gray-300" />
+        <div className="absolute bottom-0 left-5 md:left-0 right-0 lg:right-[17rem] h-px bg-gray-300" />
       </header>
 
       {/* Mobile Menu Overlay */}
@@ -173,7 +174,7 @@ export default function Portfolio() {
               <ul style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
                 <li>
                   <Link
-                    href="/#about"
+                    href="/about"
                     className="text-white uppercase hover:opacity-70 transition-opacity"
                     style={{
                       fontFamily: 'Work Sans',
@@ -205,7 +206,7 @@ export default function Portfolio() {
                 </li>
                 <li>
                   <Link
-                    href="/#process"
+                    href="/process"
                     className="text-white uppercase hover:opacity-70 transition-opacity"
                     style={{
                       fontFamily: 'Work Sans',
