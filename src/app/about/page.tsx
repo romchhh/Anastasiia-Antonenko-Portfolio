@@ -84,7 +84,7 @@ export default function AboutPage() {
                 {/* Portrait Image */}
                 <div className="flex-shrink-0">
                   <img 
-                    src="/about/2 2.png" 
+                    src="/about/2 2.jpg" 
                     alt="Anastasiia Antonenko" 
                     className="w-[300px] h-auto object-cover"
                   />
@@ -383,7 +383,7 @@ export default function AboutPage() {
             {/* Portrait Image */}
             <div className="mb-6">
               <img 
-                src="/about/2 2.png" 
+                src="/about/2 2.jpg" 
                 alt="Anastasiia Antonenko" 
                 className="w-full max-w-[300px] h-auto object-cover mx-auto"
               />
@@ -419,47 +419,23 @@ export default function AboutPage() {
                 bio
               </h3>
               <div className="space-y-4 text-[14px] md:text-[16px] leading-[155%] tracking-[-0.01em] text-[#1A1A1A]" style={{ fontFamily: 'Work Sans' }}>
-                <div>
-                  <div className="font-medium mb-1 lg:hidden normal-case">1996 —</div>
-                  <div className="lg:relative">
-                    <span className="font-medium hidden lg:inline-block lg:absolute lg:-left-[120px] lg:w-[110px] lg:text-right normal-case">1996 —</span>
-                    <span className="font-normal lowercase">Born in Luhansk, Ukraine.</span>
-                  </div>
+                <div className="lg:relative">
+                  <span className="font-medium lg:absolute lg:-left-[120px] lg:w-[110px] lg:text-right normal-case">1996 —</span> <span className="font-normal lowercase">Born in Luhansk, Ukraine.</span>
                 </div>
-                <div>
-                  <div className="font-medium mb-1 lg:hidden normal-case">2014–2019 —</div>
-                  <div className="lg:relative">
-                    <span className="font-medium hidden lg:inline-block lg:absolute lg:-left-[120px] lg:w-[110px] lg:text-right normal-case">2014–2019 —</span>
-                    <span className="font-normal lowercase">Studied at Kyiv National Linguistic University, Department of Oriental Studies (Linguistics, Oriental Studies). Alongside her academic studies, she began searching for her own language in photography.</span>
-                  </div>
+                <div className="lg:relative">
+                  <span className="font-medium lg:absolute lg:-left-[120px] lg:w-[110px] lg:text-right normal-case">2014–2019 —</span> <span className="font-normal lowercase">Studied at Kyiv National Linguistic University, Department of Oriental Studies (Linguistics, Oriental Studies). Alongside her academic studies, she began searching for her own language in photography.</span>
                 </div>
-                <div>
-                  <div className="font-medium mb-1 lg:hidden normal-case">2014–2015 —</div>
-                  <div className="lg:relative">
-                    <span className="font-medium hidden lg:inline-block lg:absolute lg:-left-[120px] lg:w-[110px] lg:text-right normal-case">2014–2015 —</span>
-                    <span className="font-normal lowercase">Completed courses at the Kyiv School of Photography, which became her first step into the medium and awakened an interest in the documentary image.</span>
-                  </div>
+                <div className="lg:relative">
+                  <span className="font-medium lg:absolute lg:-left-[120px] lg:w-[110px] lg:text-right normal-case">2014–2015 —</span> <span className="font-normal lowercase">Completed courses at the Kyiv School of Photography, which became her first step into the medium and awakened an interest in the documentary image.</span>
                 </div>
-                <div>
-                  <div className="font-medium mb-1 lg:hidden normal-case">2021–2022 —</div>
-                  <div className="lg:relative">
-                    <span className="font-medium hidden lg:inline-block lg:absolute lg:-left-[120px] lg:w-[110px] lg:text-right normal-case">2021–2022 —</span>
-                    <span className="font-normal lowercase">Studied at the School of Conceptual and Art Photography (MYPH). During this period she developed her artistic voice, moving from documentary observation toward more conceptual, poetic, and abstract approaches.</span>
-                  </div>
+                <div className="lg:relative">
+                  <span className="font-medium lg:absolute lg:-left-[120px] lg:w-[110px] lg:text-right normal-case">2021–2022 —</span> <span className="font-normal lowercase">Studied at the School of Conceptual and Art Photography (MYPH). During this period she developed her artistic voice, moving from documentary observation toward more conceptual, poetic, and abstract approaches.</span>
                 </div>
-                <div>
-                  <div className="font-medium mb-1 lg:hidden normal-case">2023 —</div>
-                  <div className="lg:relative">
-                    <span className="font-medium hidden lg:inline-block lg:absolute lg:-left-[120px] lg:w-[110px] lg:text-right normal-case">2023 —</span>
-                    <span className="font-normal lowercase">In 2023, she took part in an artist residency in Nuremberg, Germany, where she worked on projects that reflected her personal experience of displacement and the fragile intersections between private and collective memory.</span>
-                  </div>
+                <div className="lg:relative">
+                  <span className="font-medium lg:absolute lg:-left-[120px] lg:w-[110px] lg:text-right normal-case">2023 —</span> <span className="font-normal lowercase">In 2023, she took part in an artist residency in Nuremberg, Germany, where she worked on projects that reflected her personal experience of displacement and the fragile intersections between private and collective memory.</span>
                 </div>
-                <div>
-                  <div className="font-medium mb-1 lg:hidden normal-case">2024 —</div>
-                  <div className="lg:relative">
-                    <span className="font-medium hidden lg:inline-block lg:absolute lg:-left-[120px] lg:w-[110px] lg:text-right normal-case">2024 —</span>
-                    <span className="font-normal lowercase">Since 2024, she has been living and working in Austria, continuing to explore themes of memory, identity, and the body through analog and instant photography.</span>
-                  </div>
+                <div className="lg:relative">
+                  <span className="font-medium lg:absolute lg:-left-[120px] lg:w-[110px] lg:text-right normal-case">2024 —</span> <span className="font-normal lowercase">Since 2024, she has been living and working in Austria, continuing to explore themes of memory, identity, and the body through analog and instant photography.</span>
                 </div>
                 <div>
                   <span className="font-normal lowercase">Her works have been exhibited internationally in Germany, Italy, France, Greece, Sweden, Denmark, the Netherlands, the USA, and Ukraine.</span>

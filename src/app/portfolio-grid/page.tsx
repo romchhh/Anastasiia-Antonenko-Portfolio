@@ -157,6 +157,22 @@ export default function PortfolioGridPage() {
       description: 'Collage work examining the intersection of news and personal experience.',
       link: '/portfolio/from-headlines-to-reality'
     },
+    // Rectangle 72.png: moved up for mobile reordering
+    {
+      id: 'in-the-eyes-of-others',
+      title: 'IN THE EYES OF OTHERS',
+      year: '2025',
+      image: '/portfolio/Rectangle 72.png',
+      width: smallWidth,
+      height: 405,
+      top: 520,
+      left: col1Width + gap * 2,
+      row: 2,
+      mobileOrder: 4,
+      tabletOrder: 5,
+      description: 'A study of perception and identity through portraiture.',
+      link: '/portfolio/in-the-eyes-of-others'
+    },
     // 2 32.png: starts at 950 + 80 = 1030, ends at 1590
     {
       id: 'phantom',
@@ -172,6 +188,22 @@ export default function PortfolioGridPage() {
       tabletOrder: 8,
       description: 'Ghostly figures in urban landscapes.',
       link: '/portfolio/phantom'
+    },
+    // Rectangle 721.png: moved up for mobile reordering
+    {
+      id: 'air-alarm',
+      title: 'AIR ALARM',
+      year: '2023',
+      image: '/portfolio/Rectangle 721.png',
+      width: col2Width,
+      height: 578,
+      top: 1005,
+      left: col1Width + gap * 2,
+      row: 3,
+      mobileOrder: 6,
+      tabletOrder: 9,
+      description: 'Visual response to conflict and its impact on daily life.',
+      link: '/portfolio/air-alarm'
     },
     // Rectangle 742.png: starts at 1590 + 80 = 1670, ends at 2010 + 42 = 2052
     {
@@ -208,22 +240,6 @@ export default function PortfolioGridPage() {
       description: 'Damaged negatives reflecting fragmented memory and collective erasure.',
       link: '/portfolio/holes-of-time'
     },
-    // Rectangle 72.png + 2 31.png: start at 440 + 80 = 520, end at 925
-    {
-      id: 'in-the-eyes-of-others',
-      title: 'IN THE EYES OF OTHERS',
-      year: '2025',
-      image: '/portfolio/Rectangle 72.png',
-      width: smallWidth,
-      height: 405,
-      top: 520,
-      left: col1Width + gap * 2,
-      row: 2,
-      mobileOrder: 4,
-      tabletOrder: 5,
-      description: 'A study of perception and identity through portraiture.',
-      link: '/portfolio/in-the-eyes-of-others'
-    },
     {
       id: 'washed-memories',
       title: 'WASHED MEMORIES',
@@ -238,22 +254,6 @@ export default function PortfolioGridPage() {
       tabletOrder: 3,
       description: 'Exploration of memory through water and time.',
       link: '/portfolio/washed-memories'
-    },
-    // Rectangle 721.png: starts at 925 + 80 = 1005, ends at 1583
-    {
-      id: 'air-alarm',
-      title: 'AIR ALARM',
-      year: '2023',
-      image: '/portfolio/Rectangle 721.png',
-      width: col2Width,
-      height: 578,
-      top: 1005,
-      left: col1Width + gap * 2,
-      row: 3,
-      mobileOrder: 6,
-      tabletOrder: 9,
-      description: 'Visual response to conflict and its impact on daily life.',
-      link: '/portfolio/air-alarm'
     },
     // Rectangle 723.png + 2 33.png: start at 1583 + 80 = 1663, end at 2052
     {
@@ -494,11 +494,11 @@ export default function PortfolioGridPage() {
                           className="w-full h-auto object-cover" 
                         />
                       </div>
-                      <div className="mt-2 mb-4">
+                      <div className="flex flex-col mt-2 mb-4" style={{ width: '201px', height: '62px', gap: '3px', opacity: 1 }}>
                         <h3 className="text-[14px] font-normal leading-[150%] tracking-[-0.01em] text-[#1A1A1A] uppercase" style={{ fontFamily: 'Work Sans' }}>
                           {item.title}
                         </h3>
-                        <p className="text-[12px] font-normal leading-[150%] tracking-[-0.01em] text-[#515151] mt-1" style={{ fontFamily: 'Work Sans' }}>
+                        <p className="text-[12px] font-normal leading-[150%] tracking-[-0.01em] text-[#515151]" style={{ fontFamily: 'Work Sans' }}>
                           {item.year}
                         </p>
                       </div>
