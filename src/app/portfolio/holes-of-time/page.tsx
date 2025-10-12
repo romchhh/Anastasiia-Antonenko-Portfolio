@@ -518,10 +518,12 @@ In a time when truth is increasingly fragile, I see these damaged images as quie
               <img
                 src={galleryImages[0].src}
                 className="w-[calc(50%-6px)] aspect-[162/106] object-cover"
+                onClick={() => openModal(0)}
               />
               <img
                 src={galleryImages[7].src}
                 className="w-[calc(50%-6px)] aspect-[161/105] object-cover"
+                onClick={() => openModal(7)}
               />
             </div>
 
@@ -532,16 +534,19 @@ In a time when truth is increasingly fragile, I see these damaged images as quie
                   src={galleryImages[1].src}
                   alt=""
                   className="aspect-[162/106] object-cover"
+                  onClick={() => openModal(1)}
                 />
                 <img
                   src={galleryImages[2].src}
                   alt=""
                   className="aspect-[162/248] object-cover"
+                  onClick={() => openModal(2)}
                 />
                 <img
                   src={galleryImages[9].src}
                   alt=""
                   className="aspect-[162/106] object-cover"
+                  onClick={() => openModal(9)}
                 />
               </div>
               <div className="flex flex-col gap-3 w-[calc(50%-6px)]">
@@ -549,11 +554,13 @@ In a time when truth is increasingly fragile, I see these damaged images as quie
                   src={galleryImages[8].src}
                   alt=""
                   className="aspect-[161/236] object-cover"
+                  onClick={() => openModal(8)}
                 />
                 <img
                   src={galleryImages[3].src}
                   alt=""
                   className="aspect-[161/237] object-cover"
+                  onClick={() => openModal(3)}
                 />
               </div>
             </div>
@@ -563,6 +570,7 @@ In a time when truth is increasingly fragile, I see these damaged images as quie
               src={galleryImages[4].src}
               alt=""
               className="w-full aspect-[335/219] object-cover"
+              onClick={() => openModal(4)}
             />
 
             {/* Row 4: two images side by side */}
@@ -570,10 +578,13 @@ In a time when truth is increasingly fragile, I see these damaged images as quie
               <img
                 src={galleryImages[5].src}
                 className="w-[calc(50%-6px)] aspect-[162/246] object-cover"
+                onClick={() => openModal(5)}
+                // TODO: place onClick everywhere in the mobile
               />
               <img
                 src={galleryImages[6].src}
                 className="w-[calc(50%-6px)] aspect-[161/246] object-cover"
+                onClick={() => openModal(6)}
               />
             </div>
 
@@ -582,10 +593,12 @@ In a time when truth is increasingly fragile, I see these damaged images as quie
               <img
                 src={galleryImages[10].src}
                 className="w-[calc(30%-4px)] aspect-[99/146] object-cover"
+                onClick={() => openModal(10)}
               />
               <img
                 src={galleryImages[11].src}
                 className="w-[calc(70%-4px)] aspect-[223/146] object-cover"
+                onClick={() => openModal(11)}
               />
             </div>
           </div>

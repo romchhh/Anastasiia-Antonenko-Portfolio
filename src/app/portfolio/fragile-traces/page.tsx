@@ -42,7 +42,13 @@ export default function FragileTracesPage() {
         scaleFactor = 0.95;
       } else if (windowWidth >= 768) {
         // Tablet - will use grid layout instead
-        return;
+        const sidebarWidth = 272;
+        const margins = 32; // smaller margin on tablets
+        const padding = 32;
+        const safetyBuffer = 20;
+        availableWidth =
+          windowWidth - sidebarWidth - margins - padding - safetyBuffer;
+        scaleFactor = 0.93;
       } else {
         // Mobile - will use custom layout instead
         return;
@@ -57,6 +63,8 @@ export default function FragileTracesPage() {
 
       if (windowWidth < 1280 && windowWidth >= 1024) {
         maxScale = 0.85;
+      } else if (windowWidth >= 768 && windowWidth < 1024) {
+        maxScale = 0.78;
       }
 
       calculatedScale = Math.max(minScale, Math.min(maxScale, calculatedScale));
@@ -452,7 +460,7 @@ Cracks and distortions in the emulsion mirror the fragmentation of lived experie
 
           {/* Desktop: Gallery with absolute positioning - scales responsively */}
           <div
-            className="hidden lg:block w-full origin-top-left transition-transform duration-200 ease-out -ml-12 -mr-8 mt-6"
+            className="hidden md:block w-full origin-top-left transition-transform duration-200 ease-out -ml-2 lg:-ml-12 -mr-8 mt-6"
             style={{
               transform: `scale(${scale})`,
               height: `${2740 * scale}px`,
@@ -484,30 +492,17 @@ Cracks and distortions in the emulsion mirror the fragmentation of lived experie
             </div>
           </div>
 
-          {/* Tablet: Grid with 2 columns */}
-          <div className="hidden md:grid lg:hidden grid-cols-2 gap-4">
-            {galleryImages.map((image, index) => (
-              <div
-                key={index}
-                className="cursor-pointer hover:opacity-80 transition-opacity"
-                onClick={() => openModal(index)}
-              >
-                <div className="overflow-hidden bg-white/0">
-                  <img
-                    src={image.src}
-                    alt={`Fragile Traces ${index + 1}`}
-                    className="w-full h-auto object-cover"
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-
           {/* Mobile: Grid with 2 columns */}
           <div className="md:hidden w-full max-w-full mt-6 flex flex-col gap-3 mx-auto">
             <div className="flex gap-3 w-full">
-              <img className="w-[calc(50%-6px)] h-auto" src={galleryImages[0].src} />
-              <img className="w-[calc(50%-6px)] h-auto" src={galleryImages[1].src} />
+              <img
+                className="w-[calc(50%-6px)] h-auto"
+                src={galleryImages[0].src}
+              />
+              <img
+                className="w-[calc(50%-6px)] h-auto"
+                src={galleryImages[1].src}
+              />
             </div>
             <div className="flex gap-3 w-full">
               <div className="flex flex-col gap-3 w-2/5">
@@ -521,8 +516,14 @@ Cracks and distortions in the emulsion mirror the fragmentation of lived experie
               </div>
             </div>
             <div className="flex gap-3 w-full">
-              <img className="w-[calc(50%-6px)] h-auto" src={galleryImages[8].src} />
-              <img className="w-[calc(50%-6px)] h-auto" src={galleryImages[9].src} />
+              <img
+                className="w-[calc(50%-6px)] h-auto"
+                src={galleryImages[8].src}
+              />
+              <img
+                className="w-[calc(50%-6px)] h-auto"
+                src={galleryImages[9].src}
+              />
             </div>
           </div>
 
