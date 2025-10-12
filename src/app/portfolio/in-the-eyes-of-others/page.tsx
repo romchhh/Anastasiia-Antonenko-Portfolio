@@ -13,56 +13,56 @@ export default function InTheEyesOfOthersPage() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scale, setScale] = useState(1);
 
-  React.useEffect(() => {
-    const calculateScale = () => {
-      const windowWidth = window.innerWidth;
-      const gridWidth = 1138;
-      let availableWidth;
-      let scaleFactor = 0.95;
-      if (windowWidth >= 1280) {
-        const sidebarWidth = 272;
-        const margins = 48;
-        const padding = 80;
-        availableWidth = windowWidth - sidebarWidth - margins - padding;
-        scaleFactor = 0.92;
-      } else if (windowWidth >= 1024) {
-        const sidebarWidth = 272;
-        const margins = 48;
-        const padding = 48;
-        const safetyBuffer = 20;
-        availableWidth =
-          windowWidth - sidebarWidth - margins - padding - safetyBuffer;
-        scaleFactor = 0.95;
-      } else if (windowWidth >= 768) {
-        const sidebarWidth = 272;
-        const margins = 32; // smaller margin on tablets
-        const padding = 32;
-        const safetyBuffer = 20;
-        availableWidth =
-          windowWidth - sidebarWidth - margins - padding - safetyBuffer;
-        scaleFactor = 0.93;
-      } else {
-        return;
-      }
-      let calculatedScale = (availableWidth * scaleFactor) / gridWidth;
-      let maxScale = 1.0;
-      const minScale = 0.25;
-      if (windowWidth < 1280 && windowWidth >= 1024) {
-        maxScale = 0.85;
-      } else if (windowWidth >= 768 && windowWidth < 1024) {
-        maxScale = 0.78;
-      }
-      calculatedScale = Math.max(minScale, Math.min(maxScale, calculatedScale));
-      setScale(calculatedScale);
-    };
-    const timeoutId = setTimeout(calculateScale, 100);
-    calculateScale();
-    window.addEventListener("resize", calculateScale);
-    return () => {
-      clearTimeout(timeoutId);
-      window.removeEventListener("resize", calculateScale);
-    };
-  }, []);
+  // React.useEffect(() => {
+  //   const calculateScale = () => {
+  //     const windowWidth = window.innerWidth;
+  //     const gridWidth = 1138;
+  //     let availableWidth;
+  //     let scaleFactor = 0.95;
+  //     if (windowWidth >= 1280) {
+  //       const sidebarWidth = 272;
+  //       const margins = 48;
+  //       const padding = 80;
+  //       availableWidth = windowWidth - sidebarWidth - margins - padding;
+  //       scaleFactor = 0.92;
+  //     } else if (windowWidth >= 1024) {
+  //       const sidebarWidth = 272;
+  //       const margins = 48;
+  //       const padding = 48;
+  //       const safetyBuffer = 20;
+  //       availableWidth =
+  //         windowWidth - sidebarWidth - margins - padding - safetyBuffer;
+  //       scaleFactor = 0.95;
+  //     } else if (windowWidth >= 768) {
+  //       const sidebarWidth = 272;
+  //       const margins = 32; // smaller margin on tablets
+  //       const padding = 32;
+  //       const safetyBuffer = 20;
+  //       availableWidth =
+  //         windowWidth - sidebarWidth - margins - padding - safetyBuffer;
+  //       scaleFactor = 0.93;
+  //     } else {
+  //       return;
+  //     }
+  //     let calculatedScale = (availableWidth * scaleFactor) / gridWidth;
+  //     let maxScale = 1.0;
+  //     const minScale = 0.25;
+  //     if (windowWidth < 1280 && windowWidth >= 1024) {
+  //       maxScale = 0.85;
+  //     } else if (windowWidth >= 768 && windowWidth < 1024) {
+  //       maxScale = 0.78;
+  //     }
+  //     calculatedScale = Math.max(minScale, Math.min(maxScale, calculatedScale));
+  //     setScale(calculatedScale);
+  //   };
+  //   const timeoutId = setTimeout(calculateScale, 100);
+  //   calculateScale();
+  //   window.addEventListener("resize", calculateScale);
+  //   return () => {
+  //     clearTimeout(timeoutId);
+  //     window.removeEventListener("resize", calculateScale);
+  //   };
+  // }, []);
 
   const gap = 20;
   const galleryImages = [
@@ -369,7 +369,59 @@ This project examines the fragile boundary between two worlds: the human and the
               />
             </div>
           </div>
-          <div
+          <div className="hidden mt-7.5 md:flex flex-col gap-5 lg:gap-7.5 w-full origin-top-left transition-transform duration-200 ease-out lg:-ml-7.5">
+            <div className="flex gap-5 lg:gap-7.5 w-full">
+              <div className="flex w-3/5 flex-col gap-5 lg:gap-7.5">
+                <img
+                  src={galleryImages[0].src}
+                  className="h-[calc(50%-15px)]"
+                  alt=""
+                  onClick={() => openModal(0)}
+                />
+                <img
+                  src={galleryImages[3].src}
+                  className="h-[calc(50%-15px)]"
+                  alt=""
+                  onClick={() => openModal(3)}
+                />
+              </div>
+              <div className="flex flex-col w-2/5 gap-5 lg:gap-7.5">
+                <img
+                  src={galleryImages[1].src}
+                  className="h-[calc(33%-10px)]"
+                  alt=""
+                  onClick={() => openModal(1)}
+                />
+                <img
+                  src={galleryImages[2].src}
+                  className="h-[calc(33%-10px)]"
+                  alt=""
+                  onClick={() => openModal(2)}
+                />
+                <img
+                  src={galleryImages[4].src}
+                  className="h-[calc(33%-10px)]"
+                  alt=""
+                  onClick={() => openModal(4)}
+                />
+              </div>
+            </div>
+            <div className="flex w-full gap-5 lg:gap-7.5">
+              <img
+                src={galleryImages[5].src}
+                className="w-[calc(50%-15px)]"
+                alt=""
+                onClick={() => openModal(5)}
+              />
+              <img
+                src={galleryImages[6].src}
+                className="w-[calc(50%-15px)]"
+                alt=""
+                onClick={() => openModal(6)}
+              />
+            </div>
+          </div>
+          {/* <div
             className="hidden md:block w-full origin-top-left transition-transform duration-200 ease-out -ml-2 lg:-ml-12 -mr-8 mt-6"
             style={{
               transform: `scale(${scale})`,
@@ -400,7 +452,7 @@ This project examines the fragile boundary between two worlds: the human and the
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
           {/* Mobile: Grid with 2 columns */}
           <div className="md:hidden w-full max-w-full mt-6 flex flex-col gap-3 mx-auto">
             <div className="flex gap-3 w-full">
@@ -411,18 +463,32 @@ This project examines the fragile boundary between two worlds: the human and the
               <img
                 className="w-[calc(50%-6px)] h-auto"
                 src={galleryImages[1].src}
-                style={{ width: "calc(50% - 12px)" }}
               />
             </div>
             <div className="flex gap-3 w-full">
               <div className="flex flex-col gap-3 w-3/5">
-                <img className="w-full h-auto" src={galleryImages[3].src} />
-                <img className="w-full h-auto" src={galleryImages[5].src} />
+                <img
+                  className="w-full h-[calc(50%-6px)]"
+                  src={galleryImages[3].src}
+                />
+                <img
+                  className="w-full h-[calc(50%-6px)]"
+                  src={galleryImages[5].src}
+                />
               </div>
               <div className="flex flex-col gap-3 w-2/5">
-                <img className="w-full h-auto" src={galleryImages[4].src} />
-                <img className="w-full h-auto" src={galleryImages[2].src} />
-                <img className="w-full h-auto" src={galleryImages[6].src} />
+                <img
+                  className="w-full h-[calc(33%-4px)]"
+                  src={galleryImages[4].src}
+                />
+                <img
+                  className="w-full h-[calc(33%-4px)]"
+                  src={galleryImages[2].src}
+                />
+                <img
+                  className="w-full h-[calc(33%-4px)]"
+                  src={galleryImages[6].src}
+                />
               </div>
             </div>
           </div>

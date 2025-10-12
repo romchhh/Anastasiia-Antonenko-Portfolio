@@ -478,7 +478,89 @@ In a time when truth is increasingly fragile, I see these damaged images as quie
           </div>
 
           {/* Tablet and Desktop: Gallery with absolute positioning */}
-          <div
+          <div className="hidden mt-7.5 md:flex gap-5 lg:gap-7.5 w-full origin-top-left transition-transform duration-200 ease-out lg:-ml-7.5">
+            <div className="flex w-3/5 flex-col gap-5 lg:gap-7.5">
+              <img
+                src={galleryImages[0].src}
+                className="h-[calc(20%-6px)]"
+                alt=""
+                onClick={() => openModal(0)}
+              />
+              <img
+                src={galleryImages[1].src}
+                className="h-[calc(20%-6px)]"
+                alt=""
+                onClick={() => openModal(1)}
+              />
+              <div className="flex w-full h-[calc(20%-6px)] gap-5 lg:gap-7.5">
+                <img
+                  src={galleryImages[2].src}
+                  className="w-[calc(50%-15px)]"
+                  alt=""
+                  onClick={() => openModal(2)}
+                />
+                <img
+                  src={galleryImages[3].src}
+                  className="w-[calc(50%-15px)]"
+                  alt=""
+                  onClick={() => openModal(3)}
+                />
+              </div>
+              <img
+                src={galleryImages[4].src}
+                className="h-[calc(20%-6px)]"
+                alt=""
+                onClick={() => openModal(4)}
+              />
+              <div className="flex w-full h-[calc(20%-6px)] gap-5 lg:gap-7.5">
+                <img
+                  src={galleryImages[5].src}
+                  className="w-[calc(50%-15px)]"
+                  alt=""
+                  onClick={() => openModal(5)}
+                />
+                <img
+                  src={galleryImages[6].src}
+                  className="w-[calc(50%-15px)]"
+                  alt=""
+                  onClick={() => openModal(6)}
+                />
+              </div>
+            </div>
+            <div className="flex flex-col w-2/5 gap-5 lg:gap-7.5">
+              <img
+                src={galleryImages[7].src}
+                className="w-full h-auto"
+                alt=""
+                onClick={() => openModal(7)}
+              />
+              <img
+                src={galleryImages[8].src}
+                className="h-auto"
+                alt=""
+                onClick={() => openModal(8)}
+              />
+              <img
+                src={galleryImages[9].src}
+                className="h-auto"
+                alt=""
+                onClick={() => openModal(9)}
+              />
+              <img
+                src={galleryImages[10].src}
+                className="h-auto"
+                alt=""
+                onClick={() => openModal(10)}
+              />
+              <img
+                src={galleryImages[11].src}
+                className="h-[calc(20%-6px)]"
+                alt=""
+                onClick={() => openModal(11)}
+              />
+            </div>
+          </div>
+          {/* <div
             className="hidden md:block w-full origin-top-left transition-transform duration-200 ease-out md:-ml-3 md:-mr-6 lg:-ml-12 lg:-mr-8 mt-6"
             style={{
               transform: `scale(${scale})`,
@@ -509,7 +591,7 @@ In a time when truth is increasingly fragile, I see these damaged images as quie
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
 
           {/* Mobile: Grid with 2 columns */}
           <div className="md:hidden w-full max-w-full mt-6 space-y-3">
