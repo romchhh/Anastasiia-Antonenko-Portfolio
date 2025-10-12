@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Header from '@/components/Header';
 import Sidebar from '@/components/Sidebar';
-import ContactForm from '@/components/ContactForm';
 import BurgerMenu from '@/components/BurgerMenu';
 
 export default function AboutPage() {
@@ -61,7 +60,7 @@ export default function AboutPage() {
       <div className="md:hidden px-5 pt-3 pb-2 flex justify-end">
         <button
           onClick={() => window.location.href = '/'}
-          className="text-[16px] font-normal leading-[110%] tracking-[-0.01em] text-[#1A1A1A] lowercase hover:opacity-70 transition-opacity"
+          className="text-[16px] font-normal leading-[110%] tracking-[-0.01em] text-[#1A1A1A] hover:opacity-70 transition-opacity"
           style={{ fontFamily: 'Work Sans' }}
         >
           anastasiia antonenko
@@ -86,14 +85,14 @@ export default function AboutPage() {
                   <img 
                     src="/about/2 2.jpg" 
                     alt="Anastasiia Antonenko" 
-                    className="w-[300px] h-auto object-cover"
+                    className="w-[300px] h-auto object-contain"
                   />
                 </div>
                 
                 {/* Artist Statement */}
                 <div className="flex-1">
                   <h2 
-                    className="text-[35px] font-normal leading-[110%] tracking-[-0.01em] text-[#1A1A1A] lowercase mb-4"
+                    className="text-[35px] font-normal leading-[110%] tracking-[-0.01em] text-[#1A1A1A] mb-4"
                     style={{ fontFamily: 'Work Sans' }}
                   >
                     artist statement
@@ -115,38 +114,38 @@ export default function AboutPage() {
               {/* Bio Section */}
               <div className="mt-8" style={{ marginLeft: '324px' }}>
                 <h3 
-                  className="text-[35px] font-normal leading-[110%] tracking-[-0.01em] text-[#1A1A1A] lowercase mb-6"
+                  className="text-[35px] font-normal leading-[110%] tracking-[-0.01em] text-[#1A1A1A] mb-6"
                   style={{ fontFamily: 'Work Sans' }}
                 >
                   bio
                 </h3>
-                <div className="space-y-4 text-[16px] leading-[155%] tracking-[-0.01em] text-[#1A1A1A] lowercase" style={{ fontFamily: 'Work Sans' }}>
+                <div className="space-y-4 text-[16px] leading-[155%] tracking-[-0.01em] text-[#1A1A1A]" style={{ fontFamily: 'Work Sans' }}>
                   <div className="relative">
                     <span className="font-medium absolute -left-[120px] w-[110px] text-right">1996 —</span>
-                    <span className="font-normal">Born in Luhansk, Ukraine.</span>
+                    <span className="font-normal">born in Luhansk, Ukraine.</span>
                   </div>
                   <div className="relative">
                     <span className="font-medium absolute -left-[120px] w-[110px] text-right">2014–2019 —</span>
-                    <span className="font-normal">Studied at Kyiv National Linguistic University, Department of Oriental Studies (Linguistics, Oriental Studies). Alongside her academic studies, she began searching for her own language in photography.</span>
+                    <span className="font-normal">studied at Kyiv National Linguistic University, Department of Oriental Studies (Linguistics, Oriental Studies). Alongside her academic studies, she began searching for her own language in photography.</span>
                   </div>
                   <div className="relative">
                     <span className="font-medium absolute -left-[120px] w-[110px] text-right">2014–2015 —</span>
-                    <span className="font-normal">Completed courses at the Kyiv School of Photography, which became her first step into the medium and awakened an interest in the documentary image.</span>
+                    <span className="font-normal">completed courses at the Kyiv School of Photography, which became her first step into the medium and awakened an interest in the documentary image.</span>
                   </div>
                   <div className="relative">
                     <span className="font-medium absolute -left-[120px] w-[110px] text-right">2021–2022 —</span>
-                    <span className="font-normal">Studied at the School of Conceptual and Art Photography (MYPH). During this period she developed her artistic voice, moving from documentary observation toward more conceptual, poetic, and abstract approaches.</span>
+                    <span className="font-normal">studied at the School of Conceptual and Art Photography (MYPH). During this period she developed her artistic voice, moving from documentary observation toward more conceptual, poetic, and abstract approaches.</span>
                   </div>
                   <div className="relative">
                     <span className="font-medium absolute -left-[120px] w-[110px] text-right">2023 —</span>
-                    <span className="font-normal">In 2023, she took part in an artist residency in Nuremberg, Germany, where she worked on projects that reflected her personal experience of displacement and the fragile intersections between private and collective memory.</span>
+                    <span className="font-normal">in 2023, she took part in an artist residency in Nuremberg, Germany, where she worked on projects that reflected her personal experience of displacement and the fragile intersections between private and collective memory.</span>
                   </div>
                   <div className="relative">
                     <span className="font-medium absolute -left-[120px] w-[110px] text-right">2024 —</span>
-                    <span className="font-normal">Since 2024, she has been living and working in Austria, continuing to explore themes of memory, identity, and the body through analog and instant photography.</span>
+                    <span className="font-normal">since 2024, she has been living and working in Austria, continuing to explore themes of memory, identity, and the body through analog and instant photography.</span>
                   </div>
                   <div>
-                    <span className="font-normal">Her works have been exhibited internationally in Germany, Italy, France, Greece, Sweden, Denmark, the Netherlands, the USA, and Ukraine.</span>
+                    <span className="font-normal">her works have been exhibited internationally in Germany, Italy, France, Greece, Sweden, Denmark, the Netherlands, the USA, and Ukraine.</span>
                   </div>
                 </div>
               </div>
@@ -154,7 +153,7 @@ export default function AboutPage() {
               {/* Exhibitions Section */}
               <div className="mt-12 relative" style={{ marginLeft: '324px' }}>
                 <h3 
-                  className="text-[35px] font-normal leading-[110%] tracking-[-0.01em] text-[#1A1A1A] lowercase mb-6"
+                  className="text-[35px] font-normal leading-[110%] tracking-[-0.01em] text-[#1A1A1A] mb-6"
                   style={{ fontFamily: 'Work Sans' }}
                 >
                   exhibitions
@@ -179,7 +178,7 @@ export default function AboutPage() {
                 )}
                 
                 <div className="space-y-3 text-[16px] leading-[155%] tracking-[-0.01em] text-[#1A1A1A]" style={{ fontFamily: 'Work Sans' }}>
-                  <div className="relative"><span className="font-medium absolute -left-[170px] w-[160px] text-right normal-case">Jun 2025 —</span> <span className="lowercase">The &quot;Faces&quot; exhibition by Art Icon, Arles, France</span></div>
+                  <div className="relative"><span className="font-medium absolute -left-[170px] w-[160px] text-right normal-case">Jun 2025 —</span> <span>the &quot;Faces&quot; exhibition by Art Icon, Arles, France</span></div>
                   <div 
                     className="relative cursor-pointer transition-colors hover:text-gray-600" 
                     onMouseEnter={(e) => {
@@ -188,10 +187,10 @@ export default function AboutPage() {
                     }}
                     onMouseLeave={() => setHoveredItem(null)}
                   >
-                    <span className="font-medium absolute -left-[170px] w-[160px] text-right normal-case">Nov 2024 —</span> <span className="lowercase">Corporeality Exhibition, Art-Icon, Paris</span>
+                    <span className="font-medium absolute -left-[170px] w-[160px] text-right normal-case">Nov 2024 —</span> <span>corporeality exhibition, Art-Icon, Paris</span>
                   </div>
-                  <div className="relative"><span className="font-medium absolute -left-[170px] w-[160px] text-right normal-case">Sep 2024 —</span> <span className="lowercase">Imagenation Milan, exhibition Just Women</span></div>
-                  <div className="relative"><span className="font-medium absolute -left-[170px] w-[160px] text-right normal-case">Apr 2024 —</span> <span className="lowercase">Exhibition at Decode Gallery, Tucson, Arizona</span></div>
+                  <div className="relative"><span className="font-medium absolute -left-[170px] w-[160px] text-right normal-case">Sep 2024 —</span> <span>Imagenation Milan, exhibition Just Women</span></div>
+                  <div className="relative"><span className="font-medium absolute -left-[170px] w-[160px] text-right normal-case">Apr 2024 —</span> <span>exhibition at Decode Gallery, Tucson, Arizona</span></div>
                   <div 
                     className="relative cursor-pointer transition-colors hover:text-gray-600"
                     onMouseEnter={(e) => {
@@ -200,9 +199,9 @@ export default function AboutPage() {
                     }}
                     onMouseLeave={() => setHoveredItem(null)}
                   >
-                    <span className="font-medium absolute -left-[170px] w-[160px] text-right normal-case">Mar 2024 —</span> <span className="lowercase">Depths of Psyche, Korsak Museum of Contemporary Ukrainian Art</span>
+                    <span className="font-medium absolute -left-[170px] w-[160px] text-right normal-case">Mar 2024 —</span> <span>Depths of Psyche, Korsak Museum of Contemporary Ukrainian Art</span>
                   </div>
-                  <div className="relative"><span className="font-medium absolute -left-[170px] w-[160px] text-right normal-case">Jan 2024 —</span> <span className="lowercase">One day, Ukrainian Culture Center in Stockholm and Ukrainian School of Conceptual and Art Photography (MYPH)</span></div>
+                  <div className="relative"><span className="font-medium absolute -left-[170px] w-[160px] text-right normal-case">Jan 2024 —</span> <span>one day, Ukrainian Culture Center in Stockholm and Ukrainian School of Conceptual and Art Photography (MYPH)</span></div>
                   <div 
                     className="relative cursor-pointer transition-colors hover:text-gray-600"
                     onMouseEnter={(e) => {
@@ -211,9 +210,9 @@ export default function AboutPage() {
                     }}
                     onMouseLeave={() => setHoveredItem(null)}
                   >
-                    <span className="font-medium absolute -left-[170px] w-[160px] text-right normal-case">Oct – Nov 2023 —</span> <span className="lowercase">Photopolis Festival, Greece</span>
+                    <span className="font-medium absolute -left-[170px] w-[160px] text-right normal-case">Oct – Nov 2023 —</span> <span>Photopolis Festival, Greece</span>
                   </div>
-                  <div className="relative"><span className="font-medium absolute -left-[170px] w-[160px] text-right normal-case">Oct 2023 —</span> <span className="lowercase">Fresh Eyes Selection, GUP Magazine, Amsterdam, Netherlands</span></div>
+                  <div className="relative"><span className="font-medium absolute -left-[170px] w-[160px] text-right normal-case">Oct 2023 —</span> <span>Fresh Eyes Selection, GUP Magazine, Amsterdam, Netherlands</span></div>
                   <div 
                     className="relative cursor-pointer transition-colors hover:text-gray-600"
                     onMouseEnter={(e) => {
@@ -222,9 +221,9 @@ export default function AboutPage() {
                     }}
                     onMouseLeave={() => setHoveredItem(null)}
                   >
-                    <span className="font-medium absolute -left-[170px] w-[160px] text-right normal-case">Sep – Oct 2023 —</span> <span className="lowercase">Cutout Festival, Kyiv, Ukraine</span>
+                    <span className="font-medium absolute -left-[170px] w-[160px] text-right normal-case">Sep – Oct 2023 —</span> <span>Cutout Festival, Kyiv, Ukraine</span>
                   </div>
-                  <div className="relative"><span className="font-medium absolute -left-[170px] w-[160px] text-right normal-case">Sep 2023 —</span> <span className="lowercase">Exhibition at Sklad 5, Cherkasy, Ukraine</span></div>
+                  <div className="relative"><span className="font-medium absolute -left-[170px] w-[160px] text-right normal-case">Sep 2023 —</span> <span>exhibition at Sklad 5, Cherkasy, Ukraine</span></div>
                   <div 
                     className="relative cursor-pointer transition-colors hover:text-gray-600"
                     onMouseEnter={(e) => {
@@ -233,7 +232,7 @@ export default function AboutPage() {
                     }}
                     onMouseLeave={() => setHoveredItem(null)}
                   >
-                    <span className="font-medium absolute -left-[170px] w-[160px] text-right normal-case">Jul – Aug 2023 —</span> <span className="lowercase">If You Look Into the Void Too Long, Ivano-Frankivsk, Ukraine</span>
+                    <span className="font-medium absolute -left-[170px] w-[160px] text-right normal-case">Jul – Aug 2023 —</span> <span>If You Look Into the Void Too Long, Ivano-Frankivsk, Ukraine</span>
                   </div>
                   <div 
                     className="relative cursor-pointer transition-colors hover:text-gray-600"
@@ -243,12 +242,12 @@ export default function AboutPage() {
                     }}
                     onMouseLeave={() => setHoveredItem(null)}
                   >
-                    <span className="font-medium absolute -left-[170px] w-[160px] text-right normal-case">Jul 2023 —</span> <span className="lowercase">New Mythology, Ermilov Center, Kharkiv, Ukraine</span>
+                    <span className="font-medium absolute -left-[170px] w-[160px] text-right normal-case">Jul 2023 —</span> <span>New Mythology, Ermilov Center, Kharkiv, Ukraine</span>
                   </div>
-                  <div className="relative"><span className="font-medium absolute -left-[170px] w-[160px] text-right normal-case">Jun – Jul 2023 —</span> <span className="lowercase">&quot;And will be silence&quot;, Zaporizhzhia, Ukraine</span></div>
-                  <div className="relative"><span className="font-medium absolute -left-[170px] w-[160px] text-right normal-case">May 2023 —</span> <span className="lowercase">Online exhibition Baroque application – Myph 5 years anniversary</span></div>
-                  <div className="relative"><span className="font-medium absolute -left-[170px] w-[160px] text-right normal-case">Mar 2023 —</span> <span className="lowercase">War Exhibition, Mainz, Germany</span></div>
-                  <div className="relative"><span className="font-medium absolute -left-[170px] w-[160px] text-right normal-case">Feb 2023 —</span> <span className="lowercase">Fotodok, Whispers and Shouts. Voices of Ukrainian Women Photographers</span></div>
+                  <div className="relative"><span className="font-medium absolute -left-[170px] w-[160px] text-right normal-case">Jun – Jul 2023 —</span> <span>&quot;And will be silence&quot;, Zaporizhzhia, Ukraine</span></div>
+                  <div className="relative"><span className="font-medium absolute -left-[170px] w-[160px] text-right normal-case">May 2023 —</span> <span>online exhibition Baroque application – Myph 5 years anniversary</span></div>
+                  <div className="relative"><span className="font-medium absolute -left-[170px] w-[160px] text-right normal-case">Mar 2023 —</span> <span>War Exhibition, Mainz, Germany</span></div>
+                  <div className="relative"><span className="font-medium absolute -left-[170px] w-[160px] text-right normal-case">Feb 2023 —</span> <span>Fotodok, Whispers and Shouts. Voices of Ukrainian Women Photographers</span></div>
                   <div 
                     className="relative cursor-pointer transition-colors hover:text-gray-600"
                     onMouseEnter={(e) => {
@@ -257,16 +256,16 @@ export default function AboutPage() {
                     }}
                     onMouseLeave={() => setHoveredItem(null)}
                   >
-                    <span className="font-medium absolute -left-[170px] w-[160px] text-right normal-case">Jan 2023 —</span> <span className="lowercase">Exhibition opening in Berlin, Kyiv Emerging</span>
+                    <span className="font-medium absolute -left-[170px] w-[160px] text-right normal-case">Jan 2023 —</span> <span>exhibition opening in Berlin, Kyiv Emerging</span>
                   </div>
-                  <div className="relative"><span className="font-medium absolute -left-[170px] w-[160px] text-right normal-case">2022 —</span> <span className="lowercase">MyArt – Memory, Online & Offline Exhibition</span></div>
+                  <div className="relative"><span className="font-medium absolute -left-[170px] w-[160px] text-right normal-case">2022 —</span> <span>MyArt – Memory, Online & Offline Exhibition</span></div>
                 </div>
               </div>
 
               {/* Publications Section */}
               <div className="mt-12 relative" style={{ marginLeft: '324px' }}>
                 <h3 
-                  className="text-[35px] font-normal leading-[110%] tracking-[-0.01em] text-[#1A1A1A] lowercase mb-6"
+                  className="text-[35px] font-normal leading-[110%] tracking-[-0.01em] text-[#1A1A1A] mb-6"
                   style={{ fontFamily: 'Work Sans' }}
                 >
                   publications
@@ -280,8 +279,8 @@ export default function AboutPage() {
                     MAGAZINES
                   </h4>
                   <div className="space-y-2 text-[16px] leading-[155%] tracking-[-0.01em] text-[#1A1A1A]" style={{ fontFamily: 'Work Sans' }}>
-                    <div className="relative"><span className="font-medium absolute -left-[110px] w-[100px] text-right normal-case">2025 —</span> <span className="lowercase">Pamplemousse Magazine, Issue #11</span></div>
-                    <div className="relative"><span className="font-medium absolute -left-[110px] w-[100px] text-right normal-case">2025 —</span> <span className="lowercase">Bilkis Magazine #1</span></div>
+                    <div className="relative"><span className="font-medium absolute -left-[110px] w-[100px] text-right normal-case">2025 —</span> <span>Pamplemousse Magazine, Issue #11</span></div>
+                    <div className="relative"><span className="font-medium absolute -left-[110px] w-[100px] text-right normal-case">2025 —</span> <span>Bilkis Magazine #1</span></div>
                     <div 
                       className="relative cursor-pointer transition-colors hover:text-gray-600"
                       onMouseEnter={(e) => {
@@ -290,11 +289,11 @@ export default function AboutPage() {
                       }}
                       onMouseLeave={() => setHoveredItem(null)}
                     >
-                      <span className="font-medium absolute -left-[110px] w-[100px] text-right normal-case">2024 —</span> <span className="lowercase">Art House #11</span>
+                      <span className="font-medium absolute -left-[110px] w-[100px] text-right normal-case">2024 —</span> <span>Art House #11</span>
                     </div>
-                    <div className="relative"><span className="font-medium absolute -left-[110px] w-[100px] text-right normal-case">2023 —</span> <span className="lowercase">Plivka and People</span></div>
-                    <div className="relative"><span className="font-medium absolute -left-[110px] w-[100px] text-right normal-case">2022 —</span> <span className="lowercase">Zaborona: &quot;Our Worst Six Months&quot;</span></div>
-                    <div className="relative"><span className="font-medium absolute -left-[110px] w-[100px] text-right normal-case">2022 —</span> <span className="lowercase">Nakid Magazine, Ukraine</span></div>
+                    <div className="relative"><span className="font-medium absolute -left-[110px] w-[100px] text-right normal-case">2023 —</span> <span>Plivka and People</span></div>
+                    <div className="relative"><span className="font-medium absolute -left-[110px] w-[100px] text-right normal-case">2022 —</span> <span>Zaborona: &quot;Our Worst Six Months&quot;</span></div>
+                    <div className="relative"><span className="font-medium absolute -left-[110px] w-[100px] text-right normal-case">2022 —</span> <span>Nakid Magazine, Ukraine</span></div>
                   </div>
                 </div>
 
@@ -314,7 +313,7 @@ export default function AboutPage() {
                       }}
                       onMouseLeave={() => setHoveredItem(null)}
                     >
-                      <span className="font-medium absolute -left-[110px] w-[100px] text-right normal-case">2024 —</span> <span className="lowercase">Conceptual Photography, CP Publishing</span>
+                      <span className="font-medium absolute -left-[110px] w-[100px] text-right normal-case">2024 —</span> <span>Conceptual Photography, CP Publishing</span>
                     </div>
                     <div 
                       className="relative cursor-pointer transition-colors hover:text-gray-600"
@@ -324,7 +323,7 @@ export default function AboutPage() {
                       }}
                       onMouseLeave={() => setHoveredItem(null)}
                     >
-                      <span className="font-medium absolute -left-[110px] w-[100px] text-right normal-case">2023 —</span> <span className="lowercase">GUP Magazine – Fresh Eyes</span>
+                      <span className="font-medium absolute -left-[110px] w-[100px] text-right normal-case">2023 —</span> <span>GUP Magazine – Fresh Eyes</span>
                     </div>
                     <div 
                       className="relative cursor-pointer transition-colors hover:text-gray-600"
@@ -334,7 +333,7 @@ export default function AboutPage() {
                       }}
                       onMouseLeave={() => setHoveredItem(null)}
                     >
-                      <span className="font-medium absolute -left-[110px] w-[100px] text-right normal-case">2022 —</span> <span className="lowercase">MYPH – published works</span>
+                      <span className="font-medium absolute -left-[110px] w-[100px] text-right normal-case">2022 —</span> <span>MYPH – Published Works</span>
                     </div>
                   </div>
                 </div>
@@ -343,7 +342,7 @@ export default function AboutPage() {
               {/* Achievements Section */}
               <div className="mt-12" style={{ marginLeft: '324px' }}>
                 <h3 
-                  className="text-[35px] font-normal leading-[110%] tracking-[-0.01em] text-[#1A1A1A] lowercase mb-6"
+                  className="text-[35px] font-normal leading-[110%] tracking-[-0.01em] text-[#1A1A1A] mb-6"
                   style={{ fontFamily: 'Work Sans' }}
                 >
                   achievements
@@ -357,7 +356,7 @@ export default function AboutPage() {
                     RESIDENCIES
                   </h4>
                   <div className="space-y-2 text-[16px] leading-[155%] tracking-[-0.01em] text-[#1A1A1A]" style={{ fontFamily: 'Work Sans' }}>
-                    <div className="relative"><span className="font-medium absolute -left-[190px] w-[180px] text-right normal-case">Apr – May 2023 —</span> <span className="lowercase">Residency in Nuremberg, Germany</span></div>
+                    <div className="relative"><span className="font-medium absolute -left-[190px] w-[180px] text-right normal-case">Apr – May 2023 —</span> <span>Residency in Nuremberg, Germany</span></div>
                   </div>
                 </div>
 
@@ -369,8 +368,8 @@ export default function AboutPage() {
                     AWARDS
                   </h4>
                   <div className="space-y-2 text-[16px] leading-[155%] tracking-[-0.01em] text-[#1A1A1A]" style={{ fontFamily: 'Work Sans' }}>
-                    <div className="relative"><span className="font-medium absolute -left-[110px] w-[100px] text-right normal-case">2025 —</span> <span className="lowercase">Myph Prize, Longlist</span></div>
-                    <div className="relative"><span className="font-medium absolute -left-[110px] w-[100px] text-right normal-case">2024 —</span> <span className="lowercase">Myph Prize, Longlist</span></div>
+                    <div className="relative"><span className="font-medium absolute -left-[110px] w-[100px] text-right normal-case">2025 —</span> <span>Myph Prize, Longlist</span></div>
+                    <div className="relative"><span className="font-medium absolute -left-[110px] w-[100px] text-right normal-case">2024 —</span> <span>Myph Prize, Longlist</span></div>
                   </div>
                 </div>
               </div>
@@ -385,14 +384,14 @@ export default function AboutPage() {
               <img 
                 src="/about/2 2.jpg" 
                 alt="Anastasiia Antonenko" 
-                className="w-full max-w-[300px] h-auto object-cover mx-auto"
+                className="w-full max-w-[300px] h-auto object-contain mx-auto"
               />
             </div>
 
             {/* Artist Statement */}
             <div className="mb-8">
               <h2 
-                className="text-[28px] md:text-[35px] font-normal leading-[110%] tracking-[-0.01em] text-[#1A1A1A] lowercase mb-4"
+                className="text-[28px] md:text-[35px] font-normal leading-[110%] tracking-[-0.01em] text-[#1A1A1A] mb-4"
                 style={{ fontFamily: 'Work Sans' }}
               >
                 artist statement
@@ -413,32 +412,32 @@ export default function AboutPage() {
             {/* Bio Section */}
             <div className="mb-8">
               <h3 
-                className="text-[28px] md:text-[35px] font-normal leading-[110%] tracking-[-0.01em] text-[#1A1A1A] lowercase mb-6"
+                className="text-[28px] md:text-[35px] font-normal leading-[110%] tracking-[-0.01em] text-[#1A1A1A] mb-6"
                 style={{ fontFamily: 'Work Sans' }}
               >
                 bio
               </h3>
               <div className="space-y-4 text-[14px] md:text-[16px] leading-[155%] tracking-[-0.01em] text-[#1A1A1A]" style={{ fontFamily: 'Work Sans' }}>
                 <div className="lg:relative">
-                  <span className="font-medium lg:absolute lg:-left-[120px] lg:w-[110px] lg:text-right normal-case">1996 —</span> <span className="font-normal lowercase">Born in Luhansk, Ukraine.</span>
+                  <span className="font-medium lg:absolute lg:-left-[120px] lg:w-[110px] lg:text-right normal-case">1996 —</span> <span className="font-normal">born in Luhansk, Ukraine.</span>
                 </div>
                 <div className="lg:relative">
-                  <span className="font-medium lg:absolute lg:-left-[120px] lg:w-[110px] lg:text-right normal-case">2014–2019 —</span> <span className="font-normal lowercase">Studied at Kyiv National Linguistic University, Department of Oriental Studies (Linguistics, Oriental Studies). Alongside her academic studies, she began searching for her own language in photography.</span>
+                  <span className="font-medium lg:absolute lg:-left-[120px] lg:w-[110px] lg:text-right normal-case">2014–2019 —</span> <span className="font-normal">studied at Kyiv National Linguistic University, Department of Oriental Studies (Linguistics, Oriental Studies). Alongside her academic studies, she began searching for her own language in photography.</span>
                 </div>
                 <div className="lg:relative">
-                  <span className="font-medium lg:absolute lg:-left-[120px] lg:w-[110px] lg:text-right normal-case">2014–2015 —</span> <span className="font-normal lowercase">Completed courses at the Kyiv School of Photography, which became her first step into the medium and awakened an interest in the documentary image.</span>
+                  <span className="font-medium lg:absolute lg:-left-[120px] lg:w-[110px] lg:text-right normal-case">2014–2015 —</span> <span className="font-normal">completed courses at the Kyiv School of Photography, which became her first step into the medium and awakened an interest in the documentary image.</span>
                 </div>
                 <div className="lg:relative">
-                  <span className="font-medium lg:absolute lg:-left-[120px] lg:w-[110px] lg:text-right normal-case">2021–2022 —</span> <span className="font-normal lowercase">Studied at the School of Conceptual and Art Photography (MYPH). During this period she developed her artistic voice, moving from documentary observation toward more conceptual, poetic, and abstract approaches.</span>
+                  <span className="font-medium lg:absolute lg:-left-[120px] lg:w-[110px] lg:text-right normal-case">2021–2022 —</span> <span className="font-normal">studied at the School of Conceptual and Art Photography (MYPH). During this period she developed her artistic voice, moving from documentary observation toward more conceptual, poetic, and abstract approaches.</span>
                 </div>
                 <div className="lg:relative">
-                  <span className="font-medium lg:absolute lg:-left-[120px] lg:w-[110px] lg:text-right normal-case">2023 —</span> <span className="font-normal lowercase">In 2023, she took part in an artist residency in Nuremberg, Germany, where she worked on projects that reflected her personal experience of displacement and the fragile intersections between private and collective memory.</span>
+                  <span className="font-medium lg:absolute lg:-left-[120px] lg:w-[110px] lg:text-right normal-case">2023 —</span> <span className="font-normal">in 2023, she took part in an artist residency in Nuremberg, Germany, where she worked on projects that reflected her personal experience of displacement and the fragile intersections between private and collective memory.</span>
                 </div>
                 <div className="lg:relative">
-                  <span className="font-medium lg:absolute lg:-left-[120px] lg:w-[110px] lg:text-right normal-case">2024 —</span> <span className="font-normal lowercase">Since 2024, she has been living and working in Austria, continuing to explore themes of memory, identity, and the body through analog and instant photography.</span>
+                  <span className="font-medium lg:absolute lg:-left-[120px] lg:w-[110px] lg:text-right normal-case">2024 —</span> <span className="font-normal">since 2024, she has been living and working in Austria, continuing to explore themes of memory, identity, and the body through analog and instant photography.</span>
                 </div>
                 <div>
-                  <span className="font-normal lowercase">Her works have been exhibited internationally in Germany, Italy, France, Greece, Sweden, Denmark, the Netherlands, the USA, and Ukraine.</span>
+                  <span className="font-normal">her works have been exhibited internationally in Germany, Italy, France, Greece, Sweden, Denmark, the Netherlands, the USA, and Ukraine.</span>
                 </div>
               </div>
             </div>
@@ -446,37 +445,37 @@ export default function AboutPage() {
             {/* Exhibitions Section */}
             <div className="mb-8">
               <h3 
-                className="text-[28px] md:text-[35px] font-normal leading-[110%] tracking-[-0.01em] text-[#1A1A1A] lowercase mb-6"
+                className="text-[28px] md:text-[35px] font-normal leading-[110%] tracking-[-0.01em] text-[#1A1A1A] mb-6"
                 style={{ fontFamily: 'Work Sans' }}
               >
                 exhibitions
               </h3>
               <div className="space-y-3 text-[14px] md:text-[16px] leading-[155%] tracking-[-0.01em] text-[#1A1A1A]" style={{ fontFamily: 'Work Sans' }}>
-                <div><span className="font-medium normal-case">Jun 2025 —</span> <span className="lowercase">The &quot;Faces&quot; exhibition by Art Icon, Arles, France</span></div>
-                <div><span className="font-medium normal-case">Nov 2024 —</span> <span className="lowercase">Corporeality Exhibition, Art-Icon, Paris</span></div>
-                <div><span className="font-medium normal-case">Sep 2024 —</span> <span className="lowercase">Imagenation Milan, exhibition Just Women</span></div>
-                <div><span className="font-medium normal-case">Apr 2024 —</span> <span className="lowercase">Exhibition at Decode Gallery, Tucson, Arizona</span></div>
-                <div><span className="font-medium normal-case">Mar 2024 —</span> <span className="lowercase">Exhibition at Decode Gallery, Tucson, Arizona</span></div>
-                <div><span className="font-medium normal-case">Jan 2024 —</span> <span className="lowercase">One day, Ukrainian Culture Center in Stockholm and Ukrainian School of Conceptual and Art Photography (MYPH)</span></div>
-                <div><span className="font-medium normal-case">Oct – Nov 2023 —</span> <span className="lowercase">Photopolis Festival, Greece</span></div>
-                <div><span className="font-medium normal-case">Oct 2023 —</span> <span className="lowercase">Fresh Eyes Selection, GUP Magazine, Amsterdam, Netherlands</span></div>
-                <div><span className="font-medium normal-case">Sep – Oct 2023 —</span> <span className="lowercase">Cutout Festival, Kyiv, Ukraine</span></div>
-                <div><span className="font-medium normal-case">Sep 2023 —</span> <span className="lowercase">Exhibition at Sklad 5, Cherkasy, Ukraine</span></div>
-                <div><span className="font-medium normal-case">Jul – Aug 2023 —</span> <span className="lowercase">If You Look Into the Void Too Long, Ivano-Frankivsk, Ukraine</span></div>
-                <div><span className="font-medium normal-case">Jul 2023 —</span> <span className="lowercase">New Mythology, Ermilov Center, Kharkiv, Ukraine</span></div>
-                <div><span className="font-medium normal-case">Jun – Jul 2023 —</span> <span className="lowercase">&quot;And will be silence&quot;, Zaporizhzhia, Ukraine</span></div>
-                <div><span className="font-medium normal-case">May 2023 —</span> <span className="lowercase">Online exhibition Baroque application – Myph 5 years anniversary</span></div>
-                <div><span className="font-medium normal-case">Mar 2023 —</span> <span className="lowercase">War Exhibition, Mainz, Germany</span></div>
-                <div><span className="font-medium normal-case">Feb 2023 —</span> <span className="lowercase">Fotodok, Whispers and Shouts. Voices of Ukrainian Women Photographers</span></div>
-                <div><span className="font-medium normal-case">Jan 2023 —</span> <span className="lowercase">Exhibition opening in Berlin, Kyiv Emerging</span></div>
-                <div><span className="font-medium normal-case">2022 —</span> <span className="lowercase">MyArt – Memory, Online & Offline Exhibition</span></div>
+                <div><span className="font-medium normal-case">Jun 2025 —</span> <span>The &quot;Faces&quot; Exhibition by Art Icon, Arles, France</span></div>
+                <div><span className="font-medium normal-case">Nov 2024 —</span> <span>Corporeality Exhibition, Art-Icon, Paris</span></div>
+                <div><span className="font-medium normal-case">Sep 2024 —</span> <span>Imagenation Milan, Exhibition Just Women</span></div>
+                <div><span className="font-medium normal-case">Apr 2024 —</span> <span>Exhibition at Decode Gallery, Tucson, Arizona</span></div>
+                <div><span className="font-medium normal-case">Mar 2024 —</span> <span>Depths of Psyche, Korsak Museum of Contemporary Ukrainian Art</span></div>
+                <div><span className="font-medium normal-case">Jan 2024 —</span> <span>One Day, Ukrainian Culture Center in Stockholm and Ukrainian School of Conceptual and Art Photography (MYPH)</span></div>
+                <div><span className="font-medium normal-case">Oct – Nov 2023 —</span> <span>Photopolis Festival, Greece</span></div>
+                <div><span className="font-medium normal-case">Oct 2023 —</span> <span>Fresh Eyes Selection, GUP Magazine, Amsterdam, Netherlands</span></div>
+                <div><span className="font-medium normal-case">Sep – Oct 2023 —</span> <span>Cutout Festival, Kyiv, Ukraine</span></div>
+                <div><span className="font-medium normal-case">Sep 2023 —</span> <span>Exhibition at Sklad 5, Cherkasy, Ukraine</span></div>
+                <div><span className="font-medium normal-case">Jul – Aug 2023 —</span> <span>If You Look Into the Void Too Long, Ivano-Frankivsk, Ukraine</span></div>
+                <div><span className="font-medium normal-case">Jul 2023 —</span> <span>New Mythology, Ermilov Center, Kharkiv, Ukraine</span></div>
+                <div><span className="font-medium normal-case">Jun – Jul 2023 —</span> <span>&quot;And Will Be Silence&quot;, Zaporizhzhia, Ukraine</span></div>
+                <div><span className="font-medium normal-case">May 2023 —</span> <span>Online Exhibition Baroque Application – Myph 5 Years Anniversary</span></div>
+                <div><span className="font-medium normal-case">Mar 2023 —</span> <span>War Exhibition, Mainz, Germany</span></div>
+                <div><span className="font-medium normal-case">Feb 2023 —</span> <span>Fotodok, Whispers and Shouts. Voices of Ukrainian Women Photographers</span></div>
+                <div><span className="font-medium normal-case">Jan 2023 —</span> <span>Exhibition Opening in Berlin, Kyiv Emerging</span></div>
+                <div><span className="font-medium normal-case">2022 —</span> <span>MyArt – Memory, Online & Offline Exhibition</span></div>
               </div>
             </div>
 
             {/* Publications Section */}
             <div className="mb-8">
               <h3 
-                className="text-[28px] md:text-[35px] font-normal leading-[110%] tracking-[-0.01em] text-[#1A1A1A] lowercase mb-6"
+                className="text-[28px] md:text-[35px] font-normal leading-[110%] tracking-[-0.01em] text-[#1A1A1A] mb-6"
                 style={{ fontFamily: 'Work Sans' }}
               >
                 publications
@@ -490,12 +489,12 @@ export default function AboutPage() {
                   MAGAZINES
                 </h4>
                 <div className="space-y-2 text-[14px] md:text-[16px] leading-[155%] tracking-[-0.01em] text-[#1A1A1A]" style={{ fontFamily: 'Work Sans' }}>
-                  <div><span className="font-medium normal-case">2025 —</span> <span className="lowercase">Pamplemousse Magazine, Issue #11</span></div>
-                  <div><span className="font-medium normal-case">2025 —</span> <span className="lowercase">Bilkis Magazine #1</span></div>
-                  <div><span className="font-medium normal-case">2024 —</span> <span className="lowercase">Art House #11</span></div>
-                  <div><span className="font-medium normal-case">2023 —</span> <span className="lowercase">Plivka and People</span></div>
-                  <div><span className="font-medium normal-case">2022 —</span> <span className="lowercase">Zaborona: &quot;Our Worst Six Months&quot;</span></div>
-                  <div><span className="font-medium normal-case">2022 —</span> <span className="lowercase">Nakid Magazine, Ukraine</span></div>
+                  <div><span className="font-medium normal-case">2025 —</span> <span>Pamplemousse Magazine, Issue #11</span></div>
+                  <div><span className="font-medium normal-case">2025 —</span> <span>Bilkis Magazine #1</span></div>
+                  <div><span className="font-medium normal-case">2024 —</span> <span>Art House #11</span></div>
+                  <div><span className="font-medium normal-case">2023 —</span> <span>Plivka and People</span></div>
+                  <div><span className="font-medium normal-case">2022 —</span> <span>Zaborona: &quot;Our Worst Six Months&quot;</span></div>
+                  <div><span className="font-medium normal-case">2022 —</span> <span>Nakid Magazine, Ukraine</span></div>
                 </div>
               </div>
 
@@ -507,9 +506,9 @@ export default function AboutPage() {
                   BOOKS
                 </h4>
                 <div className="space-y-2 text-[14px] md:text-[16px] leading-[155%] tracking-[-0.01em] text-[#1A1A1A]" style={{ fontFamily: 'Work Sans' }}>
-                  <div><span className="font-medium normal-case">2024 —</span> <span className="lowercase">Conceptual Photography, CP Publishing</span></div>
-                  <div><span className="font-medium normal-case">2023 —</span> <span className="lowercase">GUP Magazine – Fresh Eyes</span></div>
-                  <div><span className="font-medium normal-case">2022 —</span> <span className="lowercase">MYPH – published works</span></div>
+                  <div><span className="font-medium normal-case">2024 —</span> <span>Conceptual Photography, CP Publishing</span></div>
+                  <div><span className="font-medium normal-case">2023 —</span> <span>GUP Magazine – Fresh Eyes</span></div>
+                  <div><span className="font-medium normal-case">2022 —</span> <span>MYPH – Published Works</span></div>
                 </div>
               </div>
             </div>
@@ -517,7 +516,7 @@ export default function AboutPage() {
             {/* Achievements Section */}
             <div className="mb-8">
               <h3 
-                className="text-[28px] md:text-[35px] font-normal leading-[110%] tracking-[-0.01em] text-[#1A1A1A] lowercase mb-6"
+                className="text-[28px] md:text-[35px] font-normal leading-[110%] tracking-[-0.01em] text-[#1A1A1A] mb-6"
                 style={{ fontFamily: 'Work Sans' }}
               >
                 achievements
@@ -531,7 +530,7 @@ export default function AboutPage() {
                   RESIDENCIES
                 </h4>
                 <div className="space-y-2 text-[14px] md:text-[16px] leading-[155%] tracking-[-0.01em] text-[#1A1A1A]" style={{ fontFamily: 'Work Sans' }}>
-                  <div><span className="font-medium normal-case">Apr – May 2023 —</span> <span className="lowercase">Residency in Nuremberg, Germany</span></div>
+                  <div><span className="font-medium normal-case">Apr – May 2023 —</span> <span>residency in Nuremberg, Germany</span></div>
                 </div>
               </div>
 
@@ -543,17 +542,13 @@ export default function AboutPage() {
                   AWARDS
                 </h4>
                 <div className="space-y-2 text-[14px] md:text-[16px] leading-[155%] tracking-[-0.01em] text-[#1A1A1A]" style={{ fontFamily: 'Work Sans' }}>
-                  <div><span className="font-medium normal-case">2025 —</span> <span className="lowercase">Myph Prize, Longlist</span></div>
-                  <div><span className="font-medium normal-case">2024 —</span> <span className="lowercase">Myph Prize, Longlist</span></div>
+                  <div><span className="font-medium normal-case">2025 —</span> <span>Myph Prize, Longlist</span></div>
+                  <div><span className="font-medium normal-case">2024 —</span> <span>Myph Prize, Longlist</span></div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Contact Form */}
-          <div className="mt-8 md:mt-12 lg:mt-16">
-            <ContactForm />
-          </div>
         </main>
       </div>
 

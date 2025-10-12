@@ -292,10 +292,10 @@ export default function Portfolio() {
       </div>
 
       {/* Main Content */}
-      <div className="flex-1">
+      <div className="flex-1 flex flex-col">
         {/* Gallery Section */}
-        <main className="py-8 pr-4 lg:pr-[17rem] pl-4 lg:pl-12">
-          <div>
+        <main className="flex-1 flex flex-col py-4 lg:py-6 pr-4 lg:pr-[17rem] pl-4 lg:pl-12">
+          <div className="flex-1 flex flex-col justify-center">
             <div className="relative">
               {/* Two Photos Layout */}
               <div className="flex flex-col lg:flex-row lg:items-center gap-6">
@@ -320,11 +320,6 @@ export default function Portfolio() {
                     />
                   </div>
                 </div>
-              </div>
-
-              {/* Email below images - hidden on mobile */}
-              <div className="hidden lg:block text-right mt-16 pr-4 lg:pr-12">
-                <p className="text-[16px] font-normal leading-[150%] tracking-[0.03em] text-[#515151]">stushaphotofilm@gmail.com</p>
               </div>
 
               {/* Mobile Navigation Dots */}
@@ -356,6 +351,11 @@ export default function Portfolio() {
                 variant="carousel"
               />
             </div>
+          </div>
+          
+          {/* Email below images - hidden on mobile, aligned with sidebar footer */}
+          <div className="hidden lg:block text-right pr-4 lg:pr-12 pb-2">
+            <p className="text-[14px] font-light text-[#515151]">stushaphotofilm@gmail.com</p>
           </div>
         </main>
       </div>

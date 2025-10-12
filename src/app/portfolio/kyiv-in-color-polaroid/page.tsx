@@ -291,7 +291,7 @@ export default function KyivInColorPolaroidPage() {
               <p className="text-[18px] font-normal leading-[150%] tracking-[0.03em] text-[#1A1A1A] max-w-[680px] whitespace-pre-line">
                 {fullStoryText}
               </p>
-              <div className="relative mt-14">
+              <div className="relative mt-20">
                 <div
                   className="absolute top-0 h-px bg-gray-300"
                   style={{

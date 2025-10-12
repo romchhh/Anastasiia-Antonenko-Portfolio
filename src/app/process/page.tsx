@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import Header from '@/components/Header';
 import Sidebar from '@/components/Sidebar';
-import ContactForm from '@/components/ContactForm';
 import BurgerMenu from '@/components/BurgerMenu';
 import NavigationButton from '@/components/NavigationButton';
 
@@ -197,8 +196,8 @@ export default function ProcessPage() {
                   <p>
                     One of my favorite techniques: drawing directly on negatives with markers. It is a very intimate way of interacting with the material, giving the photograph a new life.
                   </p>
-                  <p className="text-[12px] md:text-[13px] lg:text-[14px] font-medium text-[#666666] mt-3 md:mt-4" style={{ fontFamily: 'Work Sans' }}>
-                    used in project: Air Alarm
+                  <p className="text-[16px] font-normal leading-[155%] tracking-[-1%] text-[#1A1A1A] mt-3 md:mt-4" style={{ fontFamily: 'Work Sans' }}>
+                    <span className="font-semibold lowercase">used in</span> project: Air Alarm
                   </p>
                 </div>
               </div>
@@ -258,8 +257,8 @@ export default function ProcessPage() {
                     <p>
                       Hand-painting an instant photograph with paints, where color becomes an added layer of meaning.
                     </p>
-                    <p className="text-[12px] md:text-[13px] lg:text-[14px] font-medium text-[#666666] mt-3 md:mt-4" style={{ fontFamily: 'Work Sans' }}>
-                      used in projects: Kyiv in Color, Air Alarm
+                    <p className="text-[16px] font-normal leading-[155%] tracking-[-1%] text-[#1A1A1A] mt-3 md:mt-4" style={{ fontFamily: 'Work Sans' }}>
+                      <span className="font-semibold lowercase">used in</span> projects: Kyiv in Color, Air Alarm
                     </p>
                   </div>
                 </div>
@@ -314,8 +313,8 @@ export default function ProcessPage() {
                     <p>
                       In my home studio I often experiment with unconventional materials. In this series, I used receipt paper colored with markers, which later became part of the project Alien Chronicles.
                     </p>
-                    <p className="text-[12px] md:text-[13px] lg:text-[14px] font-medium text-[#666666] mt-3 md:mt-4" style={{ fontFamily: 'Work Sans' }}>
-                      used in projects: Air Alarm, Holes of Time, From Headlines to Reality, Down in Flames
+                    <p className="text-[16px] font-normal leading-[155%] tracking-[-1%] text-[#1A1A1A] mt-3 md:mt-4" style={{ fontFamily: 'Work Sans' }}>
+                      <span className="font-semibold lowercase">used in</span> projects: Air Alarm, Holes of Time, From Headlines to Reality, Down in Flames
                     </p>
                   </div>
                 </div>
@@ -370,8 +369,8 @@ export default function ProcessPage() {
                     <p>
                       Threads have become a part of my series such as Kyiv in Color Polaroids and the separate series Connection and Rupture.
                     </p>
-                    <p className="text-[12px] md:text-[13px] lg:text-[14px] font-medium text-[#666666] mt-3 md:mt-4" style={{ fontFamily: 'Work Sans' }}>
-                      used in project: Kyiv in Color version Polaroids
+                    <p className="text-[16px] font-normal leading-[155%] tracking-[-1%] text-[#1A1A1A] mt-3 md:mt-4" style={{ fontFamily: 'Work Sans' }}>
+                      <span className="font-semibold lowercase">used in</span> project: Kyiv in Color version Polaroids
                     </p>
                   </div>
                 </div>
@@ -537,8 +536,8 @@ export default function ProcessPage() {
                 <p>
                   One of my favorite techniques: drawing directly on negatives with markers. It is a very intimate way of interacting with the material, giving the photograph a new life.
                 </p>
-                <p className="text-[12px] md:text-[14px] font-medium text-[#666666] mt-4" style={{ fontFamily: 'Work Sans' }}>
-                  used in project: Air Alarm
+                <p className="text-[16px] font-normal leading-[155%] tracking-[-1%] text-[#1A1A1A] mt-4" style={{ fontFamily: 'Work Sans' }}>
+                  <span className="font-semibold lowercase">used in</span> project: Air Alarm
                 </p>
               </div>
             </div>
@@ -605,8 +604,8 @@ export default function ProcessPage() {
                 <p>
                   Hand-painting an instant photograph with paints, where color becomes an added layer of meaning.
                 </p>
-                <p className="text-[12px] md:text-[14px] font-medium text-[#666666] mt-4" style={{ fontFamily: 'Work Sans' }}>
-                  used in projects: Kyiv in Color, Air Alarm
+                <p className="text-[16px] font-normal leading-[155%] tracking-[-1%] text-[#1A1A1A] mt-4" style={{ fontFamily: 'Work Sans' }}>
+                  <span className="font-semibold lowercase">used in</span> projects: Kyiv in Color, Air Alarm
                 </p>
               </div>
             </div>
@@ -670,8 +669,8 @@ export default function ProcessPage() {
                 <p>
                   In my home studio I often experiment with unconventional materials. In this series, I used receipt paper colored with markers, which later became part of the project Alien Chronicles.
                 </p>
-                <p className="text-[12px] md:text-[14px] font-medium text-[#666666] mt-4" style={{ fontFamily: 'Work Sans' }}>
-                  used in projects: Air Alarm, Holes of Time, From Headlines to Reality, Down in Flames
+                <p className="text-[16px] font-normal leading-[155%] tracking-[-1%] text-[#1A1A1A] mt-4" style={{ fontFamily: 'Work Sans' }}>
+                  <span className="font-semibold lowercase">used in</span> projects: Air Alarm, Holes of Time, From Headlines to Reality, Down in Flames
                 </p>
               </div>
             </div>
@@ -735,8 +734,8 @@ export default function ProcessPage() {
                 <p>
                   Threads have become a part of my series such as Kyiv in Color Polaroids and the separate series Connection and Rupture.
                 </p>
-                <p className="text-[12px] md:text-[14px] font-medium text-[#666666] mt-4" style={{ fontFamily: 'Work Sans' }}>
-                  used in project: Kyiv in Color version Polaroids
+                <p className="text-[16px] font-normal leading-[155%] tracking-[-1%] text-[#1A1A1A] mt-4" style={{ fontFamily: 'Work Sans' }}>
+                  <span className="font-semibold lowercase">used in</span> project: Kyiv in Color version Polaroids
                 </p>
               </div>
             </div>
@@ -804,10 +803,6 @@ export default function ProcessPage() {
             </div>
           </div>
 
-          {/* Contact Form */}
-          <div className="mt-8 md:mt-12 lg:mt-16">
-            <ContactForm />
-          </div>
         </main>
       </div>
 

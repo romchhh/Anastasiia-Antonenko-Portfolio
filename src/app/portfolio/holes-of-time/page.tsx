@@ -579,7 +579,6 @@ In a time when truth is increasingly fragile, I see these damaged images as quie
                 src={galleryImages[5].src}
                 className="w-[calc(50%-6px)] aspect-[162/246] object-cover"
                 onClick={() => openModal(5)}
-                // TODO: place onClick everywhere in the mobile
               />
               <img
                 src={galleryImages[6].src}

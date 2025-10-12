@@ -326,7 +326,7 @@ Born in Luhansk, I carry loss as both personal and generational, making this wor
               </p>
 
               {/* Horizontal line spanning full width */}
-              <div className="relative mt-8">
+              <div className="relative mt-16">
                 {/* Full-width horizontal line from left edge to sidebar */}
                 <div
                   className="absolute top-0 h-px bg-gray-300"
