@@ -372,7 +372,7 @@ export default function PortfolioGridPage() {
       {/* Author name under horizontal line - right aligned, clickable */}
       <div className="md:hidden px-2 pt-3 pb-2 flex justify-end">
         <button 
-          onClick={() => window.location.href = '/portfolio-grid'}
+          onClick={() => window.location.href = '/portfolio'}
           className="text-[16px] font-normal leading-[110%] tracking-[-0.01em] text-[#1A1A1A] lowercase hover:opacity-70 transition-opacity"
           style={{ fontFamily: 'Work Sans' }}
         >

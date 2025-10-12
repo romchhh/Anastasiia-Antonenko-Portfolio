@@ -190,7 +190,7 @@ export default function Portfolio() {
                 </li>
                 <li>
                   <a
-                    href="/portfolio-grid"
+                    href="/portfolio"
                     className="text-white uppercase hover:opacity-70 transition-opacity"
                     style={{
                       fontFamily: 'Work Sans',

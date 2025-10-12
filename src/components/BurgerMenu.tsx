@@ -128,9 +128,9 @@ export default function BurgerMenu({ isOpen, onToggle }: BurgerMenuProps) {
                 </li>
                 <li>
                   <Link
-                    href="/portfolio-grid"
+                    href="/portfolio"
                     className={`uppercase transition-opacity ${
-                      pathname === '/portfolio-grid' ? 'text-[#080808]' : 'text-white hover:opacity-70'
+                      pathname === '/portfolio' ? 'text-[#080808]' : 'text-white hover:opacity-70'
                     }`}
                     style={{
                       fontFamily: 'Work Sans',

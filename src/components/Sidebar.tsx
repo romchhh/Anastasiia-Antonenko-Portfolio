@@ -21,9 +21,9 @@ export default function Sidebar() {
           </li>
           <li>
             <Link 
-              href="/portfolio-grid" 
+              href="/portfolio" 
               className={`tracking-wide transition-colors ${
-                pathname === '/portfolio-grid' ? 'text-[#080808]' : 'text-[#515151] hover:text-[#1A1A1A]'
+                pathname === '/portfolio' ? 'text-[#080808]' : 'text-[#515151] hover:text-[#1A1A1A]'
               }`}
             >
               PORTFOLIO
