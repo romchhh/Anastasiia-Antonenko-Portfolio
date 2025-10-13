@@ -427,13 +427,13 @@ And we, too, have changed. Fear no longer devours us — it transforms into stre
               <div className="flex w-3/5 flex-col gap-5 lg:gap-7.5">
                 <img
                   src={galleryImages[0].src}
-                  className="h-[calc(50%-15px)]"
+                  className="h-[calc(50%-15px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                   alt=""
                   onClick={() => openModal(0)}
                 />
                 <img
                   src={galleryImages[2].src}
-                  className="h-[calc(50%-15px)]"
+                  className="h-[calc(50%-15px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                   alt=""
                   onClick={() => openModal(2)}
                 />
@@ -441,19 +441,19 @@ And we, too, have changed. Fear no longer devours us — it transforms into stre
               <div className="flex flex-col w-2/5 gap-5 lg:gap-7.5">
                 <img
                   src={galleryImages[1].src}
-                  className="h-[calc(33%-10px)]"
+                  className="h-[calc(33%-10px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                   alt=""
                   onClick={() => openModal(1)}
                 />
                 <img
                   src={galleryImages[3].src}
-                  className="h-[calc(33%-10px)]"
+                  className="h-[calc(33%-10px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                   alt=""
                   onClick={() => openModal(0)}
                 />
                 <img
                   src={galleryImages[4].src}
-                  className="h-[calc(33%-10px)]"
+                  className="h-[calc(33%-10px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                   alt=""
                   onClick={() => openModal(4)}
                 />
@@ -462,13 +462,13 @@ And we, too, have changed. Fear no longer devours us — it transforms into stre
             <div className="flex w-full gap-5 lg:gap-7.5">
               <img
                 src={galleryImages[5].src}
-                className="w-[calc(50%-15px)]"
+                className="w-[calc(50%-15px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                 alt=""
                 onClick={() => openModal(5)}
               />
               <img
                 src={galleryImages[6].src}
-                className="w-[calc(50%-15px)]"
+                className="w-[calc(50%-15px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                 alt=""
                 onClick={() => openModal(6)}
               />
@@ -517,12 +517,12 @@ And we, too, have changed. Fear no longer devours us — it transforms into stre
             />
             <div className="flex gap-3 w-full ">
               <img
-                className="w-[calc(50%-6px)] h-auto"
+                className="w-[calc(50%-6px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity h-auto"
                 src={galleryImages[3].src}
                 onClick={() => openModal(3)}
               />
               <img
-                className="w-[calc(50%-6px)] h-auto"
+                className="w-[calc(50%-6px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity h-auto"
                 src={galleryImages[1].src}
                 onClick={() => openModal(1)}
               />
@@ -535,12 +535,12 @@ And we, too, have changed. Fear no longer devours us — it transforms into stre
             />
             <div className="flex gap-3 w-full ">
               <img
-                className="w-[calc(50%-6px)] h-auto"
+                className="w-[calc(50%-6px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity h-auto"
                 onClick={() => openModal(5)}
                 src={galleryImages[5].src}
               />
               <img
-                className="w-[calc(50%-6px)] h-auto"
+                className="w-[calc(50%-6px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity h-auto"
                 onClick={() => openModal(4)}
                 src={galleryImages[4].src}
               />

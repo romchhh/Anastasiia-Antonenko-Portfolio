@@ -446,13 +446,13 @@ Kyiv in Color is both a record of the city's endurance and a reminder of the cha
               <div className="flex w-3/5 flex-col gap-5 lg:gap-7.5">
                 <img
                   src={galleryImages[0].src}
-                  className="h-[calc(50%-15px)]"
+                  className="h-[calc(50%-15px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                   alt=""
                   onClick={() => openModal(0)}
                 />
                 <img
                   src={galleryImages[2].src}
-                  className="h-[calc(50%-15px)]"
+                  className="h-[calc(50%-15px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                   alt=""
                   onClick={() => openModal(2)}
                 />
@@ -460,19 +460,19 @@ Kyiv in Color is both a record of the city's endurance and a reminder of the cha
               <div className="flex flex-col w-2/5 gap-5 lg:gap-7.5">
                 <img
                   src={galleryImages[1].src}
-                  className="h-[calc(33%-10px)]"
+                  className="h-[calc(33%-10px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                   alt=""
                   onClick={() => openModal(1)}
                 />
                 <img
                   src={galleryImages[3].src}
-                  className="h-[calc(33%-10px)]"
+                  className="h-[calc(33%-10px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                   alt=""
                   onClick={() => openModal(0)}
                 />
                 <img
                   src={galleryImages[4].src}
-                  className="h-[calc(33%-10px)]"
+                  className="h-[calc(33%-10px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                   alt=""
                   onClick={() => openModal(4)}
                 />
@@ -482,19 +482,19 @@ Kyiv in Color is both a record of the city's endurance and a reminder of the cha
               <div className="flex w-2/5 flex-col gap-5 lg:gap-7.5">
                 <img
                   src={galleryImages[5].src}
-                  className="h-[calc(50%-15px)]"
+                  className="h-[calc(50%-15px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                   alt=""
                   onClick={() => openModal(5)}
                 />
                 <img
                   src={galleryImages[7].src}
-                  className="h-[calc(50%-15px)]"
+                  className="h-[calc(50%-15px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                   alt=""
                   onClick={() => openModal(7)}
                 />
                 <img
                   src={galleryImages[9].src}
-                  className="h-[calc(50%-15px)]"
+                  className="h-[calc(50%-15px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                   alt=""
                   onClick={() => openModal(9)}
                 />
@@ -502,19 +502,19 @@ Kyiv in Color is both a record of the city's endurance and a reminder of the cha
               <div className="flex flex-col w-3/5 gap-5 lg:gap-7.5">
                 <img
                   src={galleryImages[6].src}
-                  className="h-[calc(33%-10px)]"
+                  className="h-[calc(33%-10px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                   alt=""
                   onClick={() => openModal(6)}
                 />
                 <img
                   src={galleryImages[8].src}
-                  className="h-[calc(33%-10px)]"
+                  className="h-[calc(33%-10px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                   alt=""
                   onClick={() => openModal(8)}
                 />
                 <img
                   src={galleryImages[10].src}
-                  className="h-[calc(33%-10px)]"
+                  className="h-[calc(33%-10px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                   alt=""
                   onClick={() => openModal(10)}
                 />
@@ -523,13 +523,13 @@ Kyiv in Color is both a record of the city's endurance and a reminder of the cha
             <div className="flex w-full gap-5 lg:gap-7.5">
               <img
                 src={galleryImages[11].src}
-                className="w-[calc(50%-15px)]"
+                className="w-[calc(50%-15px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                 alt=""
                 onClick={() => openModal(11)}
               />
               <img
                 src={galleryImages[12].src}
-                className="w-[calc(50%-15px)]"
+                className="w-[calc(50%-15px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                 alt=""
                 onClick={() => openModal(12)}
               />
@@ -540,22 +540,22 @@ Kyiv in Color is both a record of the city's endurance and a reminder of the cha
             <img src={galleryImages[0].src} className="mx-auto" alt="" />
             <div className="flex gap-3 w-full ">
               <img
-                className="w-[calc(50%-6px)] h-auto"
+                className="w-[calc(50%-6px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity h-auto"
                 src={galleryImages[2].src}
               />
               <img
-                className="w-[calc(50%-6px)] h-auto"
+                className="w-[calc(50%-6px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity h-auto"
                 src={galleryImages[1].src}
               />
             </div>
             <img src={galleryImages[10].src} className="mx-auto" alt="" />
             <div className="flex gap-3 w-full ">
               <img
-                className="w-[calc(50%-6px)] h-auto"
+                className="w-[calc(50%-6px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity h-auto"
                 src={galleryImages[3].src}
               />
               <img
-                className="w-[calc(50%-6px)] h-auto"
+                className="w-[calc(50%-6px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity h-auto"
                 src={galleryImages[4].src}
               />
             </div>
@@ -574,11 +574,11 @@ Kyiv in Color is both a record of the city's endurance and a reminder of the cha
             <img src={galleryImages[8].src} className="mx-auto" alt="" />
             <div className="flex gap-3 w-full ">
               <img
-                className="w-[calc(50%-6px)] h-auto"
+                className="w-[calc(50%-6px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity h-auto"
                 src={galleryImages[11].src}
               />
               <img
-                className="w-[calc(50%-6px)] h-auto"
+                className="w-[calc(50%-6px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity h-auto"
                 src={galleryImages[9].src}
               />
             </div>

@@ -401,13 +401,13 @@ export default function KyivInColorPolaroidPage() {
               <div className="flex w-3/5 flex-col gap-5 lg:gap-7.5">
                 <img
                   src={galleryImages[0].src}
-                  className="h-[calc(50%-15px)]"
+                  className="h-[calc(50%-15px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                   alt=""
                   onClick={() => openModal(0)}
                 />
                 <img
                   src={galleryImages[2].src}
-                  className="h-[calc(50%-15px)]"
+                  className="h-[calc(50%-15px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                   alt=""
                   onClick={() => openModal(2)}
                 />
@@ -415,19 +415,19 @@ export default function KyivInColorPolaroidPage() {
               <div className="flex flex-col w-2/5 gap-5 lg:gap-7.5">
                 <img
                   src={galleryImages[1].src}
-                  className="h-[calc(33%-10px)]"
+                  className="h-[calc(33%-10px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                   alt=""
                   onClick={() => openModal(1)}
                 />
                 <img
                   src={galleryImages[3].src}
-                  className="h-[calc(33%-10px)]"
+                  className="h-[calc(33%-10px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                   alt=""
                   onClick={() => openModal(3)}
                 />
                 <img
                   src={galleryImages[4].src}
-                  className="h-[calc(33%-10px)]"
+                  className="h-[calc(33%-10px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                   alt=""
                   onClick={() => openModal(4)}
                 />
@@ -436,13 +436,13 @@ export default function KyivInColorPolaroidPage() {
             <div className="flex w-full gap-5 lg:gap-7.5">
               <img
                 src={galleryImages[5].src}
-                className="w-[calc(50%-15px)]"
+                className="w-[calc(50%-15px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                 alt=""
                 onClick={() => openModal(5)}
               />
               <img
                 src={galleryImages[6].src}
-                className="w-[calc(50%-15px)]"
+                className="w-[calc(50%-15px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                 alt=""
                 onClick={() => openModal(6)}
               />
@@ -451,13 +451,13 @@ export default function KyivInColorPolaroidPage() {
               <div className="flex w-3/5 flex-col gap-5 lg:gap-7.5">
                 <img
                   src={galleryImages[7].src}
-                  className="h-[calc(50%-15px)]"
+                  className="h-[calc(50%-15px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                   alt=""
                   onClick={() => openModal(7)}
                 />
                 <img
                   src={galleryImages[10].src}
-                  className="h-[calc(50%-15px)]"
+                  className="h-[calc(50%-15px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                   alt=""
                   onClick={() => openModal(10)}
                 />
@@ -465,19 +465,19 @@ export default function KyivInColorPolaroidPage() {
               <div className="flex flex-col w-2/5 gap-5 lg:gap-7.5">
                 <img
                   src={galleryImages[8].src}
-                  className="h-[calc(33%-10px)]"
+                  className="h-[calc(33%-10px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                   alt=""
                   onClick={() => openModal(8)}
                 />
                 <img
                   src={galleryImages[9].src}
-                  className="h-[calc(33%-10px)]"
+                  className="h-[calc(33%-10px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                   alt=""
                   onClick={() => openModal(9)}
                 />
                 <img
                   src={galleryImages[11].src}
-                  className="h-[calc(33%-10px)]"
+                  className="h-[calc(33%-10px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                   alt=""
                   onClick={() => openModal(11)}
                 />
@@ -486,13 +486,13 @@ export default function KyivInColorPolaroidPage() {
             <div className="flex w-full gap-5 lg:gap-7.5">
               <img
                 src={galleryImages[12].src}
-                className="w-[calc(50%-15px)]"
+                className="w-[calc(50%-15px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                 alt=""
                 onClick={() => openModal(12)}
               />
               <img
                 src={galleryImages[13].src}
-                className="w-[calc(50%-15px)]"
+                className="w-[calc(50%-15px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                 alt=""
                 onClick={() => openModal(13)}
               />
@@ -502,47 +502,47 @@ export default function KyivInColorPolaroidPage() {
           <div className="md:hidden w-full max-w-full mt-6 flex flex-col gap-3 mx-auto">
             <div className="flex gap-3 w-full">
               <img
-                className="w-[calc(50%-6px)] h-auto"
+                className="w-[calc(50%-6px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity h-auto"
                 src={galleryImages[5].src}
               />
               <img
-                className="w-[calc(50%-6px)] h-auto"
+                className="w-[calc(50%-6px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity h-auto"
                 src={galleryImages[6].src}
               />
             </div>
             <div className="flex gap-3 w-full">
               <div className="flex flex-col gap-3 w-3/5">
                 <img
-                  className="w-full h-[calc(50%-6px)]"
+                  className="w-full h-[calc(50%-6px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                   src={galleryImages[0].src}
                 />
                 <img
-                  className="w-full h-[calc(50%-6px)]"
+                  className="w-full h-[calc(50%-6px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                   src={galleryImages[2].src}
                 />
               </div>
               <div className="flex flex-col gap-3 w-2/5">
                 <img
-                  className="w-full h-[calc(33%-4px)]"
+                  className="w-full h-[calc(33%-4px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                   src={galleryImages[4].src}
                 />
                 <img
-                  className="w-full h-[calc(33%-4px)]"
+                  className="w-full h-[calc(33%-4px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                   src={galleryImages[1].src}
                 />
                 <img
-                  className="w-full h-[calc(33%-4px)]"
+                  className="w-full h-[calc(33%-4px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                   src={galleryImages[3].src}
                 />
               </div>
             </div>
             <div className="flex gap-3 w-full">
               <img
-                className="w-[calc(50%-6px)] h-auto"
+                className="w-[calc(50%-6px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity h-auto"
                 src={galleryImages[12].src}
               />
               <img
-                className="w-[calc(50%-6px)] h-auto"
+                className="w-[calc(50%-6px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity h-auto"
                 src={galleryImages[13].src}
               />
             </div>

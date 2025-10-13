@@ -410,46 +410,46 @@ This project is also a reminder of the importance of empathy and support for tho
             <div className="flex w-3/5 flex-col gap-5 lg:gap-7.5">
               <img
                 src={galleryImages[0].src}
-                className="h-auto"
+                className="h-auto bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                 alt=""
                 onClick={() => openModal(0)}
               />
               <div className="flex w-full h-auto gap-5 lg:gap-7.5">
                 <img
                   src={galleryImages[2].src}
-                  className="w-[calc(50%-15px)]"
+                  className="w-[calc(50%-15px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                   alt=""
                   onClick={() => openModal(2)}
                 />
                 <img
                   src={galleryImages[3].src}
-                  className="w-[calc(50%-15px)]"
+                  className="w-[calc(50%-15px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                   alt=""
                   onClick={() => openModal(3)}
                 />
               </div>
               <img
                 src={galleryImages[5].src}
-                className="h-auto"
+                className="h-auto bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                 alt=""
                 onClick={() => openModal(5)}
               />
               <img
                 src={galleryImages[7].src}
-                className="h-auto"
+                className="h-auto bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                 alt=""
                 onClick={() => openModal(7)}
               />
               <div className="flex w-full h-auto gap-5 lg:gap-7.5">
                 <img
                   src={galleryImages[8].src}
-                  className="w-[calc(50%-15px)]"
+                  className="w-[calc(50%-15px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                   alt=""
                   onClick={() => openModal(8)}
                 />
                 <img
                   src={galleryImages[9].src}
-                  className="w-[calc(50%-15px)]"
+                  className="w-[calc(50%-15px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                   alt=""
                   onClick={() => openModal(9)}
                 />
@@ -458,25 +458,25 @@ This project is also a reminder of the importance of empathy and support for tho
             <div className="flex flex-col w-2/5 gap-5 lg:gap-7.5">
               <img
                 src={galleryImages[1].src}
-                className="w-full h-[calc(25%-7.5px)]"
+                className="w-full h-[calc(25%-7.5px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                 alt=""
                 onClick={() => openModal(1)}
               />
               <img
                 src={galleryImages[4].src}
-                className="h-[calc(25%-7.5px)]"
+                className="h-[calc(25%-7.5px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                 alt=""
                 onClick={() => openModal(4)}
               />
               <img
                 src={galleryImages[6].src}
-                className="h-[calc(25%-7.5px)]"
+                className="h-[calc(25%-7.5px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                 alt=""
                 onClick={() => openModal(6)}
               />
               <img
                 src={galleryImages[10].src}
-                className="h-[calc(25%-7.5px)]"
+                className="h-[calc(25%-7.5px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                 alt=""
                 onClick={() => openModal(10)}
               />
@@ -520,11 +520,11 @@ This project is also a reminder of the importance of empathy and support for tho
             <img src={galleryImages[0].src} className="mx-auto" alt="" />
             <div className="flex gap-3 w-full ">
               <img
-                className="w-[calc(50%-6px)] h-auto"
+                className="w-[calc(50%-6px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity h-auto"
                 src={galleryImages[2].src}
               />
               <img
-                className="w-[calc(50%-6px)] h-auto"
+                className="w-[calc(50%-6px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity h-auto"
                 src={galleryImages[3].src}
               />
             </div>
@@ -541,11 +541,11 @@ This project is also a reminder of the importance of empathy and support for tho
             </div>
             <div className="flex gap-3 w-full">
               <img
-                className="w-[calc(50%-6px)] h-auto"
+                className="w-[calc(50%-6px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity h-auto"
                 src={galleryImages[9].src}
               />
               <img
-                className="w-[calc(50%-6px)] h-auto"
+                className="w-[calc(50%-6px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity h-auto"
                 src={galleryImages[8].src}
               />
             </div>

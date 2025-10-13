@@ -482,46 +482,46 @@ In a time when truth is increasingly fragile, I see these damaged images as quie
             <div className="flex w-3/5 flex-col gap-5 lg:gap-7.5">
               <img
                 src={galleryImages[0].src}
-                className="h-[calc(20%-6px)]"
+                className="h-[calc(20%-6px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                 alt=""
                 onClick={() => openModal(0)}
               />
               <img
                 src={galleryImages[1].src}
-                className="h-[calc(20%-6px)]"
+                className="h-[calc(20%-6px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                 alt=""
                 onClick={() => openModal(1)}
               />
               <div className="flex w-full h-[calc(20%-6px)] gap-5 lg:gap-7.5">
                 <img
                   src={galleryImages[2].src}
-                  className="w-[calc(50%-15px)]"
+                  className="w-[calc(50%-15px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                   alt=""
                   onClick={() => openModal(2)}
                 />
                 <img
                   src={galleryImages[3].src}
-                  className="w-[calc(50%-15px)]"
+                  className="w-[calc(50%-15px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                   alt=""
                   onClick={() => openModal(3)}
                 />
               </div>
               <img
                 src={galleryImages[4].src}
-                className="h-[calc(20%-6px)]"
+                className="h-[calc(20%-6px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                 alt=""
                 onClick={() => openModal(4)}
               />
               <div className="flex w-full h-[calc(20%-6px)] gap-5 lg:gap-7.5">
                 <img
                   src={galleryImages[5].src}
-                  className="w-[calc(50%-15px)]"
+                  className="w-[calc(50%-15px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                   alt=""
                   onClick={() => openModal(5)}
                 />
                 <img
                   src={galleryImages[6].src}
-                  className="w-[calc(50%-15px)]"
+                  className="w-[calc(50%-15px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                   alt=""
                   onClick={() => openModal(6)}
                 />
@@ -530,31 +530,31 @@ In a time when truth is increasingly fragile, I see these damaged images as quie
             <div className="flex flex-col w-2/5 gap-5 lg:gap-7.5">
               <img
                 src={galleryImages[7].src}
-                className="w-full h-auto"
+                className="w-full h-auto  bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                 alt=""
                 onClick={() => openModal(7)}
               />
               <img
                 src={galleryImages[8].src}
-                className="h-auto"
+                className="h-auto bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                 alt=""
                 onClick={() => openModal(8)}
               />
               <img
                 src={galleryImages[9].src}
-                className="h-auto"
+                className="h-auto bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                 alt=""
                 onClick={() => openModal(9)}
               />
               <img
                 src={galleryImages[10].src}
-                className="h-auto"
+                className="h-auto bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                 alt=""
                 onClick={() => openModal(10)}
               />
               <img
                 src={galleryImages[11].src}
-                className="h-[calc(20%-6px)]"
+                className="h-[calc(20%-6px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                 alt=""
                 onClick={() => openModal(11)}
               />
@@ -599,19 +599,19 @@ In a time when truth is increasingly fragile, I see these damaged images as quie
             <div className="flex gap-3">
               <img
                 src={galleryImages[0].src}
-                className="w-[calc(50%-6px)] aspect-[162/106] object-cover"
+                className="w-[calc(50%-6px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity aspect-[162/106] object-cover"
                 onClick={() => openModal(0)}
               />
               <img
                 src={galleryImages[7].src}
-                className="w-[calc(50%-6px)] aspect-[161/105] object-cover"
+                className="w-[calc(50%-6px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity aspect-[161/105] object-cover"
                 onClick={() => openModal(7)}
               />
             </div>
 
             {/* Row 2 */}
             <div className="flex gap-3">
-              <div className="flex flex-col gap-3 w-[calc(50%-6px)]">
+              <div className="flex flex-col gap-3 w-[calc(50%-6px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity">
                 <img
                   src={galleryImages[1].src}
                   alt=""
@@ -631,7 +631,7 @@ In a time when truth is increasingly fragile, I see these damaged images as quie
                   onClick={() => openModal(9)}
                 />
               </div>
-              <div className="flex flex-col gap-3 w-[calc(50%-6px)]">
+              <div className="flex flex-col gap-3 w-[calc(50%-6px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity">
                 <img
                   src={galleryImages[8].src}
                   alt=""
@@ -659,12 +659,12 @@ In a time when truth is increasingly fragile, I see these damaged images as quie
             <div className="flex gap-3">
               <img
                 src={galleryImages[5].src}
-                className="w-[calc(50%-6px)] aspect-[162/246] object-cover"
+                className="w-[calc(50%-6px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity aspect-[162/246] object-cover"
                 onClick={() => openModal(5)}
               />
               <img
                 src={galleryImages[6].src}
-                className="w-[calc(50%-6px)] aspect-[161/246] object-cover"
+                className="w-[calc(50%-6px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity aspect-[161/246] object-cover"
                 onClick={() => openModal(6)}
               />
             </div>
@@ -673,12 +673,12 @@ In a time when truth is increasingly fragile, I see these damaged images as quie
             <div className="flex gap-3">
               <img
                 src={galleryImages[10].src}
-                className="w-[calc(30%-4px)] aspect-[99/146] object-cover"
+                className="w-[calc(30%-4px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity aspect-[99/146] object-cover"
                 onClick={() => openModal(10)}
               />
               <img
                 src={galleryImages[11].src}
-                className="w-[calc(70%-4px)] aspect-[223/146] object-cover"
+                className="w-[calc(70%-4px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity aspect-[223/146] object-cover"
                 onClick={() => openModal(11)}
               />
             </div>
