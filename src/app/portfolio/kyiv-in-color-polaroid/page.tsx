@@ -205,7 +205,7 @@ export default function KyivInColorPolaroidPage() {
     };
   }, [selectedImage, nextImage, prevImage]);
 
-  const fullStoryText = `This series presents Kyiv through Polaroid photography, each image a unique document of everyday life shaped by the unpredictability of instant film. Unlike the analog series, it captures spontaneous encounters with the city, preserving fleeting moments in raw, unrepeatable form.`;
+  const fullStoryText = `This series presents Kyiv through polaroid photography, each image a unique document of everyday life shaped by the unpredictability of instant film. Unlike the analog series, it captures spontaneous encounters with the city, preserving fleeting moments in raw, unrepeatable form.`;
 
   return (
     <div className="min-h-screen bg-[#F5F5F5] relative overflow-x-hidden">

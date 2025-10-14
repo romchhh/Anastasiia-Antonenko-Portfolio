@@ -235,7 +235,7 @@ export default function Portfolio() {
 
             {/* Email */}
             <div className="mb-8">
-              <p className="text-white text-base tracking-wide">
+              <p className="text-white text-base tracking-wide" style={{ fontFamily: 'Work Sans' }}>
                 stushaphotofilm@gmail.com
               </p>
             </div>
@@ -355,7 +355,7 @@ export default function Portfolio() {
           
           {/* Email below images - hidden on mobile, aligned with sidebar footer */}
           <div className="hidden lg:block text-right pr-4 lg:pr-12 pb-2">
-            <p className="text-[14px] font-light text-[#515151]">stushaphotofilm@gmail.com</p>
+            <p className="text-[14px] font-light text-[#515151]" style={{ fontFamily: 'Work Sans' }}>stushaphotofilm@gmail.com</p>
           </div>
         </main>
       </div>

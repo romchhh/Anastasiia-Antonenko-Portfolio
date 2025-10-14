@@ -300,28 +300,30 @@ Born in Luhansk, I carry loss as both personal and generational, making this wor
                 <button
                   onClick={() => setActiveTab("overview")}
                   className={
-                    "text-[45px] font-normal leading-[110%] tracking-[0.03em] lowercase transition-colors " +
+                    "text-[45px] font-normal leading-[110%] tracking-[0.03em] lowercase transition-colors cursor-pointer " +
                     (activeTab === "overview"
                       ? "text-[#1A1A1A]"
                       : "text-[#515151] hover:text-[#1A1A1A]")
                   }
+                  style={{ fontFamily: 'Work Sans' }}
                 >
                   overview
                 </button>
                 <button
                   onClick={() => setActiveTab("full")}
                   className={
-                    "text-[45px] font-normal leading-[110%] tracking-[0.03em] lowercase transition-colors " +
+                    "text-[45px] font-normal leading-[110%] tracking-[0.03em] lowercase transition-colors cursor-pointer " +
                     (activeTab === "full"
                       ? "text-[#1A1A1A]"
                       : "text-[#515151] hover:text-[#1A1A1A]")
                   }
+                  style={{ fontFamily: 'Work Sans' }}
                 >
                   full story
                 </button>
               </div>
 
-              <p className="mt-3 text-[18px] font-normal leading-[150%] tracking-[0.03em] text-[#1A1A1A] w-[680px] whitespace-pre-line">
+              <p className="mt-3 text-[18px] font-normal leading-[150%] tracking-[0.03em] text-[#1A1A1A] w-[680px] whitespace-pre-line" style={{ fontFamily: 'Work Sans' }}>
                 {activeTab === "overview" ? overviewText : fullStoryText}
               </p>
 
@@ -343,27 +345,29 @@ Born in Luhansk, I carry loss as both personal and generational, making this wor
               <button
                 onClick={() => setActiveTab("overview")}
                 className={
-                  "text-[28px] md:text-[36px] font-normal leading-[110%] tracking-[0.03em] lowercase transition-colors " +
+                  "text-[28px] md:text-[36px] font-normal leading-[110%] tracking-[0.03em] lowercase transition-colors cursor-pointer " +
                   (activeTab === "overview"
                     ? "text-[#1A1A1A]"
                     : "text-[#515151] hover:text-[#1A1A1A]")
                 }
+                style={{ fontFamily: 'Work Sans' }}
               >
                 overview
               </button>
               <button
                 onClick={() => setActiveTab("full")}
                 className={
-                  "text-[28px] md:text-[36px] font-normal leading-[110%] tracking-[0.03em] lowercase transition-colors " +
+                  "text-[28px] md:text-[36px] font-normal leading-[110%] tracking-[0.03em] lowercase transition-colors cursor-pointer " +
                   (activeTab === "full"
                     ? "text-[#1A1A1A]"
                     : "text-[#515151] hover:text-[#1A1A1A]")
                 }
+                style={{ fontFamily: 'Work Sans' }}
               >
                 full story
               </button>
             </div>
-            <p className="text-[14px] md:text-[16px] font-normal leading-[150%] tracking-[0.03em] text-[#1A1A1A] whitespace-pre-line pr-4 mb-4">
+            <p className="text-[14px] md:text-[16px] font-normal leading-[150%] tracking-[0.03em] text-[#1A1A1A] whitespace-pre-line pr-4 mb-4" style={{ fontFamily: 'Work Sans' }}>
               {activeTab === "overview" ? overviewText : fullStoryText}
             </p>
 

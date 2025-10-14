@@ -100,11 +100,11 @@ export default function ProcessPage() {
           <div className="hidden lg:block">
             
             {/* Top Section - Overview and Handmade Techniques */}
-            <div className="relative grid grid-cols-[1fr_1fr] gap-4 md:gap-6 mb-8">
+            <div className="relative grid grid-cols-[374px_1fr] gap-10 mb-8" style={{ marginTop: '-6px' }}>
               {/* Vertical line between sections */}
-              <div className="absolute left-[40%] w-px bg-gray-300" style={{ top: '-32px', bottom: '-32px' }} />
+              <div className="absolute left-[374px] w-px bg-gray-300" style={{ top: '-32px', bottom: '-32px' }} />
               {/* Left Column - Overview */}
-              <div className="text-[#1A1A1A] pr-4 md:pr-6 lg:pr-8">
+              <div className="text-[#1A1A1A]">
                 <h2 
                   className="text-[18px] md:text-[20px] lg:text-[22px] font-medium leading-[150%] tracking-[-0.01em] text-[#1A1A1A] lowercase mb-3 md:mb-4"
                   style={{ fontFamily: 'Work Sans' }}
@@ -115,22 +115,22 @@ export default function ProcessPage() {
                   className="text-[14px] md:text-[15px] lg:text-[16px] font-normal leading-[150%] tracking-[-0.01em] text-[#1A1A1A] lowercase break-words"
                   style={{ fontFamily: 'Work Sans' }}
                 >
-                  <div>film soup, bleach,</div>
-                  <div>altered negatives,</div>
-                  <div>hand-painted photographs, acetone transfer,</div>
-                  <div>material experiments, embroidery, zines & books</div>
+                  <div>film soup, bleach, altered negatives,</div>
+                  <div>hand-painted photographs,</div>
+                  <div>acetone transfer, material experiments,</div>
+                  <div>embroidery, zines & books</div>
                 </div>
               </div>
 
               {/* Right Column - Handmade Techniques */}
-              <div className="text-[#1A1A1A]">
+              <div className="text-[#1A1A1A]" style={{ width: '700px' }}>
                 <h3 
-                  className="text-[32px] md:text-[38px] lg:text-[45px] font-normal leading-[110%] tracking-[-0.01em] text-[#1A1A1A] lowercase mb-4 md:mb-5 lg:mb-6"
+                  className="text-[32px] md:text-[38px] lg:text-[45px] font-normal leading-[110%] tracking-[0.03em] text-[#1A1A1A] lowercase mb-10"
                   style={{ fontFamily: 'Work Sans' }}
                 >
                   handmade techniques
                 </h3>
-                <div className="space-y-3 md:space-y-4 text-[16px] md:text-[17px] lg:text-[18px] font-normal leading-[150%] tracking-[-0.01em] text-[#1A1A1A]" style={{ fontFamily: 'Work Sans' }}>
+                <div className="space-y-10 text-[16px] md:text-[17px] lg:text-[18px] font-normal leading-[150%] tracking-[0.03em] text-[#1A1A1A]" style={{ fontFamily: 'Work Sans' }}>
                   <p>
                     Since childhood, I have been engaged in creative practices, and I have always loved working with my hands: cutting, burning, gluing, embroidering. For me, this process is not only about the final result, but also about the act itself — sometimes it becomes meditative.
                   </p>
@@ -145,9 +145,9 @@ export default function ProcessPage() {
             <div className="absolute left-5 right-[15.5rem] h-px bg-gray-300 mb-8" />
 
             {/* Bottom Section - Image and Chemical Intervention */}
-            <div className="flex gap-4 md:gap-6 lg:gap-8 mt-16">
+            <div className="grid grid-cols-[374px_1fr] gap-10 mt-16">
               {/* Left Column - Chemical Intervention Image Carousel */}
-              <div className="relative flex-shrink-0 w-[45%] lg:w-[35%]">
+              <div className="relative">
                 <div className="relative overflow-hidden group">
                   <img 
                     src={processImages.chemical[chemicalIndex]} 
@@ -179,14 +179,14 @@ export default function ProcessPage() {
               </div>
 
               {/* Right Column - Chemical Intervention */}
-              <div className="text-[#1A1A1A] flex-1">
+              <div className="text-[#1A1A1A]" style={{ width: '700px' }}>
                 <h3 
-                  className="text-[32px] md:text-[38px] lg:text-[45px] font-normal leading-[110%] tracking-[0.03em] text-[#1A1A1A] lowercase mb-4 md:mb-5 lg:mb-6"
+                  className="text-[32px] md:text-[38px] lg:text-[45px] font-normal leading-[110%] tracking-[0.03em] text-[#1A1A1A] lowercase mb-10"
                   style={{ fontFamily: 'Work Sans' }}
                 >
                   chemical intervention
                 </h3>
-                <div className="space-y-3 md:space-y-4 text-[16px] md:text-[17px] lg:text-[18px] font-normal leading-[150%] tracking-[0.03em] text-[#1A1A1A]" style={{ fontFamily: 'Work Sans' }}>
+                <div className="space-y-10 text-[16px] md:text-[17px] lg:text-[18px] font-normal leading-[150%] tracking-[0.03em] text-[#1A1A1A]" style={{ fontFamily: 'Work Sans' }}>
                   <p>
                     One of my methods of working with negatives begins with a so-called film soup, after which the film is developed. Later, I might burn it slightly, or draw on top of it with any kind of material.
                   </p>
@@ -196,7 +196,7 @@ export default function ProcessPage() {
                   <p>
                     One of my favorite techniques: drawing directly on negatives with markers. It is a very intimate way of interacting with the material, giving the photograph a new life.
                   </p>
-                  <p className="text-[16px] font-normal leading-[155%] tracking-[-1%] text-[#1A1A1A] mt-3 md:mt-4" style={{ fontFamily: 'Work Sans' }}>
+                  <p className="text-[18px] font-normal leading-[150%] tracking-[-0.01em] text-[#1A1A1A] mt-8" style={{ fontFamily: 'Work Sans' }}>
                     <span className="font-semibold lowercase">used in</span> project: Air Alarm
                   </p>
                 </div>
@@ -206,9 +206,9 @@ export default function ProcessPage() {
             {/* Additional Sections */}
             <div className="mt-12 space-y-12">
               {/* Instant Photo-painting */}
-              <div className="flex gap-4 md:gap-6 lg:gap-8">
+              <div className="grid grid-cols-[374px_1fr] gap-10">
                 {/* Left Column - Instant Photo-painting Image Carousel */}
-                <div className="relative flex-shrink-0 w-[45%] lg:w-[35%]">
+                <div className="relative">
                   <div className="relative overflow-hidden group">
                     <img 
                       src={processImages.instant[instantIndex]} 
@@ -240,14 +240,14 @@ export default function ProcessPage() {
                 </div>
                 
                 {/* Right Column - Instant Photo-painting Text */}
-                <div className="text-[#1A1A1A] flex-1">
+                <div className="text-[#1A1A1A]" style={{ width: '700px' }}>
                   <h3 
-                    className="text-[32px] md:text-[38px] lg:text-[45px] font-normal leading-[110%] tracking-[0.03em] text-[#1A1A1A] lowercase mb-4 md:mb-5 lg:mb-6"
+                    className="text-[32px] md:text-[38px] lg:text-[45px] font-normal leading-[110%] tracking-[0.03em] text-[#1A1A1A] lowercase mb-10"
                     style={{ fontFamily: 'Work Sans' }}
                   >
                     instant photo-painting
                   </h3>
-                  <div className="space-y-3 md:space-y-4 text-[16px] md:text-[17px] lg:text-[18px] font-normal leading-[150%] tracking-[0.03em] text-[#1A1A1A]" style={{ fontFamily: 'Work Sans' }}>
+                  <div className="space-y-10 text-[16px] md:text-[17px] lg:text-[18px] font-normal leading-[150%] tracking-[0.03em] text-[#1A1A1A]" style={{ fontFamily: 'Work Sans' }}>
                     <p>
                       Working with instant photography: a black-and-white instant image hand-painted with acrylics. This process merges the documentary nature of the photograph with the expressiveness of painting.
                     </p>
@@ -257,7 +257,7 @@ export default function ProcessPage() {
                     <p>
                       Hand-painting an instant photograph with paints, where color becomes an added layer of meaning.
                     </p>
-                    <p className="text-[16px] font-normal leading-[155%] tracking-[-1%] text-[#1A1A1A] mt-3 md:mt-4" style={{ fontFamily: 'Work Sans' }}>
+                    <p className="text-[18px] font-normal leading-[150%] tracking-[-0.01em] text-[#1A1A1A] mt-8" style={{ fontFamily: 'Work Sans' }}>
                       <span className="font-semibold lowercase">used in</span> projects: Kyiv in Color, Air Alarm
                     </p>
                   </div>
@@ -265,9 +265,9 @@ export default function ProcessPage() {
               </div>
 
               {/* Material Experiments */}
-              <div className="flex gap-4 md:gap-6 lg:gap-8">
+              <div className="grid grid-cols-[374px_1fr] gap-10">
                 {/* Left Column - Material Experiments Image Carousel */}
-                <div className="relative flex-shrink-0 w-[45%] lg:w-[35%]">
+                <div className="relative">
                   <div className="relative overflow-hidden group">
                     <img 
                       src={processImages.material[materialIndex]} 
@@ -299,21 +299,21 @@ export default function ProcessPage() {
                 </div>
                 
                 {/* Right Column - Material Experiments Text */}
-                <div className="text-[#1A1A1A] flex-1">
+                <div className="text-[#1A1A1A]" style={{ width: '700px' }}>
                   <h3 
-                    className="text-[32px] md:text-[38px] lg:text-[45px] font-normal leading-[110%] tracking-[0.03em] text-[#1A1A1A] lowercase mb-4 md:mb-5 lg:mb-6"
+                    className="text-[32px] md:text-[38px] lg:text-[45px] font-normal leading-[110%] tracking-[0.03em] text-[#1A1A1A] lowercase mb-10"
                     style={{ fontFamily: 'Work Sans' }}
                   >
                     material experiments
                   </h3>
-                  <div className="space-y-3 md:space-y-4 text-[16px] md:text-[17px] lg:text-[18px] font-normal leading-[150%] tracking-[0.03em] text-[#1A1A1A]" style={{ fontFamily: 'Work Sans' }}>
+                  <div className="space-y-10 text-[16px] md:text-[17px] lg:text-[18px] font-normal leading-[150%] tracking-[0.03em] text-[#1A1A1A]" style={{ fontFamily: 'Work Sans' }}>
                     <p>
                       The acetone transfer technique, which I used to transfer my photographs onto thick paper. This method became a way of preparing material for a future artist book.
                     </p>
                     <p>
                       In my home studio I often experiment with unconventional materials. In this series, I used receipt paper colored with markers, which later became part of the project Alien Chronicles.
                     </p>
-                    <p className="text-[16px] font-normal leading-[155%] tracking-[-1%] text-[#1A1A1A] mt-3 md:mt-4" style={{ fontFamily: 'Work Sans' }}>
+                    <p className="text-[18px] font-normal leading-[150%] tracking-[-0.01em] text-[#1A1A1A] mt-8" style={{ fontFamily: 'Work Sans' }}>
                       <span className="font-semibold lowercase">used in</span> projects: Air Alarm, Holes of Time, From Headlines to Reality, Down in Flames
                     </p>
                   </div>
@@ -321,9 +321,9 @@ export default function ProcessPage() {
               </div>
 
               {/* Embroidery on photography */}
-              <div className="flex gap-4 md:gap-6 lg:gap-8">
+              <div className="grid grid-cols-[374px_1fr] gap-10">
                 {/* Left Column - Embroidery Image Carousel */}
-                <div className="relative flex-shrink-0 w-[45%] lg:w-[35%]">
+                <div className="relative">
                   <div className="relative overflow-hidden group">
                     <img 
                       src={processImages.embroidery[embroideryIndex]} 
@@ -355,32 +355,31 @@ export default function ProcessPage() {
                 </div>
                 
                 {/* Right Column - Embroidery Text */}
-                <div className="text-[#1A1A1A] flex-1">
+                <div className="text-[#1A1A1A]" style={{ width: '700px' }}>
                   <h3 
-                    className="text-[32px] md:text-[38px] lg:text-[45px] font-normal leading-[110%] tracking-[0.03em] text-[#1A1A1A] lowercase mb-4 md:mb-5 lg:mb-6"
+                    className="text-[32px] md:text-[38px] lg:text-[45px] font-normal leading-[110%] tracking-[0.03em] text-[#1A1A1A] lowercase mb-10"
                     style={{ fontFamily: 'Work Sans' }}
                   >
                     embroidery on photography
                   </h3>
-                  <div className="space-y-3 md:space-y-4 text-[16px] md:text-[17px] lg:text-[18px] font-normal leading-[150%] tracking-[0.03em] text-[#1A1A1A]" style={{ fontFamily: 'Work Sans' }}>
+                  <div className="space-y-10 text-[16px] md:text-[17px] lg:text-[18px] font-normal leading-[150%] tracking-[0.03em] text-[#1A1A1A]" style={{ fontFamily: 'Work Sans' }}>
                     <p>
                       Embroidery on photography: a hand-stitched image created directly on photographs. I use different types of paper surfaces and various embroidery techniques with threads to enhance the mood or emphasize an idea.
                     </p>
                     <p>
                       Threads have become a part of my series such as Kyiv in Color Polaroids and the separate series Connection and Rupture.
                     </p>
-                    <p className="text-[16px] font-normal leading-[155%] tracking-[-1%] text-[#1A1A1A] mt-3 md:mt-4" style={{ fontFamily: 'Work Sans' }}>
+                    <p className="text-[18px] font-normal leading-[150%] tracking-[-0.01em] text-[#1A1A1A] mt-8" style={{ fontFamily: 'Work Sans' }}>
                       <span className="font-semibold lowercase">used in</span> project: Kyiv in Color version Polaroids
                     </p>
                   </div>
                 </div>
-                <div></div>
               </div>
 
               {/* Book-making */}
-              <div className="flex gap-4 md:gap-6 lg:gap-8">
+              <div className="grid grid-cols-[374px_1fr] gap-10">
                 {/* Left Column - Book-making Image Carousel */}
-                <div className="relative flex-shrink-0 w-[45%] lg:w-[35%]">
+                <div className="relative">
                   <div className="relative overflow-hidden group">
                     <img 
                       src={processImages.bookmaking[bookmakingIndex]} 
@@ -412,14 +411,14 @@ export default function ProcessPage() {
                 </div>
                 
                 {/* Right Column - Book-making Text */}
-                <div className="text-[#1A1A1A] flex-1">
+                <div className="text-[#1A1A1A]" style={{ width: '700px' }}>
                   <h3 
-                    className="text-[32px] md:text-[38px] lg:text-[45px] font-normal leading-[110%] tracking-[0.03em] text-[#1A1A1A] lowercase mb-4 md:mb-5 lg:mb-6"
+                    className="text-[32px] md:text-[38px] lg:text-[45px] font-normal leading-[110%] tracking-[0.03em] text-[#1A1A1A] lowercase mb-10"
                     style={{ fontFamily: 'Work Sans' }}
                   >
                     book-making
                   </h3>
-                  <div className="space-y-3 md:space-y-4 text-[16px] md:text-[17px] lg:text-[18px] font-normal leading-[150%] tracking-[0.03em] text-[#1A1A1A]" style={{ fontFamily: 'Work Sans' }}>
+                  <div className="space-y-10 text-[16px] md:text-[17px] lg:text-[18px] font-normal leading-[150%] tracking-[0.03em] text-[#1A1A1A]" style={{ fontFamily: 'Work Sans' }}>
                     <p>
                       Currently, I create various artist books using instant photographs. I cut out parts of the images and assemble them together, forming unique handmade art books. My art books are often inspired by different exhibitions, and through this practice, I have developed various collaborations, such as Yagallery and Voitok Gallery.
                     </p>
@@ -536,7 +535,7 @@ export default function ProcessPage() {
                 <p>
                   One of my favorite techniques: drawing directly on negatives with markers. It is a very intimate way of interacting with the material, giving the photograph a new life.
                 </p>
-                <p className="text-[16px] font-normal leading-[155%] tracking-[-1%] text-[#1A1A1A] mt-4" style={{ fontFamily: 'Work Sans' }}>
+                <p className="text-[18px] font-normal leading-[150%] tracking-[-0.01em] text-[#1A1A1A] mt-8" style={{ fontFamily: 'Work Sans' }}>
                   <span className="font-semibold lowercase">used in</span> project: Air Alarm
                 </p>
               </div>
@@ -604,7 +603,7 @@ export default function ProcessPage() {
                 <p>
                   Hand-painting an instant photograph with paints, where color becomes an added layer of meaning.
                 </p>
-                <p className="text-[16px] font-normal leading-[155%] tracking-[-1%] text-[#1A1A1A] mt-4" style={{ fontFamily: 'Work Sans' }}>
+                <p className="text-[18px] font-normal leading-[150%] tracking-[-0.01em] text-[#1A1A1A] mt-8" style={{ fontFamily: 'Work Sans' }}>
                   <span className="font-semibold lowercase">used in</span> projects: Kyiv in Color, Air Alarm
                 </p>
               </div>
@@ -669,7 +668,7 @@ export default function ProcessPage() {
                 <p>
                   In my home studio I often experiment with unconventional materials. In this series, I used receipt paper colored with markers, which later became part of the project Alien Chronicles.
                 </p>
-                <p className="text-[16px] font-normal leading-[155%] tracking-[-1%] text-[#1A1A1A] mt-4" style={{ fontFamily: 'Work Sans' }}>
+                <p className="text-[18px] font-normal leading-[150%] tracking-[-0.01em] text-[#1A1A1A] mt-8" style={{ fontFamily: 'Work Sans' }}>
                   <span className="font-semibold lowercase">used in</span> projects: Air Alarm, Holes of Time, From Headlines to Reality, Down in Flames
                 </p>
               </div>
@@ -734,7 +733,7 @@ export default function ProcessPage() {
                 <p>
                   Threads have become a part of my series such as Kyiv in Color Polaroids and the separate series Connection and Rupture.
                 </p>
-                <p className="text-[16px] font-normal leading-[155%] tracking-[-1%] text-[#1A1A1A] mt-4" style={{ fontFamily: 'Work Sans' }}>
+                <p className="text-[18px] font-normal leading-[150%] tracking-[-0.01em] text-[#1A1A1A] mt-8" style={{ fontFamily: 'Work Sans' }}>
                   <span className="font-semibold lowercase">used in</span> project: Kyiv in Color version Polaroids
                 </p>
               </div>

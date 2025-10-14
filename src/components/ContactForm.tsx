@@ -62,25 +62,27 @@ export default function ContactForm() {
         onSubmit={handleSubmit}
       >
         <textarea
-          className={`w-full max-w-[500px] h-[100px] sm:h-[117px] border border-gray-300 bg-transparent px-3 py-2 text-[12px] outline-none focus:border-gray-300 resize-none ${touched.message && !isMessageValid ? 'placeholder-red-500' : 'placeholder-gray-500'}`}
+          className={`w-full max-w-[600px] h-[117px] border border-gray-300 bg-transparent px-4 py-3 text-[16px] font-light leading-[150%] tracking-[-1%] outline-none focus:border-gray-300 resize-none ${touched.message && !isMessageValid ? 'placeholder-red-500' : 'placeholder-gray-500'}`}
           placeholder={touched.message && !isMessageValid ? "Please write your message here" : "Your message here"}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           onBlur={() => setTouched((t) => ({ ...t, message: true }))}
           style={{ 
-            color: touched.message && !isMessageValid ? '#ef4444' : '#999'
+            color: touched.message && !isMessageValid ? '#ef4444' : '#999',
+            fontFamily: 'Work Sans'
           }}
         />
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-5 items-end">
           <div className="flex flex-col gap-1 w-full sm:w-auto">
             <input
-              className={`w-full sm:w-[240px] h-[29px] bg-transparent border-0 border-b border-gray-300 px-0 py-0 text-[12px] outline-none focus:border-gray-300 ${touched.name && !isNameValid ? 'placeholder-red-500' : 'placeholder-gray-500'}`}
+              className={`w-full sm:w-[240px] h-[40px] bg-transparent border-0 border-b border-gray-300 px-0 py-1 text-[16px] font-light leading-[150%] tracking-[-1%] outline-none focus:border-gray-300 ${touched.name && !isNameValid ? 'placeholder-red-500' : 'placeholder-gray-500'}`}
               placeholder={touched.name && !isNameValid ? "Please enter your name" : "Name"}
               value={name}
               onChange={(e) => setName(e.target.value)}
               onBlur={() => setTouched((t) => ({ ...t, name: true }))}
               style={{ 
-                color: touched.name && !isNameValid ? '#ef4444' : '#999'
+                color: touched.name && !isNameValid ? '#ef4444' : '#999',
+                fontFamily: 'Work Sans'
               }}
             />
           </div>
@@ -89,7 +91,7 @@ export default function ContactForm() {
               <span className="text-[10px] text-red-500">please enter a valid email address</span>
             )}
             <input
-              className={`w-full sm:w-[240px] h-[29px] bg-transparent border-0 border-b border-gray-300 px-0 py-0 text-[12px] outline-none focus:border-gray-300 ${touched.email && !isEmailValid ? 'placeholder-red-500 border-red-500' : 'placeholder-gray-500'}`}
+              className={`w-full sm:w-[240px] h-[40px] bg-transparent border-0 border-b border-gray-300 px-0 py-1 text-[16px] font-light leading-[150%] tracking-[-1%] outline-none focus:border-gray-300 ${touched.email && !isEmailValid ? 'placeholder-red-500 border-red-500' : 'placeholder-gray-500'}`}
               placeholder={touched.email && !isEmailValid ? "Invalid email" : "Email"}
               inputMode="email"
               value={email}
@@ -97,13 +99,15 @@ export default function ContactForm() {
               onBlur={() => setTouched((t) => ({ ...t, email: true }))}
               style={{ 
                 color: touched.email && !isEmailValid ? '#ef4444' : '#999',
-                borderBottomColor: touched.email && !isEmailValid ? '#ef4444' : undefined
+                borderBottomColor: touched.email && !isEmailValid ? '#ef4444' : undefined,
+                fontFamily: 'Work Sans'
               }}
             />
           </div>
           <button
             type="submit"
-            className="h-[40px] px-8 sm:px-10 bg-[#1A1A1A] text-white text-[12px] hover:bg-[#333] transition-colors border border-[#1A1A1A] whitespace-nowrap w-full sm:w-auto"
+            className="h-[50px] px-10 bg-[#1A1A1A] text-white text-[16px] font-normal hover:bg-[#333] transition-colors border border-[#1A1A1A] whitespace-nowrap w-full sm:w-auto cursor-pointer"
+            style={{ fontFamily: 'Work Sans' }}
           >
             get in touch
           </button>

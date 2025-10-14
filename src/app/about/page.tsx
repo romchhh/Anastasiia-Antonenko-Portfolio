@@ -81,11 +81,12 @@ export default function AboutPage() {
               {/* Portrait Image and Artist Statement */}
               <div className="flex gap-6 mb-8">
                 {/* Portrait Image */}
-                <div className="flex-shrink-0">
+                <div className="flex-shrink-0 w-[300px]">
                   <img 
                     src="/about/2 2.jpg" 
                     alt="Anastasiia Antonenko" 
-                    className="w-[300px] h-auto object-contain"
+                    className="w-full h-auto object-contain"
+                    style={{ objectFit: 'contain', maxWidth: '100%', height: 'auto' }}
                   />
                 </div>
                 
@@ -273,10 +274,10 @@ export default function AboutPage() {
                 
                 <div className="mb-6">
                   <h4 
-                    className="text-[22px] font-medium leading-[150%] tracking-[0.03em] text-[#1A1A1A] uppercase mb-4"
+                    className="text-[22px] font-medium leading-[150%] tracking-[0.03em] text-[#1A1A1A] lowercase mb-4"
                     style={{ fontFamily: 'Work Sans' }}
                   >
-                    MAGAZINES
+                    magazines
                   </h4>
                   <div className="space-y-2 text-[16px] leading-[155%] tracking-[-0.01em] text-[#1A1A1A]" style={{ fontFamily: 'Work Sans' }}>
                     <div className="relative"><span className="font-medium absolute -left-[110px] w-[100px] text-right normal-case">2025 —</span> <span>Pamplemousse Magazine, Issue #11</span></div>
@@ -299,10 +300,10 @@ export default function AboutPage() {
 
                 <div>
                   <h4 
-                    className="text-[22px] font-medium leading-[150%] tracking-[0.03em] text-[#1A1A1A] uppercase mb-4"
+                    className="text-[22px] font-medium leading-[150%] tracking-[0.03em] text-[#1A1A1A] lowercase mb-4"
                     style={{ fontFamily: 'Work Sans' }}
                   >
-                    BOOKS
+                    books
                   </h4>
                   <div className="space-y-2 text-[16px] leading-[155%] tracking-[-0.01em] text-[#1A1A1A]" style={{ fontFamily: 'Work Sans' }}>
                     <div 
@@ -350,10 +351,10 @@ export default function AboutPage() {
                 
                 <div className="mb-6">
                   <h4 
-                    className="text-[22px] font-medium leading-[150%] tracking-[0.03em] text-[#1A1A1A] uppercase mb-4"
+                    className="text-[22px] font-medium leading-[150%] tracking-[0.03em] text-[#1A1A1A] lowercase mb-4"
                     style={{ fontFamily: 'Work Sans' }}
                   >
-                    RESIDENCIES
+                    residencies
                   </h4>
                   <div className="space-y-2 text-[16px] leading-[155%] tracking-[-0.01em] text-[#1A1A1A]" style={{ fontFamily: 'Work Sans' }}>
                     <div className="relative"><span className="font-medium absolute -left-[190px] w-[180px] text-right normal-case">Apr – May 2023 —</span> <span>Residency in Nuremberg, Germany</span></div>
@@ -362,10 +363,10 @@ export default function AboutPage() {
 
                 <div>
                   <h4 
-                    className="text-[22px] font-medium leading-[150%] tracking-[0.03em] text-[#1A1A1A] uppercase mb-4"
+                    className="text-[22px] font-medium leading-[150%] tracking-[0.03em] text-[#1A1A1A] lowercase mb-4"
                     style={{ fontFamily: 'Work Sans' }}
                   >
-                    AWARDS
+                    awards
                   </h4>
                   <div className="space-y-2 text-[16px] leading-[155%] tracking-[-0.01em] text-[#1A1A1A]" style={{ fontFamily: 'Work Sans' }}>
                     <div className="relative"><span className="font-medium absolute -left-[110px] w-[100px] text-right normal-case">2025 —</span> <span>Myph Prize, Longlist</span></div>
@@ -380,11 +381,12 @@ export default function AboutPage() {
           {/* Mobile/Tablet Layout */}
           <div className="lg:hidden">
             {/* Portrait Image */}
-            <div className="mb-6">
+            <div className="mb-6 flex justify-center">
               <img 
                 src="/about/2 2.jpg" 
                 alt="Anastasiia Antonenko" 
-                className="w-full max-w-[300px] h-auto object-contain mx-auto"
+                className="w-full max-w-[300px] h-auto"
+                style={{ objectFit: 'contain', maxWidth: '300px', height: 'auto' }}
               />
             </div>
 
@@ -483,10 +485,10 @@ export default function AboutPage() {
               
               <div className="mb-6">
                 <h4 
-                  className="text-[20px] md:text-[22px] font-medium leading-[150%] tracking-[0.03em] text-[#1A1A1A] uppercase mb-4"
+                  className="text-[20px] md:text-[22px] font-medium leading-[150%] tracking-[0.03em] text-[#1A1A1A] lowercase mb-4"
                   style={{ fontFamily: 'Work Sans' }}
                 >
-                  MAGAZINES
+                  magazines
                 </h4>
                 <div className="space-y-2 text-[14px] md:text-[16px] leading-[155%] tracking-[-0.01em] text-[#1A1A1A]" style={{ fontFamily: 'Work Sans' }}>
                   <div><span className="font-medium normal-case">2025 —</span> <span>Pamplemousse Magazine, Issue #11</span></div>
@@ -500,10 +502,10 @@ export default function AboutPage() {
 
               <div>
                 <h4 
-                  className="text-[20px] md:text-[22px] font-medium leading-[150%] tracking-[0.03em] text-[#1A1A1A] uppercase mb-4"
+                  className="text-[20px] md:text-[22px] font-medium leading-[150%] tracking-[0.03em] text-[#1A1A1A] lowercase mb-4"
                   style={{ fontFamily: 'Work Sans' }}
                 >
-                  BOOKS
+                  books
                 </h4>
                 <div className="space-y-2 text-[14px] md:text-[16px] leading-[155%] tracking-[-0.01em] text-[#1A1A1A]" style={{ fontFamily: 'Work Sans' }}>
                   <div><span className="font-medium normal-case">2024 —</span> <span>Conceptual Photography, CP Publishing</span></div>
@@ -524,10 +526,10 @@ export default function AboutPage() {
               
               <div className="mb-6">
                 <h4 
-                  className="text-[20px] md:text-[22px] font-medium leading-[150%] tracking-[0.03em] text-[#1A1A1A] uppercase mb-4"
+                  className="text-[20px] md:text-[22px] font-medium leading-[150%] tracking-[0.03em] text-[#1A1A1A] lowercase mb-4"
                   style={{ fontFamily: 'Work Sans' }}
                 >
-                  RESIDENCIES
+                  residencies
                 </h4>
                 <div className="space-y-2 text-[14px] md:text-[16px] leading-[155%] tracking-[-0.01em] text-[#1A1A1A]" style={{ fontFamily: 'Work Sans' }}>
                   <div><span className="font-medium normal-case">Apr – May 2023 —</span> <span>residency in Nuremberg, Germany</span></div>
@@ -536,10 +538,10 @@ export default function AboutPage() {
 
               <div>
                 <h4 
-                  className="text-[20px] md:text-[22px] font-medium leading-[150%] tracking-[0.03em] text-[#1A1A1A] uppercase mb-4"
+                  className="text-[20px] md:text-[22px] font-medium leading-[150%] tracking-[0.03em] text-[#1A1A1A] lowercase mb-4"
                   style={{ fontFamily: 'Work Sans' }}
                 >
-                  AWARDS
+                  awards
                 </h4>
                 <div className="space-y-2 text-[14px] md:text-[16px] leading-[155%] tracking-[-0.01em] text-[#1A1A1A]" style={{ fontFamily: 'Work Sans' }}>
                   <div><span className="font-medium normal-case">2025 —</span> <span>Myph Prize, Longlist</span></div>

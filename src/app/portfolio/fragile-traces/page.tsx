@@ -303,18 +303,18 @@ Cracks and distortions in the emulsion mirror the fragmentation of lived experie
             <aside className="text-[#1A1A1A]">
               <div className="space-y-8 pr-6 -ml-6">
                 <div>
-                  <p className="text-[22px] font-medium leading-[150%] tracking-[0.03em] lowercase">
+                  <p className="text-[22px] font-medium leading-[150%] tracking-[0.03em] lowercase" style={{ fontFamily: 'Work Sans' }}>
                     years:
                   </p>
-                  <p className="mt-2 text-[16px] font-normal leading-[150%] tracking-[0.03em]">
+                  <p className="mt-2 text-[16px] font-normal leading-[150%] tracking-[0.03em]" style={{ fontFamily: 'Work Sans' }}>
                     2025
                   </p>
                 </div>
                 <div>
-                  <p className="text-[22px] font-medium leading-[150%] tracking-[0.03em] lowercase">
+                  <p className="text-[22px] font-medium leading-[150%] tracking-[0.03em] lowercase" style={{ fontFamily: 'Work Sans' }}>
                     medium:
                   </p>
-                  <p className="mt-2 text-[16px] font-normal leading-[150%] tracking-[0.03em]">
+                  <p className="mt-2 text-[16px] font-normal leading-[150%] tracking-[0.03em]" style={{ fontFamily: 'Work Sans' }}>
                     Polaroid lift on glass
                   </p>
                 </div>
@@ -329,28 +329,30 @@ Cracks and distortions in the emulsion mirror the fragmentation of lived experie
                 <button
                   onClick={() => setActiveTab("overview")}
                   className={
-                    "text-[45px] font-normal leading-[110%] tracking-[0.03em] lowercase transition-colors " +
+                    "text-[45px] font-normal leading-[110%] tracking-[0.03em] lowercase transition-colors cursor-pointer " +
                     (activeTab === "overview"
                       ? "text-[#1A1A1A]"
                       : "text-[#515151] hover:text-[#1A1A1A]")
                   }
+                  style={{ fontFamily: 'Work Sans' }}
                 >
                   overview
                 </button>
                 <button
                   onClick={() => setActiveTab("full")}
                   className={
-                    "text-[45px] font-normal leading-[110%] tracking-[0.03em] lowercase transition-colors " +
+                    "text-[45px] font-normal leading-[110%] tracking-[0.03em] lowercase transition-colors cursor-pointer " +
                     (activeTab === "full"
                       ? "text-[#1A1A1A]"
                       : "text-[#515151] hover:text-[#1A1A1A]")
                   }
+                  style={{ fontFamily: 'Work Sans' }}
                 >
                   full story
                 </button>
               </div>
 
-              <p className="mt-3 text-[18px] font-normal leading-[150%] tracking-[0.03em] text-[#1A1A1A] max-w-[680px] whitespace-pre-line">
+              <p className="mt-3 text-[18px] font-normal leading-[150%] tracking-[0.03em] text-[#1A1A1A] max-w-[680px] whitespace-pre-line" style={{ fontFamily: 'Work Sans' }}>
                 {activeTab === "overview" ? overviewText : fullStoryText}
               </p>
 
@@ -375,29 +377,31 @@ Cracks and distortions in the emulsion mirror the fragmentation of lived experie
               <button
                 onClick={() => setActiveTab("overview")}
                 className={
-                  "text-[28px] md:text-[36px] font-normal leading-[110%] tracking-[0.03em] lowercase transition-colors " +
+                  "text-[28px] md:text-[36px] font-normal leading-[110%] tracking-[0.03em] lowercase transition-colors cursor-pointer " +
                   (activeTab === "overview"
                     ? "text-[#1A1A1A]"
                     : "text-[#515151] hover:text-[#1A1A1A]")
                 }
+                style={{ fontFamily: 'Work Sans' }}
               >
                 overview
               </button>
               <button
                 onClick={() => setActiveTab("full")}
                 className={
-                  "text-[28px] md:text-[36px] font-normal leading-[110%] tracking-[0.03em] lowercase transition-colors " +
+                  "text-[28px] md:text-[36px] font-normal leading-[110%] tracking-[0.03em] lowercase transition-colors cursor-pointer " +
                   (activeTab === "full"
                     ? "text-[#1A1A1A]"
                     : "text-[#515151] hover:text-[#1A1A1A]")
                 }
+                style={{ fontFamily: 'Work Sans' }}
               >
                 full story
               </button>
             </div>
 
             {/* Text content */}
-            <p className="text-[14px] md:text-[16px] font-normal leading-[150%] tracking-[0.03em] text-[#1A1A1A] whitespace-pre-line pr-4 mb-4">
+            <p className="text-[14px] md:text-[16px] font-normal leading-[150%] tracking-[0.03em] text-[#1A1A1A] whitespace-pre-line pr-4 mb-4" style={{ fontFamily: 'Work Sans' }}>
               {activeTab === "overview" ? overviewText : fullStoryText}
             </p>
 

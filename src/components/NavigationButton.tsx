@@ -19,7 +19,7 @@ export default function NavigationButton({
   return (
     <button
       onClick={onClick}
-      className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 z-10 hover:scale-110 hover:bg-[#1A1A1A] ${className}`}
+      className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 z-10 hover:scale-110 hover:bg-[#1A1A1A] cursor-pointer ${className}`}
       style={{ backgroundColor: '#A6A3A3B2' }}
       aria-label={direction === 'left' ? 'Previous' : 'Next'}
     >
@@ -38,7 +38,7 @@ export function CloseButton({ onClick, className = '' }: CloseButtonProps) {
   return (
     <button
       onClick={onClick}
-      className={`w-10 h-10 flex items-center justify-center rounded-full transition-all duration-300 z-60 hover:scale-110 hover:bg-[#1A1A1A] ${className}`}
+      className={`w-10 h-10 flex items-center justify-center rounded-full transition-all duration-300 z-60 hover:scale-110 hover:bg-[#1A1A1A] cursor-pointer ${className}`}
       style={{ backgroundColor: '#A6A3A3B2' }}
       aria-label="Close"
     >

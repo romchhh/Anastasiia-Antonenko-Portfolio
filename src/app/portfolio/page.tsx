@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Header from '@/components/Header';
 import Sidebar from '@/components/Sidebar';
-import ContactForm from '@/components/ContactForm';
 import NavigationButton, { CloseButton } from '@/components/NavigationButton';
 import BurgerMenu from '@/components/BurgerMenu';
 
@@ -23,6 +22,9 @@ interface PortfolioItem {
   tabletOrder?: number;
   description: string;
   link: string;
+  objectPosition?: string;
+  objectFit?: 'cover' | 'contain';
+  imageScale?: number;
 }
 
 export default function PortfolioGridPage() {
@@ -155,7 +157,8 @@ export default function PortfolioGridPage() {
       mobileOrder: 3,
       tabletOrder: 4,
       description: 'Collage work examining the intersection of news and personal experience.',
-      link: '/portfolio/from-headlines-to-reality'
+      link: '/portfolio/from-headlines-to-reality',
+      objectPosition: 'left center'
     },
     // Rectangle 72.png: moved up for mobile reordering
     {
@@ -171,7 +174,10 @@ export default function PortfolioGridPage() {
       mobileOrder: 4,
       tabletOrder: 5,
       description: 'A study of perception and identity through portraiture.',
-      link: '/portfolio/in-the-eyes-of-others'
+      link: '/portfolio/in-the-eyes-of-others',
+      objectFit: 'contain',
+      objectPosition: 'center bottom',
+      imageScale: 0.85
     },
     // 2 32.png: starts at 950 + 80 = 1030, ends at 1590
     {
@@ -203,7 +209,10 @@ export default function PortfolioGridPage() {
       mobileOrder: 6,
       tabletOrder: 9,
       description: 'Visual response to conflict and its impact on daily life.',
-      link: '/portfolio/air-alarm'
+      link: '/portfolio/air-alarm',
+      objectFit: 'contain',
+      objectPosition: 'center bottom',
+      imageScale: 0.83
     },
     // Rectangle 742.png: starts at 1590 + 80 = 1670, ends at 2010 + 42 = 2052
     {
@@ -269,7 +278,10 @@ export default function PortfolioGridPage() {
       mobileOrder: 5,
       tabletOrder: 7,
       description: 'Polaroid documentation of Kyiv with selective color highlighting.',
-      link: '/portfolio/kyiv-in-color-polaroid'
+      link: '/portfolio/kyiv-in-color-polaroid',
+      objectFit: 'contain',
+      objectPosition: 'center bottom',
+      imageScale: 0.85
     },
     {
       id: 'down-in-flames',
@@ -402,7 +414,7 @@ export default function PortfolioGridPage() {
                 <div key={item.id} className="absolute" style={{ top: `${item.top}px`, left: `${item.left}px` }}>
                   {/* Image */}
                   <div 
-                    className="overflow-hidden bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
+                    className={`overflow-hidden bg-white/0 cursor-pointer hover:opacity-80 transition-opacity ${item.objectFit === 'contain' ? 'flex items-end justify-center' : ''}`}
                     style={{
                       width: `${item.width}px`,
                       height: `${item.height}px`
@@ -412,7 +424,15 @@ export default function PortfolioGridPage() {
                     <img 
                       src={item.image} 
                       alt={item.title}
-                      className="w-full h-full object-cover" 
+                      className={item.objectFit === 'contain' ? 'object-contain' : 'w-full h-full object-cover'}
+                      style={{
+                        ...(item.objectPosition && item.objectFit !== 'contain' ? { objectPosition: item.objectPosition } : {}),
+                        ...(item.imageScale && item.objectFit === 'contain' ? { 
+                          height: `${item.height * item.imageScale}px`,
+                          width: 'auto',
+                          maxWidth: '100%'
+                        } : {})
+                      }}
                     />
                   </div>
                   
@@ -444,7 +464,8 @@ export default function PortfolioGridPage() {
                     <img 
                       src={item.image} 
                       alt={item.title}
-                      className="w-full h-auto object-cover" 
+                      className={`w-full h-auto ${item.objectFit === 'contain' ? 'object-contain' : 'object-cover'}`}
+                      style={item.objectPosition ? { objectPosition: item.objectPosition } : {}}
                     />
                   </div>
                   <div className="mt-2 mb-4">
@@ -491,7 +512,8 @@ export default function PortfolioGridPage() {
                         <img 
                           src={item.mobileImage || item.image} 
                           alt={item.title}
-                          className="w-full h-auto object-cover" 
+                          className={`w-full h-auto ${item.objectFit === 'contain' ? 'object-contain' : 'object-cover'}`}
+                          style={item.objectPosition ? { objectPosition: item.objectPosition } : {}}
                         />
                       </div>
                       <div className="flex flex-col mt-2 mb-4" style={{ width: '201px', height: '62px', gap: '3px', opacity: 1 }}>
@@ -508,10 +530,6 @@ export default function PortfolioGridPage() {
               ))}
           </div>
 
-          {/* Contact Form */}
-          <div className="mt-4 md:mt-6 lg:mt-8 pt-0 px-2 sm:px-4 md:px-0">
-            <ContactForm />
-          </div>
         </main>
       </div>
 
