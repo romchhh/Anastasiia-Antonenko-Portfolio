@@ -296,11 +296,11 @@ In a time when truth is increasingly fragile, I see these damaged images as quie
             </div>
           </button>
         </div>
-        <div className="absolute bottom-0 left-5 right-0 h-px bg-gray-300" />
+        <div className="absolute bottom-0 left-5 right-0 h-px bg-gray-300 " />
       </header>
 
       {/* Author name under horizontal line - right aligned, clickable */}
-      <div className="md:hidden px-5 pt-3 pb-2 flex justify-end">
+      {/* <div className="md:hidden px-5 pt-3 pb-2 flex justify-end">
         <button
           onClick={() => (window.location.href = "/")}
           className="text-[16px] font-normal leading-[110%] tracking-[-0.01em] text-[#1A1A1A] lowercase hover:opacity-70 transition-opacity"
@@ -308,12 +308,12 @@ In a time when truth is increasingly fragile, I see these damaged images as quie
         >
           anastasiia antonenko
         </button>
-      </div>
+      </div> */}
 
       <div className="md:mx-3 lg:mx-6 md:my-3 lg:my-6 bg-transparent relative pr-0 md:pr-[17rem]">
         {/* Desktop/Tablet Header */}
         <div className="hidden md:block">
-          <Header title="HOLES OF TIME" subtitle="anastasiia antonenko" />
+          <Header title="HOLES OF TIME" subtitle="anastasiia antonenko"/>
         </div>
 
         {/* Main content area */}

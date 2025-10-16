@@ -200,11 +200,11 @@ Through these images, I explore how personal experiences transform into vague im
             </div>
           </button>
         </div>
-        <div className="absolute bottom-0 left-5 right-0 h-px bg-gray-300" />
+        <div className="absolute bottom-0 left-5 right-0 h-px bg-gray-300 " />
       </header>
 
       {/* Author name under horizontal line - right aligned, clickable */}
-      <div className="md:hidden px-5 pt-3 pb-2 flex justify-end">
+      {/* <div className="md:hidden px-5 pt-3 pb-2 flex justify-end">
         <button
           onClick={() => (window.location.href = "/")}
           className="text-[16px] font-normal leading-[110%] tracking-[-0.01em] text-[#1A1A1A] lowercase hover:opacity-70 transition-opacity"
@@ -212,7 +212,7 @@ Through these images, I explore how personal experiences transform into vague im
         >
           anastasiia antonenko
         </button>
-      </div>
+      </div> */}
       <div className="md:mx-3 lg:mx-6 md:my-3 lg:my-6 bg-transparent relative pr-0 md:pr-[17rem]">
         <div className="hidden md:block">
           <Header title="WASHED MEMORIES" subtitle="anastasiia antonenko" />
@@ -250,7 +250,7 @@ Through these images, I explore how personal experiences transform into vague im
                       ? "text-[#1A1A1A]"
                       : "text-[#515151] hover:text-[#1A1A1A]")
                   }
-                  style={{ fontFamily: 'Work Sans' }}
+                  style={{ fontFamily: "Work Sans" }}
                 >
                   overview
                 </button>
@@ -262,12 +262,15 @@ Through these images, I explore how personal experiences transform into vague im
                       ? "text-[#1A1A1A]"
                       : "text-[#515151] hover:text-[#1A1A1A]")
                   }
-                  style={{ fontFamily: 'Work Sans' }}
+                  style={{ fontFamily: "Work Sans" }}
                 >
                   full story
                 </button>
               </div>
-              <p className="mt-3 text-[18px] font-normal leading-[150%] tracking-[0.03em] text-[#1A1A1A] max-w-[680px] whitespace-pre-line" style={{ fontFamily: 'Work Sans' }}>
+              <p
+                className="mt-3 text-[18px] font-normal leading-[150%] tracking-[0.03em] text-[#1A1A1A] max-w-[680px] whitespace-pre-line"
+                style={{ fontFamily: "Work Sans" }}
+              >
                 {activeTab === "overview" ? overviewText : fullStoryText}
               </p>
               <div className="relative mt-8">
@@ -291,7 +294,7 @@ Through these images, I explore how personal experiences transform into vague im
                     ? "text-[#1A1A1A]"
                     : "text-[#515151] hover:text-[#1A1A1A]")
                 }
-                style={{ fontFamily: 'Work Sans' }}
+                style={{ fontFamily: "Work Sans" }}
               >
                 overview
               </button>
@@ -303,12 +306,15 @@ Through these images, I explore how personal experiences transform into vague im
                     ? "text-[#1A1A1A]"
                     : "text-[#515151] hover:text-[#1A1A1A]")
                 }
-                style={{ fontFamily: 'Work Sans' }}
+                style={{ fontFamily: "Work Sans" }}
               >
                 full story
               </button>
             </div>
-            <p className="text-[14px] md:text-[16px] font-normal leading-[150%] tracking-[0.03em] text-[#1A1A1A] whitespace-pre-line pr-4 mb-4" style={{ fontFamily: 'Work Sans' }}>
+            <p
+              className="text-[14px] md:text-[16px] font-normal leading-[150%] tracking-[0.03em] text-[#1A1A1A] whitespace-pre-line pr-4 mb-4"
+              style={{ fontFamily: "Work Sans" }}
+            >
               {activeTab === "overview" ? overviewText : fullStoryText}
             </p>
 
@@ -459,22 +465,44 @@ Through these images, I explore how personal experiences transform into vague im
               <img
                 className="w-[calc(50%-6px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity h-auto"
                 src={galleryImages[0].src}
+                onClick={() => openModal(0)}
               />
               <img
                 className="w-[calc(50%-6px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity h-auto"
                 src={galleryImages[1].src}
+                onClick={() => openModal(1)}
                 style={{ width: "calc(50% - 12px)" }}
               />
             </div>
             <div className="flex gap-3 w-full">
               <div className="flex flex-col gap-3 w-2/5">
-                <img className="w-full h-auto" src={galleryImages[3].src} />
-                <img className="w-full h-auto" src={galleryImages[6].src} />
-                <img className="w-full h-auto" src={galleryImages[5].src} />
+                <img
+                  className="w-full h-auto"
+                  src={galleryImages[3].src}
+                  onClick={() => openModal(3)}
+                />
+                <img
+                  className="w-full h-auto"
+                  src={galleryImages[6].src}
+                  onClick={() => openModal(6)}
+                />
+                <img
+                  className="w-full h-auto"
+                  src={galleryImages[5].src}
+                  onClick={() => openModal(5)}
+                />
               </div>
               <div className="flex flex-col gap-3 w-3/5">
-                <img className="w-full h-auto" src={galleryImages[2].src} />
-                <img className="w-full h-auto" src={galleryImages[4].src} />
+                <img
+                  className="w-full h-auto"
+                  src={galleryImages[2].src}
+                  onClick={() => openModal(2)}
+                />
+                <img
+                  className="w-full h-auto"
+                  src={galleryImages[4].src}
+                  onClick={() => openModal(4)}
+                />
               </div>
             </div>
           </div>

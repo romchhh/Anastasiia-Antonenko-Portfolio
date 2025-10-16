@@ -244,7 +244,7 @@ export default function KyivInColorPolaroidPage() {
             </div>
           </button>
         </div>
-        <div className="absolute bottom-0 left-5 right-0 h-px bg-gray-300" />
+        <div className="absolute bottom-0 left-5 right-0 h-px bg-gray-300 " />
       </header>
 
       {/* Author name under horizontal line - right aligned, clickable */}
@@ -504,10 +504,12 @@ export default function KyivInColorPolaroidPage() {
               <img
                 className="w-[calc(50%-6px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity h-auto"
                 src={galleryImages[5].src}
+                onClick={() => openModal(5)}
               />
               <img
                 className="w-[calc(50%-6px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity h-auto"
                 src={galleryImages[6].src}
+                onClick={() => openModal(6)}
               />
             </div>
             <div className="flex gap-3 w-full">
@@ -515,24 +517,29 @@ export default function KyivInColorPolaroidPage() {
                 <img
                   className="w-full h-[calc(50%-6px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                   src={galleryImages[0].src}
+                  onClick={() => openModal(0)}
                 />
                 <img
                   className="w-full h-[calc(50%-6px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                   src={galleryImages[2].src}
+                  onClick={() => openModal(2)}
                 />
               </div>
               <div className="flex flex-col gap-3 w-2/5">
                 <img
                   className="w-full h-[calc(33%-4px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                   src={galleryImages[4].src}
+                  onClick={() => openModal(4)}
                 />
                 <img
                   className="w-full h-[calc(33%-4px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                   src={galleryImages[1].src}
+                  onClick={() => openModal(1)}
                 />
                 <img
                   className="w-full h-[calc(33%-4px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity"
                   src={galleryImages[3].src}
+                  onClick={() => openModal(3)}
                 />
               </div>
             </div>
@@ -540,21 +547,43 @@ export default function KyivInColorPolaroidPage() {
               <img
                 className="w-[calc(50%-6px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity h-auto"
                 src={galleryImages[12].src}
+                onClick={() => openModal(12)}
               />
               <img
                 className="w-[calc(50%-6px)] bg-white/0 cursor-pointer hover:opacity-80 transition-opacity h-auto"
                 src={galleryImages[13].src}
+                onClick={() => openModal(13)}
               />
             </div>
             <div className="flex gap-3 w-full">
               <div className="flex flex-col gap-3 w-3/5">
-                <img className="w-full h-auto" src={galleryImages[7].src} />
-                <img className="w-full h-auto" src={galleryImages[10].src} />
+                <img
+                  className="w-full h-auto"
+                  src={galleryImages[7].src}
+                  onClick={() => openModal(7)}
+                />
+                <img
+                  className="w-full h-auto"
+                  src={galleryImages[10].src}
+                  onClick={() => openModal(10)}
+                />
               </div>
               <div className="flex flex-col gap-3 w-2/5">
-                <img className="w-full h-auto" src={galleryImages[8].src} />
-                <img className="w-full h-auto" src={galleryImages[9].src} />
-                <img className="w-full h-auto" src={galleryImages[11].src} />
+                <img
+                  className="w-full h-auto"
+                  src={galleryImages[8].src}
+                  onClick={() => openModal(8)}
+                />
+                <img
+                  className="w-full h-auto"
+                  src={galleryImages[9].src}
+                  onClick={() => openModal(9)}
+                />
+                <img
+                  className="w-full h-auto"
+                  src={galleryImages[11].src}
+                  onClick={() => openModal(11)}
+                />
               </div>
             </div>
           </div>

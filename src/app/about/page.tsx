@@ -57,7 +57,7 @@ export default function AboutPage() {
       </header>
 
       {/* Author name under horizontal line - right aligned, clickable */}
-      <div className="md:hidden px-5 pt-3 pb-2 flex justify-end">
+      {/* <div className="md:hidden px-5 pt-3 pb-2 flex justify-end">
         <button
           onClick={() => window.location.href = '/'}
           className="text-[16px] font-normal leading-[110%] tracking-[-0.01em] text-[#1A1A1A] hover:opacity-70 transition-opacity"
@@ -65,12 +65,12 @@ export default function AboutPage() {
         >
           anastasiia antonenko
         </button>
-      </div>
+      </div> */}
       
       <div className="md:mx-3 lg:mx-6 md:my-3 lg:my-6 bg-transparent relative pr-0 md:pr-[17rem]">
         {/* Desktop/Tablet Header */}
         <div className="hidden md:block">
-          <Header title="ABOUT" subtitle="anastasiia antonenko" />
+          <Header title="ABOUT" subtitle="anastasiia antonenko"/>
         </div>
 
         <main className="py-2 md:py-4 lg:py-8 px-5 md:px-2 lg:pl-12 lg:pr-8">
@@ -385,8 +385,7 @@ export default function AboutPage() {
               <img 
                 src="/about/2 2.jpg" 
                 alt="Anastasiia Antonenko" 
-                className="w-full max-w-[300px] h-auto"
-                style={{ objectFit: 'contain', maxWidth: '300px', height: 'auto' }}
+                className="w-full h-auto"
               />
             </div>
 

@@ -25,7 +25,7 @@ export default function Header({ title, subtitle, showLine = true }: HeaderProps
         </div>
       </div>
       {showLine && (
-        <div className="absolute left-0 h-px bg-gray-300" style={{ width: '102%', bottom: '5.5%' }} />
+        <div className="absolute left-0 right-0 h-px bg-gray-300 md:-mr-3 lg:-mr-6" style={{ bottom: '5.5%' }} />
       )}
     </header>
   );
