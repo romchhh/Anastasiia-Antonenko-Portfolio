@@ -578,34 +578,36 @@ And we, too, have changed. Fear no longer devours us — it transforms into stre
           {/* Close button - fixed to top-right corner of viewport */}
           <CloseButton onClick={closeModal} className="fixed top-8 right-8" />
 
-          {/* Image */}
-          <img
-            src={galleryImages[selectedImage].src}
-            alt={`Air Alarm ${selectedImage + 1}`}
-            className="h-[85vh] w-auto max-w-[90vw] object-contain mx-4"
-            onClick={(e) => e.stopPropagation()}
-          />
+          <div className="relative mx-4 flex items-center justify-center">
+            {/* Image */}
+            <img
+              src={galleryImages[selectedImage].src}
+              alt={`Air Alarm ${selectedImage + 1}`}
+              className="h-[85vh] w-auto max-w-[90vw] object-contain"
+              onClick={(e) => e.stopPropagation()}
+            />
 
-          {/* Navigation arrows */}
-          <NavigationButton
-            direction="left"
-            onClick={(e) => {
-              e?.stopPropagation();
-              prevImage();
-            }}
-            className="fixed left-4 top-1/2 -translate-y-1/2"
-            variant="lightbox"
-          />
+            {/* Navigation arrows */}
+            <NavigationButton
+              direction="left"
+              onClick={(e) => {
+                e?.stopPropagation();
+                prevImage();
+              }}
+              className="absolute left-4 top-1/2 -translate-y-1/2"
+              variant="lightbox"
+            />
 
-          <NavigationButton
-            direction="right"
-            onClick={(e) => {
-              e?.stopPropagation();
-              nextImage();
-            }}
-            className="fixed right-4 top-1/2 -translate-y-1/2"
-            variant="lightbox"
-          />
+            <NavigationButton
+              direction="right"
+              onClick={(e) => {
+                e?.stopPropagation();
+                nextImage();
+              }}
+              className="absolute right-4 top-1/2 -translate-y-1/2"
+              variant="lightbox"
+            />
+          </div>
         </div>
       )}
     </div>

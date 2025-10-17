@@ -614,10 +614,9 @@ export default function ProcessPage() {
                 className="text-[16px] md:text-[18px] font-normal leading-[150%] tracking-[-0.01em] text-[#1A1A1A] lowercase"
                 style={{ fontFamily: "Work Sans" }}
               >
-                film soup, bleach, <br /> altered negatives, hand-painted <br />
-                photographs, acetone transfer, <br /> material experiments,
-                embroidery, <br />
-                zines & books
+                film soup, bleach, altered negatives, <br /> hand-painted 
+                photographs, acetone transfer, material experiments, <br />
+                embroidery, zines & books
               </div>
             </div>
             <div className="mt-6.25 -mr-5 h-px bg-gray-300 " />
