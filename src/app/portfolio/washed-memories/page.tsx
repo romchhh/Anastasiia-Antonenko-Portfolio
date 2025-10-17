@@ -520,7 +520,10 @@ Through these images, I explore how personal experiences transform into vague im
           onClick={closeModal}
         >
           <CloseButton onClick={closeModal} className="fixed top-8 right-8" />
-          <div className="relative mx-4 flex items-center justify-center">
+          <div 
+            className="relative mx-4 flex items-center justify-center"
+            onClick={closeModal}
+          >
             <img
               src={galleryImages[selectedImage].src}
               alt={`Washed Memories ${selectedImage + 1}`}

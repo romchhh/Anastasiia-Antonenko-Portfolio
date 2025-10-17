@@ -601,7 +601,10 @@ export default function KyivInColorPolaroidPage() {
           onClick={closeModal}
         >
           <CloseButton onClick={closeModal} className="fixed top-8 right-8" />
-          <div className="relative mx-4 flex items-center justify-center">
+          <div 
+            className="relative mx-4 flex items-center justify-center"
+            onClick={closeModal}
+          >
             <img
               src={galleryImages[selectedImage].src}
               alt={`Kyiv in Color Polaroid ${selectedImage + 1}`}

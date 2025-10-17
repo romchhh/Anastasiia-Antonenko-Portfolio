@@ -709,7 +709,10 @@ In a time when truth is increasingly fragile, I see these damaged images as quie
           {/* Close button - fixed to top-right corner of viewport */}
           <CloseButton onClick={closeModal} className="fixed top-8 right-8" />
 
-          <div className="relative mx-4 flex items-center justify-center">
+          <div 
+            className="relative mx-4 flex items-center justify-center"
+            onClick={closeModal}
+          >
             {/* Image */}
             <img
               src={galleryImages[selectedImage].src}

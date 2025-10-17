@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import Header from "@/components/Header";
 import Sidebar from "@/components/Sidebar";
 import BurgerMenu from "@/components/BurgerMenu";
@@ -226,7 +227,9 @@ export default function ProcessPage() {
                     <span className="font-semibold lowercase">
                       used in project:{" "}
                     </span>
-                    Air Alarm
+                    <Link href="/portfolio/air-alarm" className="hover:opacity-70 transition-opacity">
+                      Air Alarm
+                    </Link>
                   </p>
                 </div>
               </div>
@@ -310,7 +313,13 @@ export default function ProcessPage() {
                       <span className="font-semibold lowercase">
                         used in projects:{" "}
                       </span>
-                      Kyiv in Color, Air Alarm
+                      <Link href="/portfolio/kyiv-in-color" className="hover:opacity-70 transition-opacity">
+                        Kyiv in Color
+                      </Link>
+                      ,{" "}
+                      <Link href="/portfolio/air-alarm" className="hover:opacity-70 transition-opacity">
+                        Air Alarm
+                      </Link>
                     </p>
                   </div>
                 </div>
@@ -388,8 +397,21 @@ export default function ProcessPage() {
                       <span className="font-semibold lowercase">
                         used in projects:{" "}
                       </span>
-                      Air Alarm, Holes of Time, From Headlines to Reality, Down
-                      in Flames
+                      <Link href="/portfolio/air-alarm" className="hover:opacity-70 transition-opacity">
+                        Air Alarm
+                      </Link>
+                      ,{" "}
+                      <Link href="/portfolio/holes-of-time" className="hover:opacity-70 transition-opacity">
+                        Holes of Time
+                      </Link>
+                      ,{" "}
+                      <Link href="/portfolio/from-headlines-to-reality" className="hover:opacity-70 transition-opacity">
+                        From Headlines to Reality
+                      </Link>
+                      ,{" "}
+                      <Link href="/portfolio/down-in-flames" className="hover:opacity-70 transition-opacity">
+                        Down in Flames
+                      </Link>
                     </p>
                   </div>
                 </div>
@@ -467,7 +489,9 @@ export default function ProcessPage() {
                       <span className="font-semibold lowercase">
                         used in project:{" "}
                       </span>
-                      Kyiv in Color version Polaroids
+                      <Link href="/portfolio/kyiv-in-color-polaroid" className="hover:opacity-70 transition-opacity">
+                        Kyiv in Color version Polaroids
+                      </Link>
                     </p>
                   </div>
                 </div>
@@ -686,7 +710,9 @@ export default function ProcessPage() {
                   <span className="font-semibold lowercase">
                     used in project:{" "}
                   </span>
-                  Air Alarm
+                  <Link href="/portfolio/air-alarm" className="hover:opacity-70 transition-opacity">
+                    Air Alarm
+                  </Link>
                 </p>
               </div>
             </div>
@@ -779,7 +805,13 @@ export default function ProcessPage() {
                   <span className="font-semibold lowercase">
                     used in projects:{" "}
                   </span>
-                  Kyiv in Color, Air Alarm
+                  <Link href="/portfolio/kyiv-in-color" className="hover:opacity-70 transition-opacity">
+                    Kyiv in Color
+                  </Link>
+                  ,{" "}
+                  <Link href="/portfolio/air-alarm" className="hover:opacity-70 transition-opacity">
+                    Air Alarm
+                  </Link>
                 </p>
               </div>
             </div>
@@ -870,8 +902,21 @@ export default function ProcessPage() {
                   <span className="font-semibold lowercase">
                     used in projects:{" "}
                   </span>
-                  Air Alarm, Holes of Time, From Headlines to Reality, Down in
-                  Flames
+                  <Link href="/portfolio/air-alarm" className="hover:opacity-70 transition-opacity">
+                    Air Alarm
+                  </Link>
+                  ,{" "}
+                  <Link href="/portfolio/holes-of-time" className="hover:opacity-70 transition-opacity">
+                    Holes of Time
+                  </Link>
+                  ,{" "}
+                  <Link href="/portfolio/from-headlines-to-reality" className="hover:opacity-70 transition-opacity">
+                    From Headlines to Reality
+                  </Link>
+                  ,{" "}
+                  <Link href="/portfolio/down-in-flames" className="hover:opacity-70 transition-opacity">
+                    Down in Flames
+                  </Link>
                 </p>
               </div>
             </div>
@@ -961,7 +1006,9 @@ export default function ProcessPage() {
                   <span className="font-semibold lowercase">
                     used in project:{" "}
                   </span>
-                  Kyiv in Color version Polaroids
+                  <Link href="/portfolio/kyiv-in-color-polaroid" className="hover:opacity-70 transition-opacity">
+                    Kyiv in Color version Polaroids
+                  </Link>
                 </p>
               </div>
             </div>

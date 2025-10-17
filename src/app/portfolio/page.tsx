@@ -599,7 +599,7 @@ export default function PortfolioGridPage() {
           </div>
 
           {/* Mobile: Custom layout */}
-          <div className="md:hidden flex flex-col gap-4">
+          {/* <div className="md:hidden flex flex-col gap-4">
             {[...portfolioItems]
               .sort((a, b) => (a.mobileOrder || 0) - (b.mobileOrder || 0))
               .reduce((rows: PortfolioItem[][], item, index, arr) => {
@@ -672,7 +672,7 @@ export default function PortfolioGridPage() {
                   ))}
                 </div>
               ))}
-          </div>
+          </div> */}
 
           <div className="md:hidden flex flex-col gap-3.75">
             <ImageTemplate id={6} />
@@ -727,36 +727,34 @@ export default function PortfolioGridPage() {
           {/* Close button */}
           <CloseButton onClick={closeModal} className="fixed top-8 right-8" />
 
-          <div className="relative mx-4 flex items-center justify-center">
-            {/* Image */}
-            <img
-              src={portfolioItems[selectedImage].image}
-              alt={portfolioItems[selectedImage].title}
-              className="h-[85vh] w-auto max-w-[90vw] object-contain"
-              onClick={(e) => e.stopPropagation()}
-            />
+          {/* Image */}
+          <img
+            src={portfolioItems[selectedImage].image}
+            alt={portfolioItems[selectedImage].title}
+            className="h-[85vh] w-auto max-w-[90vw] object-contain mx-4"
+            onClick={(e) => e.stopPropagation()}
+          />
 
-            {/* Navigation arrows */}
-            <NavigationButton
-              direction="left"
-              onClick={(e) => {
-                e?.stopPropagation();
-                prevImage();
-              }}
-              className="absolute left-4 top-1/2 -translate-y-1/2"
-              variant="lightbox"
-            />
+          {/* Navigation arrows */}
+          <NavigationButton
+            direction="left"
+            onClick={(e) => {
+              e?.stopPropagation();
+              prevImage();
+            }}
+            className="fixed left-4 top-1/2 -translate-y-1/2"
+            variant="lightbox"
+          />
 
-            <NavigationButton
-              direction="right"
-              onClick={(e) => {
-                e?.stopPropagation();
-                nextImage();
-              }}
-              className="absolute right-4 top-1/2 -translate-y-1/2"
-              variant="lightbox"
-            />
-          </div>
+          <NavigationButton
+            direction="right"
+            onClick={(e) => {
+              e?.stopPropagation();
+              nextImage();
+            }}
+            className="fixed right-4 top-1/2 -translate-y-1/2"
+            variant="lightbox"
+          />
 
           {/* Image info */}
           <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-center text-white">

@@ -67,8 +67,8 @@ export default function BurgerMenu({ isOpen, onToggle }: BurgerMenuProps) {
             height: '20px'
           }}
         >
-          <span className="absolute top-1/2 left-0 w-full h-[0.5px] bg-white transform -translate-y-1/2 rotate-45"></span>
-          <span className="absolute top-1/2 left-0 w-full h-[0.5px] bg-white transform -translate-y-1/2 -rotate-45"></span>
+          <span className="absolute top-1/2 left-0 w-full h-[1.5px] bg-white transform -translate-y-1/2 rotate-45"></span>
+          <span className="absolute top-1/2 left-0 w-full h-[1.5px] bg-white transform -translate-y-1/2 -rotate-45"></span>
         </button>
 
         {/* Menu Panel */}

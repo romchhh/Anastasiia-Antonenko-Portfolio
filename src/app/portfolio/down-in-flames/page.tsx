@@ -626,7 +626,10 @@ In this sense, "this shoot" is more than an image. It reflects an inner shift â€
           {/* Close button - fixed to top-right corner of viewport */}
           <CloseButton onClick={closeModal} className="fixed top-8 right-8" />
 
-          <div className="relative mx-4 flex items-center justify-center">
+          <div 
+            className="relative mx-4 flex items-center justify-center"
+            onClick={closeModal}
+          >
             {/* Image */}
             <img
               src={galleryImages[selectedImage].src}

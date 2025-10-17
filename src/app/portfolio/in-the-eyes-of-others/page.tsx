@@ -523,7 +523,10 @@ This project examines the fragile boundary between two worlds: the human and the
           onClick={closeModal}
         >
           <CloseButton onClick={closeModal} className="fixed top-8 right-8" />
-          <div className="relative mx-4 flex items-center justify-center">
+          <div 
+            className="relative mx-4 flex items-center justify-center"
+            onClick={closeModal}
+          >
             <img
               src={galleryImages[selectedImage].src}
               alt={`In the Eyes of Others ${selectedImage + 1}`}
