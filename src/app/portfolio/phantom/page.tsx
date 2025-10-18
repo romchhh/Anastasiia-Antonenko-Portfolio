@@ -324,7 +324,7 @@ This project is also a reminder of the importance of empathy and support for tho
 
           {/* Mobile/Tablet Intro */}
           <div className="lg:hidden mb-6">
-            <div className="flex items-baseline gap-4 md:gap-6 pb-3">
+            <div className="flex items-baseline mt-2 gap-4 md:gap-6 pb-3">
               <button
                 onClick={() => setActiveTab("overview")}
                 className={

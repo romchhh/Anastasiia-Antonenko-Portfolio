@@ -388,7 +388,7 @@ Cracks and distortions in the emulsion mirror the fragmentation of lived experie
           {/* Mobile/Tablet Intro - simplified version */}
           <div className="lg:hidden mb-6">
             {/* Tabs */}
-            <div className="flex items-baseline gap-4 md:gap-6 pb-3">
+            <div className="flex items-baseline mt-2 gap-4 md:gap-6 pb-3">
               <button
                 onClick={() => setActiveTab("overview")}
                 className={

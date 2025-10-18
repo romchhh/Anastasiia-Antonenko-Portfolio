@@ -73,7 +73,7 @@ export default function AboutPage() {
           <Header title="ABOUT" subtitle="anastasiia antonenko"/>
         </div>
 
-        <main className="py-2 md:py-4 lg:py-8 px-5 md:px-2 lg:pl-12 lg:pr-8">
+        <main className="lg:py-8 px-5 md:px-2 lg:pl-12 lg:pr-8">
           {/* Desktop Layout */}
           <div className="hidden lg:block">
             {/* Main Content */}
@@ -380,6 +380,12 @@ export default function AboutPage() {
 
           {/* Mobile/Tablet Layout */}
           <div className="lg:hidden">
+            <h2 
+                className="my-5 mb-6.25 text-[28px] md:text-[35px] font-normal leading-[110%] tracking-[-0.01em] text-[#1A1A1A]"
+                style={{ fontFamily: 'Work Sans' }}
+              >
+                artist statement
+              </h2>
             {/* Portrait Image */}
             <div className="mb-6 flex justify-center">
               <img 
@@ -391,12 +397,6 @@ export default function AboutPage() {
 
             {/* Artist Statement */}
             <div className="mb-8">
-              <h2 
-                className="text-[28px] md:text-[35px] font-normal leading-[110%] tracking-[-0.01em] text-[#1A1A1A] mb-4"
-                style={{ fontFamily: 'Work Sans' }}
-              >
-                artist statement
-              </h2>
               <div className="space-y-6 text-[16px] font-normal leading-[155%] tracking-[-0.01em] text-[#1A1A1A]" style={{ fontFamily: 'Work Sans' }}>
                 <p>
                   My artistic practice revolves around exploring the fragile intersections of memory, identity, and the body. Working with analog and instant photography allows me to embrace imperfection, accident, and temporality, turning them into essential parts of the image.

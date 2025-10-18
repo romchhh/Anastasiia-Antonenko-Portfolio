@@ -329,7 +329,7 @@ Kyiv in Color is both a record of the city's endurance and a reminder of the cha
             </section>
           </div>
           <div className="lg:hidden mb-6">
-            <div className="flex items-baseline gap-4 md:gap-6 pb-3">
+            <div className="flex items-baseline mt-2 gap-4 md:gap-6 pb-3">
               <button
                 onClick={() => setActiveTab("overview")}
                 className={

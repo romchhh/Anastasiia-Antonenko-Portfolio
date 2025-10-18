@@ -365,13 +365,8 @@ export default function PortfolioGridPage() {
           />
         </div>
         <div
-          className="flex flex-col mt-2 mb-4"
-          style={{
-            width: "201px",
-            height: "62px",
-            gap: "3px",
-            opacity: 1,
-          }}
+          className="flex flex-col mt-2"
+          
         >
           <h3
             className="text-[14px] font-normal leading-[150%] tracking-[-0.01em] text-[#1A1A1A] uppercase"
@@ -674,7 +669,7 @@ export default function PortfolioGridPage() {
               ))}
           </div> */}
 
-          <div className="md:hidden flex flex-col gap-3.75">
+          <div className="mt-7.5 md:hidden flex flex-col gap-3.75">
             <ImageTemplate id={6} />
             <div className="flex gap-3.75">
               <div className="w-[calc(50%-7.5px)] h-auto">
@@ -686,8 +681,8 @@ export default function PortfolioGridPage() {
             </div>
             <ImageTemplate id={1} />
             <div className="flex gap-3.75">
-              <div className="flex flex-col gap-3.75 w-[calc(60%-7.5px)]">
-                <div className="w-full h-[calc(33%-5px)]">
+              <div className="flex flex-col gap-3.75 w-[calc(60%-7.5px)] justify-between">
+                <div className="w-full h-auto">
                   <ImageTemplate id={2} />
                 </div>
                 <div className="w-auto h-auto">
@@ -697,7 +692,7 @@ export default function PortfolioGridPage() {
                   <ImageTemplate id={4} />
                 </div>
               </div>
-              <div className="flex flex-col gap-3.75 w-[calc(40%-7.5px)]">
+              <div className="flex flex-col gap-3.75 w-[calc(40%-7.5px)] justify-between">
                 <div className="w-auto h-auto">
                   <ImageTemplate id={3} />
                 </div>

@@ -251,7 +251,7 @@ Born in Luhansk, I carry loss as both personal and generational, making this wor
       </header>
 
       {/* Author name under horizontal line - right aligned, clickable */}
-      <div className="md:hidden px-5 pt-3 pb-2 flex justify-end">
+      {/* <div className="md:hidden px-5 pt-3 pb-2 flex justify-end">
         <button
           onClick={() => (window.location.href = "/")}
           className="text-[16px] font-normal leading-[110%] tracking-[-0.01em] text-[#1A1A1A] lowercase hover:opacity-70 transition-opacity"
@@ -259,7 +259,7 @@ Born in Luhansk, I carry loss as both personal and generational, making this wor
         >
           anastasiia antonenko
         </button>
-      </div>
+      </div> */}
       <div className="md:mx-3 lg:mx-6 md:my-3 lg:my-6 bg-transparent relative pr-0 md:pr-[17rem]">
         <div className="hidden md:block">
           <Header
@@ -344,7 +344,7 @@ Born in Luhansk, I carry loss as both personal and generational, making this wor
             </section>
           </div>
           <div className="lg:hidden mb-6">
-            <div className="flex items-baseline gap-4 md:gap-6 pb-3">
+            <div className="flex items-baseline mt-2 gap-4 md:gap-6 pb-3">
               <button
                 onClick={() => setActiveTab("overview")}
                 className={
