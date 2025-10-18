@@ -11,7 +11,7 @@ export default function ContactForm() {
     email: false,
     message: false,
   });
-  const [formState, setFormState] = useState<"idle" | "submitted">("idle");
+  const [formState, setFormState] = useState<"idle" | "submitting" | "submitted" | "error">("idle");
 
   // Simple email mask/validator: keeps only allowed chars and auto-lowers, also checks pattern
   const emailRegex = useMemo(
@@ -32,20 +32,46 @@ export default function ContactForm() {
   const isMessageValid = message.trim().length > 3;
   const isFormValid = isEmailValid && isNameValid && isMessageValid;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setTouched({ name: true, email: true, message: true });
     if (!isFormValid) return;
 
-    // Simulate form submission
-    setFormState("submitted");
+    setFormState("submitting");
 
-    // For now just open the email client. Later can be wired to API.
-    const subject = encodeURIComponent("Portfolio contact");
-    const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\n\n${message}`
-    );
-    window.location.href = `mailto:stushaphotofilm@gmail.com?subject=${subject}&body=${body}`;
+    try {
+      const formData = new FormData();
+      formData.append("access_key", "2fab4520-f7a6-4066-a0e8-37f581cbf04e");
+      formData.append("name", name);
+      formData.append("email", email);
+      formData.append("message", message);
+      formData.append("subject", "New Portfolio Contact Form Submission");
+      formData.append("from_name", "Portfolio Contact Form");
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const result = await response.json();
+      
+      if (result.success) {
+        setFormState("submitted");
+        // Reset form fields
+        setName("");
+        setEmail("");
+        setMessage("");
+        setTouched({ name: false, email: false, message: false });
+      } else {
+        console.error("Web3Forms error:", result);
+        setFormState("error");
+        setTimeout(() => setFormState("idle"), 3000);
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setFormState("error");
+      setTimeout(() => setFormState("idle"), 3000);
+    }
   };
 
   if (formState === "submitted") {
@@ -148,12 +174,22 @@ export default function ContactForm() {
           </div>
           <button
             type="submit"
-            className="h-[50px] px-10 mt-4 bg-[#1A1A1A] text-white text-[16px] font-normal hover:bg-[#333] transition-colors border border-[#1A1A1A] whitespace-nowrap w-full sm:w-auto cursor-pointer"
+            disabled={formState === "submitting"}
+            className={`h-[50px] px-10 mt-4 text-white text-[16px] font-normal transition-colors border whitespace-nowrap w-full sm:w-auto ${
+              formState === "submitting"
+                ? "bg-gray-400 border-gray-400 cursor-not-allowed"
+                : "bg-[#1A1A1A] border-[#1A1A1A] hover:bg-[#333] cursor-pointer"
+            }`}
             style={{ fontFamily: "Work Sans" }}
           >
-            get in touch
+            {formState === "submitting" ? "sending..." : "get in touch"}
           </button>
         </div>
+        {formState === "error" && (
+          <p className="mt-3 text-[14px] text-red-500">
+            Failed to send message. Please try again.
+          </p>
+        )}
       </form>
     </div>
   );
