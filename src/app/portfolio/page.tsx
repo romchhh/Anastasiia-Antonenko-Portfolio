@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Header from "@/components/Header";
 import Sidebar from "@/components/Sidebar";
@@ -30,11 +30,11 @@ interface PortfolioItem {
 export default function PortfolioGridPage() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [scale, setScale] = useState(1);
+  const [scale, setScale] = useState<number | null>(null);
   const router = useRouter();
 
   // Calculate scale based on available width
-  React.useEffect(() => {
+  useLayoutEffect(() => {
     const calculateScale = () => {
       const windowWidth = window.innerWidth;
       const gridWidth = 1100; // Fixed grid width
@@ -364,10 +364,7 @@ export default function PortfolioGridPage() {
             }
           />
         </div>
-        <div
-          className="flex flex-col mt-2"
-          
-        >
+        <div className="flex flex-col mt-2">
           <h3
             className="text-[14px] font-normal leading-[150%] tracking-[-0.01em] text-[#1A1A1A] uppercase"
             style={{ fontFamily: "Work Sans" }}
@@ -383,6 +380,11 @@ export default function PortfolioGridPage() {
         </div>
       </div>
     );
+  }
+
+  if (scale === null) {
+    // Optionally render a loader or empty div or nothing
+    return null;
   }
 
   return (
