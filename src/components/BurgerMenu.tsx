@@ -177,15 +177,20 @@ export default function BurgerMenu({ isOpen, onToggle }: BurgerMenuProps) {
 
             {/* Email */}
             <div className="mb-8">
-              <p className="text-white text-base tracking-wide">
+              <a 
+                href="mailto:stushaphotofilm@gmail.com"
+                className="text-white text-base tracking-wide hover:opacity-70 transition-opacity block"
+              >
                 stushaphotofilm@gmail.com
-              </p>
+              </a>
             </div>
 
             {/* Social Icons */}
             <div className="flex gap-4 mb-8">
               <a
-                href="#"
+                href="https://www.facebook.com/stushafilm"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-white hover:opacity-70 transition-opacity"
                 aria-label="Facebook"
               >
@@ -194,7 +199,9 @@ export default function BurgerMenu({ isOpen, onToggle }: BurgerMenuProps) {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/stusha_film"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-white hover:opacity-70 transition-opacity"
                 aria-label="Instagram"
               >
@@ -203,7 +210,9 @@ export default function BurgerMenu({ isOpen, onToggle }: BurgerMenuProps) {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://wa.me/436604266037"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-white hover:opacity-70 transition-opacity"
                 aria-label="WhatsApp"
               >
@@ -215,8 +224,11 @@ export default function BurgerMenu({ isOpen, onToggle }: BurgerMenuProps) {
 
             {/* Design Credit */}
             <div>
-              <p 
-                className="text-white"
+              <a
+                href="https://www.instagram.com/evaholts/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:opacity-70 transition-opacity block"
                 style={{
                   fontFamily: 'Work Sans',
                   fontWeight: 300,
@@ -227,7 +239,7 @@ export default function BurgerMenu({ isOpen, onToggle }: BurgerMenuProps) {
                 }}
               >
                 design by eva holts
-              </p>
+              </a>
             </div>
           </div>
         </div>
