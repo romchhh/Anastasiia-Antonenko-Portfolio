@@ -81,15 +81,15 @@ export default function ProcessPage() {
         </button>
       </div> */}
 
-      <div className="md:mx-3 lg:mx-6 md:my-3 lg:my-6 bg-transparent relative pr-0 md:pr-[17rem]">
+      <div className="md:mx-3 lg:mx-6 md:my-3 lg:my-6 bg-transparent relative pr-0 md:pr-0 2xl:pr-[17rem]">
         {/* Desktop/Tablet Header */}
         <div className="hidden md:block">
           <Header title="PROCESS" subtitle="anastasiia antonenko" />
         </div>
 
-        <main className="py-2 md:py-4 lg:py-8 px-5 md:px-2 lg:pl-12 lg:pr-8">
+        <main className="py-2 md:py-4 lg:py-8 px-5 md:px-6 lg:pl-12 lg:pr-8">
           {/* Desktop Layout */}
-          <div className="hidden lg:block">
+          <div className="hidden 2xl:block">
             {/* Top Section - Overview and Handmade Techniques */}
             <div
               className="relative grid grid-cols-[374px_1fr] gap-10 mb-8"
@@ -571,7 +571,7 @@ export default function ProcessPage() {
           </div>
 
           {/* Mobile/Tablet Layout */}
-          <div className="lg:hidden">
+          <div className="2xl:hidden">
             {/* Handmade Techniques */}
             <div className="mb-8 mt-5">
               <h3
@@ -1100,7 +1100,7 @@ export default function ProcessPage() {
       </div>
 
       {/* Desktop Sidebar */}
-      <div className="hidden md:block fixed top-0 bottom-0 right-0 w-[17rem]">
+      <div className="hidden 2xl:block fixed top-0 bottom-0 right-0 w-[17rem]">
         <Sidebar />
       </div>
     </div>

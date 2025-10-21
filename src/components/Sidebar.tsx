@@ -68,7 +68,14 @@ export default function Sidebar() {
         
         {/* Contact & Credits */}
         <div className="space-y-2 text-[#515151]">
-          <p className="text-[14px] font-light">design by eva holts</p>
+          <a 
+            href="https://www.instagram.com/evaholts/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-[14px] font-light hover:text-[#1A1A1A] transition-colors block"
+          >
+            design by eva holts
+          </a>
         </div>
       </div>
     </aside>
