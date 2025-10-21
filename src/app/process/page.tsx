@@ -81,7 +81,7 @@ export default function ProcessPage() {
         </button>
       </div> */}
 
-      <div className="md:mx-3 lg:mx-6 md:my-3 lg:my-6 bg-transparent relative pr-0 md:pr-0 2xl:pr-[17rem]">
+      <div className="md:mx-3 lg:mx-6 md:my-3 lg:my-6 bg-transparent relative pr-0 md:pr-[17rem]">
         {/* Desktop/Tablet Header */}
         <div className="hidden md:block">
           <Header title="PROCESS" subtitle="anastasiia antonenko" />
@@ -89,7 +89,7 @@ export default function ProcessPage() {
 
         <main className="py-2 md:py-4 lg:py-8 px-5 md:px-6 lg:pl-12 lg:pr-8">
           {/* Desktop Layout */}
-          <div className="hidden 2xl:block">
+          <div className="hidden lg:block">
             {/* Top Section - Overview and Handmade Techniques */}
             <div
               className="relative grid grid-cols-[374px_1fr] gap-10 mb-8"
@@ -120,7 +120,7 @@ export default function ProcessPage() {
               </div>
 
               {/* Right Column - Handmade Techniques */}
-              <div className="text-[#1A1A1A]" style={{ width: "700px" }}>
+              <div className="text-[#1A1A1A]">
                 <h3
                   className="text-[32px] md:text-[38px] lg:text-[45px] font-normal leading-[110%] tracking-[0.03em] text-[#1A1A1A] lowercase mb-10"
                   style={{ fontFamily: "Work Sans" }}
@@ -194,7 +194,7 @@ export default function ProcessPage() {
               </div>
 
               {/* Right Column - Chemical Intervention */}
-              <div className="text-[#1A1A1A]" style={{ width: "700px" }}>
+              <div className="text-[#1A1A1A]">
                 <h3
                   className="text-[32px] md:text-[38px] lg:text-[45px] font-normal leading-[110%] tracking-[0.03em] text-[#1A1A1A] lowercase mb-10"
                   style={{ fontFamily: "Work Sans" }}
@@ -280,7 +280,7 @@ export default function ProcessPage() {
                 </div>
 
                 {/* Right Column - Instant Photo-painting Text */}
-                <div className="text-[#1A1A1A]" style={{ width: "700px" }}>
+                <div className="text-[#1A1A1A]">
                   <h3
                     className="text-[32px] md:text-[38px] lg:text-[45px] font-normal leading-[110%] tracking-[0.03em] text-[#1A1A1A] lowercase mb-10"
                     style={{ fontFamily: "Work Sans" }}
@@ -368,7 +368,7 @@ export default function ProcessPage() {
                 </div>
 
                 {/* Right Column - Material Experiments Text */}
-                <div className="text-[#1A1A1A]" style={{ width: "700px" }}>
+                <div className="text-[#1A1A1A]">
                   <h3
                     className="text-[32px] md:text-[38px] lg:text-[45px] font-normal leading-[110%] tracking-[0.03em] text-[#1A1A1A] lowercase mb-10"
                     style={{ fontFamily: "Work Sans" }}
@@ -460,7 +460,7 @@ export default function ProcessPage() {
                 </div>
 
                 {/* Right Column - Embroidery Text */}
-                <div className="text-[#1A1A1A]" style={{ width: "700px" }}>
+                <div className="text-[#1A1A1A]">
                   <h3
                     className="text-[32px] md:text-[38px] lg:text-[45px] font-normal leading-[110%] tracking-[0.03em] text-[#1A1A1A] lowercase mb-10"
                     style={{ fontFamily: "Work Sans" }}
@@ -540,7 +540,7 @@ export default function ProcessPage() {
                 </div>
 
                 {/* Right Column - Book-making Text */}
-                <div className="text-[#1A1A1A]" style={{ width: "700px" }}>
+                <div className="text-[#1A1A1A]">
                   <h3
                     className="text-[32px] md:text-[38px] lg:text-[45px] font-normal leading-[110%] tracking-[0.03em] text-[#1A1A1A] lowercase mb-10"
                     style={{ fontFamily: "Work Sans" }}
@@ -571,7 +571,7 @@ export default function ProcessPage() {
           </div>
 
           {/* Mobile/Tablet Layout */}
-          <div className="2xl:hidden">
+          <div className="lg:hidden">
             {/* Handmade Techniques */}
             <div className="mb-8 mt-5">
               <h3
@@ -1100,7 +1100,7 @@ export default function ProcessPage() {
       </div>
 
       {/* Desktop Sidebar */}
-      <div className="hidden 2xl:block fixed top-0 bottom-0 right-0 w-[17rem]">
+      <div className="hidden md:block fixed top-0 bottom-0 right-0 w-[17rem]">
         <Sidebar />
       </div>
     </div>
