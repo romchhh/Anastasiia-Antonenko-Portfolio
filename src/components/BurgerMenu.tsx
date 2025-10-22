@@ -15,7 +15,7 @@ export default function BurgerMenu({ isOpen, onToggle }: BurgerMenuProps) {
     <>
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed h-full inset-0 z-40 lg:hidden transition-all duration-300 ${
+        className={`fixed h-[100dvh] inset-0 z-40 lg:hidden transition-all duration-300 ${
           isOpen ? 'visible opacity-100' : 'invisible opacity-0'
         }`}
       >
