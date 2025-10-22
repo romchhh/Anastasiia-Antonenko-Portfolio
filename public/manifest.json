@@ -1,0 +1,21 @@
+{
+  "name": "Anastasiia Antonenko - Photographer & Visual Artist",
+  "short_name": "Anastasiia Antonenko",
+  "description": "Portfolio of Anastasiia Antonenko, a Ukrainian photographer and visual artist. Explore contemporary photography, documentary work, and artistic projects.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F5F5F5",
+  "theme_color": "#1A1A1A",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["photography", "art", "portfolio", "visual arts"],
+  "lang": "en",
+  "dir": "ltr"
+}
