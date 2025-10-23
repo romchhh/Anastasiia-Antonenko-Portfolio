@@ -86,7 +86,7 @@ export default function ContactForm() {
           <p className="text-[16px] md:text-[18px] font-normal leading-[150%] tracking-[0.03em] text-[#515151] lowercase">
             your message has been sent.
           </p>
-          <p className="text-[16px] md:text-[18px] font-normal leading-[150%] tracking-[0.03em] text-[#515151] lowercase">
+          <p className="text-[16px] md:text-[18px] font-normal leading-[150%] tracking-[0.03em] text-[#515151]">
             I look forward to continuing the conversation.
           </p>
         </div>
@@ -101,7 +101,7 @@ export default function ContactForm() {
         <br />
         or collaborations?
       </h3>
-      <p className="mt-4 text-[16px] md:text-[18px] font-normal leading-[150%] tracking-[0.03em] text-[#515151] lowercase w-full max-w-[477px]">
+      <p className="mt-4 text-[16px] md:text-[18px] font-normal leading-[150%] tracking-[0.03em] text-[#515151] w-full max-w-[477px]">
         leave your message below and I&apos;ll get back to you soon
       </p>
 
