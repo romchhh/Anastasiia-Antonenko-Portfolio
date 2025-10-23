@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     siteName: 'Anastasiia Antonenko Portfolio',
     images: [
       {
-        url: '/gallery/2 11.png',
+        url: '/gallery/Frame 458.png',
         width: 1200,
         height: 630,
         alt: 'Anastasiia Antonenko Photography Portfolio',
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "Anastasiia Antonenko - Photographer & Visual Artist",
     description: "Portfolio of Anastasiia Antonenko, a Ukrainian photographer and visual artist. Explore contemporary photography, documentary work, and artistic projects.",
-    images: ['/gallery/2 11.png'],
+    images: ['/gallery/Frame 458.png'],
     creator: '@stusha_film',
   },
   robots: {
