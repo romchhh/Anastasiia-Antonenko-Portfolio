@@ -12,6 +12,20 @@ export default function KyivInColorPolaroidPage() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scale, setScale] = useState(1);
 
+  // Заборона скролінгу при відкритому мобільному меню
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    // Cleanup function для відновлення скролінгу при unmount
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMobileMenuOpen]);
+
   // React.useEffect(() => {
   //   const calculateScale = () => {
   //     const windowWidth = window.innerWidth;

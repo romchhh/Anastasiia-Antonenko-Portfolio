@@ -14,6 +14,20 @@ export default function HolesOfTimePage() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scale, setScale] = useState(1);
 
+  // Заборона скролінгу при відкритому мобільному меню
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    // Cleanup function для відновлення скролінгу при unmount
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMobileMenuOpen]);
+
   // Calculate scale based on available width
   React.useEffect(() => {
     const calculateScale = () => {

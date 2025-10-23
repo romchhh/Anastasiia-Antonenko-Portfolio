@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Header from "@/components/Header";
 import Sidebar from "@/components/Sidebar";
@@ -32,6 +32,20 @@ export default function PortfolioGridPage() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scale, setScale] = useState(1);
   const router = useRouter();
+
+  // Заборона скролінгу при відкритому мобільному меню
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    // Cleanup function для відновлення скролінгу при unmount
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMobileMenuOpen]);
 
   // Calculate scale based on available width
   React.useEffect(() => {

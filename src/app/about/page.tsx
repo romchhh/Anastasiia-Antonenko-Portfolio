@@ -21,6 +21,20 @@ export default function AboutPage() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [hoveredItem]);
 
+  // Заборона скролінгу при відкритому мобільному меню
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    // Cleanup function для відновлення скролінгу при unmount
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMobileMenuOpen]);
+
   return (
     <div className="min-h-screen bg-[#F5F5F5] relative overflow-x-hidden">
       {/* Burger Menu - mobile only */}

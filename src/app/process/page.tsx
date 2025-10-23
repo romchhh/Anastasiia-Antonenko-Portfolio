@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Sidebar from "@/components/Sidebar";
@@ -14,6 +14,20 @@ export default function ProcessPage() {
   const [materialIndex, setMaterialIndex] = useState(0);
   const [embroideryIndex, setEmbroideryIndex] = useState(0);
   const [bookmakingIndex, setBookmakingIndex] = useState(0);
+
+  // Заборона скролінгу при відкритому мобільному меню
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    // Cleanup function для відновлення скролінгу при unmount
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMobileMenuOpen]);
 
   const processImages = {
     chemical: ["/process/4 7.png", "/process/4 71.png", "/process/4 72.png"],

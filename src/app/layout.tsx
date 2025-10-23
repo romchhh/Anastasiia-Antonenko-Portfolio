@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     siteName: 'Anastasiia Antonenko Portfolio',
     images: [
       {
-        url: '/gallery/2 1.png',
+        url: '/gallery/2 11.png',
         width: 1200,
         height: 630,
         alt: 'Anastasiia Antonenko Photography Portfolio',
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "Anastasiia Antonenko - Photographer & Visual Artist",
     description: "Portfolio of Anastasiia Antonenko, a Ukrainian photographer and visual artist. Explore contemporary photography, documentary work, and artistic projects.",
-    images: ['/gallery/2 1.png'],
+    images: ['/gallery/2 11.png'],
     creator: '@stusha_film',
   },
   robots: {
@@ -82,9 +82,9 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: '/favicon.png',
-    shortcut: '/favicon.png',
-    apple: '/favicon.png',
+    icon: '/favicon.png?v=2',
+    shortcut: '/favicon.png?v=2',
+    apple: '/favicon.png?v=2',
   },
   manifest: '/manifest.json',
 };
@@ -97,9 +97,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.png" type="image/png" />
-        <link rel="shortcut icon" href="/favicon.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/favicon.png" />
+        <link rel="icon" href="/favicon.png?v=2" type="image/png" />
+        <link rel="shortcut icon" href="/favicon.png?v=2" type="image/png" />
+        <link rel="apple-touch-icon" href="/favicon.png?v=2" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=2" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png?v=2" />
       </head>
       <body
         className={`${workSans.variable} antialiased`}
